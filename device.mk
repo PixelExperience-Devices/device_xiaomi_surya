@@ -136,6 +136,7 @@ PRODUCT_PACKAGES += \
     AOSPASuryaFrameworks \
     AOSPASuryaSettings \
     KarnaFrameworks \
+    NoCutoutOverlay \
     SuryaFrameworks \
     SuryaSystemUI
 
