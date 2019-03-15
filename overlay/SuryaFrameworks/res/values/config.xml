@@ -478,4 +478,7 @@
          will not debounce light sensor readings -->
     <integer name="config_lightSensorWarmupTime">250</integer>
 
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
+
 </resources>
