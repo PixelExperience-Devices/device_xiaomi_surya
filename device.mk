@@ -137,6 +137,7 @@ PRODUCT_PACKAGES += \
     AOSPASuryaSettings \
     KarnaFrameworks \
     NoCutoutOverlay \
+    NotchBarKiller \
     SuryaFrameworks \
     SuryaSystemUI
 
