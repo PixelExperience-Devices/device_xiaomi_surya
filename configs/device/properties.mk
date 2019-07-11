@@ -162,10 +162,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sensors.enable.mag_filter=true
     debug.sensors.diag_buffer_log=false
 
-# SSR
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # Thermal
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
