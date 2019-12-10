@@ -1,4 +1,5 @@
 # Audio
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 persist.vendor.audio.voicecall.speaker.stereo=true
 
 # Bluetooth
