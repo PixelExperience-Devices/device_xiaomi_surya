@@ -1,4 +1,5 @@
 type persist_subsys_file, vendor_persist_type, file_type;
 type proc_tp_gesture, fs_type, proc_type;
 type sysfs_battery_saver, fs_type, sysfs_type;
-
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_kgsl_proc, sysfs_type, fs_type;
