@@ -243,7 +243,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 $(call inherit-product-if-exists, $(LOCAL_PATH)/gps/gps_vendor_product.mk)
 
 # GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Health
 PRODUCT_PACKAGES += \
