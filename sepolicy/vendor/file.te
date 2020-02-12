@@ -5,3 +5,6 @@ type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_kgsl_proc, sysfs_type, fs_type;
 type sysfs_kgsl, sysfs_type, fs_type;
 type proc_sched_boost, fs_type, proc_type;
+
+# Data files
+type per_boot_file, file_type, data_file_type, core_data_file_type;
