@@ -10,6 +10,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/surya/sepolicy/nfc/vendor \
     device/xiaomi/surya/sepolicy/power/vendor \
     device/xiaomi/surya/sepolicy/qcom/vendor \
+    device/xiaomi/surya/sepolicy/sensors/vendor \
     device/xiaomi/surya/sepolicy/thermal/vendor \
     device/xiaomi/surya/sepolicy/usb/vendor
 
