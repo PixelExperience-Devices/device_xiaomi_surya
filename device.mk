@@ -188,6 +188,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wlan
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_xiaomi
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
