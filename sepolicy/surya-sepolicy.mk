@@ -18,4 +18,5 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/xiaomi/surya/sepolicy/audio/private \
     device/xiaomi/surya/sepolicy/camera/private \
-    device/xiaomi/surya/sepolicy/common/private
+    device/xiaomi/surya/sepolicy/common/private \
+    device/xiaomi/surya/sepolicy/sensors/private
