@@ -23,3 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WaveOS Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
      ro.wave.maintainer=ghostrider_reborn
+
+# Zygote
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.device_config.runtime_native.usap_pool_enabled=true
