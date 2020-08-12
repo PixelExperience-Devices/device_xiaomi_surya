@@ -35,6 +35,7 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 #include <android-base/properties.h>
+#include <sys/sysinfo.h>
 
 #include "property_service.h"
 #include "vendor_init.h"
@@ -79,6 +80,29 @@ void set_device_props(const string brand, const string device,
     }
 }
 
+void load_dalvik_properties() {
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+    if (sys.totalram >= 5ull * 1024 * 1024 * 1024){
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        property_override("dalvik.vm.heapstartsize", "16m");
+        property_override("dalvik.vm.heapgrowthlimit", "256m");
+        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heaptargetutilization", "0.5");
+        property_override("dalvik.vm.heapmaxfree", "32m");
+    } else if (sys.totalram >= 7ull * 1024 * 1024 * 1024) {
+        // 8GB
+        property_override("dalvik.vm.heapstartsize", "24m");
+        property_override("dalvik.vm.heapgrowthlimit", "256m");
+        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heaptargetutilization", "0.46");
+        property_override("dalvik.vm.heapmaxfree", "48m");
+    }
+
+    property_override("dalvik.vm.heapminfree", "8m");
+}
+
 void vendor_load_properties()
 {
     /*
@@ -91,4 +115,6 @@ void vendor_load_properties()
         set_device_props("POCO", "surya", "M2007J20CG", "surya_global");
         property_override("ro.product.mod_device", "surya_global");
     }
+
+    load_dalvik_properties();
 }
