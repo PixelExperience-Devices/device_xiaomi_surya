@@ -1,5 +1,5 @@
 # Dirac
-type dirac_prop, property_type;
+vendor_internal_prop(dirac_prop);
 
 # IR
-type lirc_prop, property_type;
+vendor_internal_prop(lirc_prop);
