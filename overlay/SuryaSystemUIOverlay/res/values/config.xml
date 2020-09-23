@@ -44,4 +44,8 @@
     <!-- The width of user avatar when on Keyguard -->
     <dimen name="multi_user_avatar_keyguard_size">12dp</dimen>
     
+    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+     vibrator is capable of subtle vibrations -->
+    <bool name="config_vibrateOnIconAnimation">true</bool>
+    
 </resources>
