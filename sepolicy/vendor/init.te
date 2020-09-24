@@ -2,3 +2,6 @@ allow init vendor_sysfs_cpu_boost:{ file lnk_file } rw_file_perms;
 allow init vendor_sysfs_devfreq:{ file lnk_file } rw_file_perms;
 allow init vendor_sysfs_kgsl:{ file lnk_file } rw_file_perms;
 allow init vendor_sysfs_msm_power:{ file lnk_file } rw_file_perms;
+
+allow init per_boot_file:file ioctl;
+allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
