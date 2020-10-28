@@ -484,7 +484,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf
 
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
@@ -501,4 +500,5 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Zygote
 PRODUCT_SYSTEM_PROPERTIES += \
-    persist.device_config.runtime_native.usap_pool_enabled=true
+    persist.device_config.runtime_native.usap_pool_enabled=true \
+    zygote.critical_window.minute=10
