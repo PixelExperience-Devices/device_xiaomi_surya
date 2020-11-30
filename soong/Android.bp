@@ -1,0 +1,14 @@
+bootstrap_go_package {
+    name: "dummy-soong-rules",
+    pkgPath: "android/soong/dummy",
+    pluginFor: ["soong_build"],
+    deps: [
+        "blueprint",
+        "soong",
+        "soong-android",
+        "soong-phony",
+    ],
+    srcs: [
+        "dummy.go",
+    ]
+}
