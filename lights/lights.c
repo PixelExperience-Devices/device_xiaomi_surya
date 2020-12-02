@@ -16,7 +16,6 @@
  * limitations under the License.
  */
 
-
 // #define LOG_NDEBUG 0
 
 #include <log/log.h>
@@ -61,15 +60,11 @@ char const*const PERSISTENCE_FILE
         = "/sys/class/graphics/fb0/msm_fb_persist_mode";
 
 enum rgb_led {
-    LED_RED = 0,
-    LED_GREEN,
-    LED_BLUE,
+    LED_WHITE = 0,
 };
 
 char *led_names[] = {
-    "red",
-    "green",
-    "blue",
+    "white",
 };
 /**
  * device methods
@@ -217,20 +212,14 @@ static int
 set_speaker_light_locked(struct light_device_t* dev,
         struct light_state_t const* state)
 {
-    int red, green, blue;
+    int brightness = rgb_to_brightness(state);
     int onMS, offMS;
-    unsigned int colorRGB;
     int blink = 0;
     int rc = 0;
 
-    if(!dev) {
+    if (!dev) {
         return -1;
     }
-
-    colorRGB = state->color;
-    red = (colorRGB >> 16) & 0xFF;
-    green = (colorRGB >> 8) & 0xFF;
-    blue = colorRGB & 0xFF;
 
     onMS = state->flashOnMS;
     offMS = state->flashOffMS;
@@ -240,35 +229,23 @@ set_speaker_light_locked(struct light_device_t* dev,
 
     switch (state->flashMode) {
         case LIGHT_FLASH_HARDWARE:
-            if (!!red)
-                rc = set_rgb_led_hw_blink(LED_RED, blink);
-            if (!!green)
-                rc |= set_rgb_led_hw_blink(LED_GREEN, blink);
-            if (!!blue)
-                rc |= set_rgb_led_hw_blink(LED_BLUE, blink);
+            rc = set_rgb_led_hw_blink(LED_WHITE, blink);
             /* fallback to timed blinking if breath is not supported */
             if (rc == 0)
                 break;
         case LIGHT_FLASH_TIMED:
-            if (!!red)
-                rc = set_rgb_led_timer_trigger(LED_RED, onMS, offMS);
-            if (!!green)
-                rc |= set_rgb_led_timer_trigger(LED_GREEN, onMS, offMS);
-            if (!!blue)
-                rc |= set_rgb_led_timer_trigger(LED_BLUE, onMS, offMS);
+            rc = set_rgb_led_timer_trigger(LED_WHITE, onMS, offMS);
             /* fallback to constant on if timed blinking is not supported */
             if (rc == 0)
                 break;
         case LIGHT_FLASH_NONE:
         default:
-            rc = set_rgb_led_brightness(LED_RED, red);
-            rc |= set_rgb_led_brightness(LED_GREEN, green);
-            rc |= set_rgb_led_brightness(LED_BLUE, blue);
+            rc = set_rgb_led_brightness(LED_WHITE, brightness);
             break;
     }
 
-    ALOGD("set_speaker_light_locked mode=%d, colorRGB=%08X, onMS=%d, offMS=%d, rc=%d\n",
-            state->flashMode, colorRGB, onMS, offMS, rc);
+    ALOGV("set_speaker_light_locked mode=%d, brightness=%d, onMS=%d, offMS=%d, rc=%d\n",
+            state->flashMode, brightness, onMS, offMS, rc);
 
     return rc;
 }
