@@ -67,6 +67,9 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 TARGET_KERNEL_APPEND_DTB := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Media
 TARGET_DISABLED_UBWC := true
 
