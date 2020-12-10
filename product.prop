@@ -13,3 +13,6 @@ ro.soc.model=SM7150
 
 # (b/183612348): Enable skia reduceOpsTaskSplitting
 renderthread.skia.reduceopstasksplitting=true
+
+#  Maximum operating rate for codecs.
+debug.media.transcoding.codec_max_operating_rate=120
