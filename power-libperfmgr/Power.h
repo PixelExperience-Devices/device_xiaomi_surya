@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2020 The PixelExperience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,6 +58,10 @@ class Power : public ::aidl::android::hardware::power::BnPower {
     std::atomic<bool> mSustainedPerfModeOn;
     std::atomic<bool> mBatterySaverOn;
     const int64_t mAdpfRateNs;
+    int open_ts_input();
+    void handle_dt2w(bool enabled);
+    char mDt2wPath[PATH_MAX];
+    std::atomic<bool> mPathCached;
 };
 
 }  // namespace pixel
