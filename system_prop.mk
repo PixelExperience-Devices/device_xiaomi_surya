@@ -19,3 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Netflix
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q6150-17263-1
+
+# WaveOS Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.wave.maintainer=ghostrider_reborn
