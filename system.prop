@@ -20,9 +20,6 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 ro.charger.enable_suspend=true
 persist.vendor.quick.charge=1
 
-# CNE
-persist.vendor.cne.feature=1
-
 # DPM
 persist.vendor.dpm.feature=11
 
