@@ -14,7 +14,7 @@ endif
 
 # Camera
 PRODUCT_PRODUCT_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.lineageos.snap,net.sourceforge.opencamera,org.codeaurora.snapcam
+    vendor.camera.aux.packagelist=com.android.camera,net.sourceforge.opencamera,org.codeaurora.snapcam
 
 # Charger
 PRODUCT_PRODUCT_PROPERTIES += \
