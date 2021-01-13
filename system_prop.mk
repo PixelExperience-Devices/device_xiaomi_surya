@@ -35,10 +35,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # App with ~20.5ms (16.6ms * 2 - 10.5ms - 2ms). The other values were calculated similarly.
 # Full comparison between the old vs. the new values are captured in
 # https://docs.google.com/spreadsheets/d/1a_5cVNY3LUAkeg-yL56rYQNwved6Hy-dvEcKSxp6f8k/edit
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.use_phase_offsets_as_durations=1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.late.sf.duration=10500000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.late.app.duration=20500000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.early.sf.duration=21000000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.early.app.duration=16500000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.earlyGl.sf.duration=13500000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=21000000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.use_phase_offsets_as_durations=1
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.late.sf.duration=10500000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.late.app.duration=20500000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.sf.duration=21000000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.early.app.duration=16500000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.sf.duration=13500000
+PRODUCT_PROPERTY_OVERRIDES += debug.sf.earlyGl.app.duration=21000000
