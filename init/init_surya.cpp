@@ -100,8 +100,10 @@ void load_device_properties() {
 
     if (hwname == "surya") {
         set_device_props(fingerprint, description, "Poco", "surya", "M2007J20CG");
+        SetProperty("ro.wave.device_name", "POCO X3 NFC");
     } else if (hwname == "karna") {
         set_device_props(fingerprint, description, "Poco", "karna", "M2007J20CI");
+        SetProperty("ro.wave.device_name", "POCO X3");
     }
 }
 
