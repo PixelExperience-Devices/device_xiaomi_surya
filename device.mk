@@ -53,8 +53,7 @@ PRODUCT_PACKAGES += \
     libbtconfigstore
 
 # Camera
-PRODUCT_PACKAGES += \
-    Snap
+$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
