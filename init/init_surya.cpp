@@ -45,7 +45,6 @@
 #include "vendor_init.h"
 
 using android::base::GetProperty;
-using android::base::SetProperty;
 using std::string;
 
 std::vector<string> ro_props_default_source_order = {
@@ -101,10 +100,10 @@ void load_device_properties() {
 
     if (hwname == "surya") {
         set_device_props(fingerprint, description, "Poco", "surya", "M2007J20CG");
-        SetProperty("ro.wave.device_name", "POCO X3 NFC");
+        property_override("ro.wave.device_name", "POCO X3 NFC");
     } else if (hwname == "karna") {
         set_device_props(fingerprint, description, "Poco", "karna", "M2007J20CI");
-        SetProperty("ro.wave.device_name", "POCO X3");
+        property_override("ro.wave.device_name", "POCO X3");
     }
 }
 
@@ -138,12 +137,12 @@ void load_dalvik_properties()
         heapmaxfree = "32m";
     }
 
-    SetProperty("dalvik.vm.heapstartsize", heapstartsize);
-    SetProperty("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    SetProperty("dalvik.vm.heapsize", heapsize);
-    SetProperty("dalvik.vm.heaptargetutilization", heaptargetutilization);
-    SetProperty("dalvik.vm.heapminfree", heapminfree);
-    SetProperty("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 }
 
 void vendor_load_properties()
