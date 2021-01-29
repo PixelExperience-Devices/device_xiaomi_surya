@@ -91,9 +91,9 @@ void load_device_properties() {
     string hwname = GetProperty("ro.boot.hwname", "");
 
     if (hwname == "surya") {
-        set_device_props("Poco", "surya", "M2007J20CG");
+        set_device_props("Poco", "surya", "POCO X3 NFC");
     } else if (hwname == "karna") {
-        set_device_props("Poco", "karna", "M2007J20CI");
+        set_device_props("Poco", "karna", "POCO X3");
     }
 }
 
