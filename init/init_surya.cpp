@@ -79,29 +79,21 @@ void set_ro_build_prop(const string &source, const string &prop,
     property_override(prop_name.c_str(), value.c_str(), false);
 }
 
-void set_device_props(const string fingerprint, const string description,
-                      const string brand, const string device, const string model) {
+void set_device_props(const string brand, const string device, const string model) {
     for (const auto &source : ro_props_default_source_order) {
-        set_ro_build_prop(source, "fingerprint", fingerprint);
         set_ro_build_prop(source, "brand", brand, true);
         set_ro_build_prop(source, "device", device, true);
         set_ro_build_prop(source, "model", model, true);
     }
-
-    property_override("ro.build.fingerprint", fingerprint.c_str());
-    property_override("ro.build.description", description.c_str());
 }
 
 void load_device_properties() {
     string hwname = GetProperty("ro.boot.hwname", "");
 
-    string fingerprint = "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys";
-    string description = "sunfish-user 11 RQ1A.210105.002 6985033 release-keys";
-
     if (hwname == "surya") {
-        set_device_props(fingerprint, description, "Poco", "surya", "M2007J20CG");
+        set_device_props("Poco", "surya", "M2007J20CG");
     } else if (hwname == "karna") {
-        set_device_props(fingerprint, description, "Poco", "karna", "M2007J20CI");
+        set_device_props("Poco", "karna", "M2007J20CI");
     }
 }
 
