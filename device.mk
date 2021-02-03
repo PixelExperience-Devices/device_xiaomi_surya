@@ -183,5 +183,15 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+# PA common QTI components configuration
+TARGET_BOARD_PLATFORM := sm6150
+
+TARGET_COMMON_QTI_COMPONENTS := \
+    bt \
+    display \
+    gps \
+    perf \
+    telephony \
+    wfd
+
+-include device/qcom/common/common.mk
