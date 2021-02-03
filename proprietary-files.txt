@@ -161,9 +161,6 @@ product/lib64/vendor.display.color@1.2.so
 product/lib64/vendor.display.color@1.3.so
 product/lib64/vendor.display.postproc@1.0.so
 
-# Power-off charging daemon - from cmi
-bin/charger|4b600706d503dce9cf3b41b81f9c9a618a458221
-
 # Soundfx - from guacamole QKQ1.190716.003
 product/vendor_overlay/29/lib/soundfx/libvolumelistener.so|e6c1f1bfb7bd5cfb36131aaff0d4e8c74833865d
 product/vendor_overlay/29/lib64/soundfx/libvolumelistener.so|1b16cd00fd2144e860f99c0869c2db1489c789a2
