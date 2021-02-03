@@ -20,10 +20,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.netflix.bsp_rev=Q6150-17263-1
 
-# WaveOS Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-     ro.wave.maintainer=ghostrider_reborn
-
 # Zygote
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.device_config.runtime_native.usap_pool_enabled=true
