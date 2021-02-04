@@ -76,6 +76,7 @@ public class DevicePreferenceFragment extends PreferenceFragment {
         mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getEntry());
         mPrefPowerSaveRefreshRate.setValue(Integer.toString(RefreshRateUtils.getPowerSaveRefreshRate(getActivity())));
         mPrefPowerSaveRefreshRate.setSummary(mPrefPowerSaveRefreshRate.getEntry());
+        mPrefPowerSaveRefreshRate.setEnabled(RefreshRateUtils.getPowerSaveRefreshRateSwitch(getActivity()));
         mPrefPowerSaveRefreshRateSwitch.setChecked(RefreshRateUtils.getPowerSaveRefreshRateSwitch(getActivity()));
         try {
             mPrefHideCameraCutout.setChecked(
