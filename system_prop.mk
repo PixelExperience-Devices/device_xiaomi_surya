@@ -1,12 +1,12 @@
 # Bluetooth
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bluetooth.a2dp_offload.supported=false \
+    persist.bluetooth.a2dp_offload.disabled=true \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
+    vendor.audio.feature.a2dp_offload.enable=false \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=false \
     persist.vendor.bt.a2dp.aac_whitelist=false \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac \
-    persist.vendor.btstack.enable.splita2dp=true \
-    persist.vendor.btstack.enable.twsplus=true \
-    persist.vendor.btstack.enable.twsplussho=true \
-    ro.bluetooth.library_name=libbluetooth_qti.so \
-    vendor.bluetooth.soc=cherokee
+    ro.bluetooth.library_name=libbluetooth.so
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
