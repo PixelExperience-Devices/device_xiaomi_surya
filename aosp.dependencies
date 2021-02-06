@@ -20,11 +20,11 @@
     "remote": "pixel-devices-blobs",
     "repository": "vendor_qcom_common",
     "target_path": "vendor/qcom/common",
-    "branch": "ruby"
+    "branch": "eleven"
   },
   {
     "repository": "device_qcom_common",
     "target_path": "device/qcom/common",
-    "branch": "ruby"
+    "branch": "eleven"
   }
 ]
