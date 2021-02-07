@@ -143,6 +143,7 @@ TARGET_NFC_SKU := surya
 PRODUCT_PACKAGES += \
     AOSPASuryaFrameworks \
     AOSPASuryaSettings \
+    AOSPASuryaSystemUI \
     KarnaFrameworks \
     NoCutoutOverlay \
     NotchBarKiller \
