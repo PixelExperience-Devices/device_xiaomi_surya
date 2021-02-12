@@ -40,6 +40,10 @@ lib/libfm-hci.so
 product/lib64/vendor.qti.hardware.fm@1.0.so
 product/lib/vendor.qti.hardware.fm@1.0.so
 
+# Hacks
+lib/libcameraservice.so|c56a909d4222988ef3c76a0376a11ae02a8c1779
+lib64/libcameraservice.so|44f939eddb5694423704c85a062ae362afccf892
+
 # Input
 etc/excluded-input-devices.xml
 
