@@ -12,6 +12,14 @@ on init
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_movie
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_still  
 
+on init
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-3
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
+
 on property:ro.boot.hwc=*
     setprop vendor.boot.hwc ${ro.boot.hwc}   
 
