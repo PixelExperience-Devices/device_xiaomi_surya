@@ -15,6 +15,7 @@
     <!-- POCO X3 specific settings -->
     <string name="device_power_save_refresh_rate">Battery saver refresh rate</string>
     <string name="device_power_save_refresh_rate_switch">Automatically lower refresh rate when battery saver is active</string>
+    <string name="refresh_rate_tile_disabled">Battery saver enabled</string>
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Clear speaker</string>
