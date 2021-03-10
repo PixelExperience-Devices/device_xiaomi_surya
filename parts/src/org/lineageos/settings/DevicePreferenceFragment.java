@@ -36,7 +36,6 @@ public class DevicePreferenceFragment extends PreferenceFragment {
     private static final String KEY_POWER_SAVE_REFRESH_RATE = "pref_power_save_refresh_rate";
     private static final String KEY_POWER_SAVE_REFRESH_RATE_SWITCH = "pref_power_save_refresh_rate_switch";
 
-    private IOverlayManager mOverlayService;
     private PowerManager mPowerManagerService;
 
     private ListPreference mPrefMinRefreshRate;
@@ -47,7 +46,6 @@ public class DevicePreferenceFragment extends PreferenceFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
-        mOverlayService = IOverlayManager.Stub.asInterface(ServiceManager.getService("overlay"));
         mPowerManagerService = (PowerManager) getContext().getSystemService(Context.POWER_SERVICE);
     }
 

@@ -16,7 +16,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory
-        android:title="@string/device_refresh_rate">
+        android:title="@string/device_min_refresh_rate">
 
         <ListPreference
             android:key="pref_min_refresh_rate"
