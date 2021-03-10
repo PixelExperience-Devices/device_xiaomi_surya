@@ -11,6 +11,8 @@ on init
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_movie
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/dsi_display_cabc_still  
+    # Setup permissions for schedtune boost to allow parts to write to it
+    chmod 646 /dev/stune/top-app/schedtune.boost
 
 on late-init
     # Start services for bootanim
