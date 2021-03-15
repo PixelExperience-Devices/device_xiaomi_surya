@@ -26,5 +26,11 @@
     "repository": "device_qcom_common",
     "target_path": "device/qcom/common",
     "branch": "eleven"
+  },
+  {
+    "repository": "vendor_nubia_TP1803",
+    "target_path": "vendor/nubia/TP1803",
+    "branch": "eleven",
+    "remote": "pixel-devices-blobs"
   }
 ]

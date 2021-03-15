@@ -143,7 +143,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
-    RcsService
+    RcsService \
+    imsoverride
 
 # Telephony
 PRODUCT_PACKAGES += \

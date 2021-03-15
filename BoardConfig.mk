@@ -163,6 +163,9 @@ TARGET_TAP_TO_WAKE_NODE := "/dev/input/event1"
 # Treble
 BOARD_VNDK_VERSION := current
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += vendor/nubia/TP1803
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
