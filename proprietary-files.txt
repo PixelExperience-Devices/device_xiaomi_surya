@@ -46,7 +46,3 @@ lib64/libcameraservice.so|44f939eddb5694423704c85a062ae362afccf892
 
 # Input
 etc/excluded-input-devices.xml
-
-# Soundfx - from guacamole QKQ1.190716.003
-product/vendor_overlay/29/lib/soundfx/libvolumelistener.so|e6c1f1bfb7bd5cfb36131aaff0d4e8c74833865d
-product/vendor_overlay/29/lib64/soundfx/libvolumelistener.so|1b16cd00fd2144e860f99c0869c2db1489c789a2
