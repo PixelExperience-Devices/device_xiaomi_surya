@@ -150,11 +150,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
-# WiFi
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
-
 # WFD
 PRODUCT_PACKAGES += \
     libaacwrapper \
