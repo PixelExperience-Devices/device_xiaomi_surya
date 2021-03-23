@@ -51,10 +51,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbtconfigstore
 
-PRODUCT_COPY_FILES += \
-   frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/a2dp_audio_policy_configuration.xml \
-   frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/bluetooth_audio_policy_configuration.xml
-
 # Camera
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
@@ -148,7 +144,7 @@ PRODUCT_BOOT_JARS += \
 
 # Vendor overlay
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/vendor-overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION))
+    $(LOCAL_PATH)/vendor-overlay/etc/vintf/manifest/st_disable.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/vintf/manifest/st_disable.xml
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
