@@ -18,10 +18,12 @@ import common
 import re
 
 def FullOTA_InstallEnd(info):
+  OTA_InstallVendor(info)
   OTA_InstallEnd(info)
   return
 
 def IncrementalOTA_InstallEnd(info):
+  OTA_InstallVendor(info)
   OTA_InstallEnd(info)
   return
 
@@ -29,13 +31,24 @@ def AddImage(info, basename, dest):
   name = basename
   data = info.input_zip.read("IMAGES/" + basename)
   common.ZipWriteStr(info.output_zip, name, data)
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
+  if dest: # Do we want to install the file or just add it to the zip?
+    info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
 def AddImageRadio(info, basename, dest):
   name = basename
   data = info.input_zip.read("RADIO/" + basename)
   common.ZipWriteStr(info.output_zip, name, data)
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
+  if dest: # Do we want to install the file or just add it to the zip?
+    info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
+
+def OTA_InstallVendor(info):
+  # Magic fuckery begins here
+  info.script.Print("Patching vendor image unconditionally...") # Deception
+  AddImageRadio(info, "vendor_op_list", "") # Add the dynamic operations list file to the zip
+  AddImageRadio(info, "cafvendor.img", "") # Add the vendor image to the zip
+  info.script.AppendExtra('# hello there') # egg
+  info.script.AppendExtra('assert(update_dynamic_partitions(package_extract_file("vendor_op_list")));') # resize vendor lp
+  info.script.AppendExtra('package_extract_file("cafvendor.img", map_partition("vendor"));') # yup, it's that simple
 
 def OTA_InstallEnd(info):
   info.script.Print("Patching firmware images...")
