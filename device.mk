@@ -142,10 +142,6 @@ PRODUCT_BOOT_JARS += \
     telephony-ext \
     android.hidl.manager-V1.0-java
 
-# Vendor overlay
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vendor-overlay/etc/vintf/manifest/st_disable.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/vintf/manifest/st_disable.xml
-
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
