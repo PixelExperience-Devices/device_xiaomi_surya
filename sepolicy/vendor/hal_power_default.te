@@ -1,3 +1,5 @@
+typeattribute hal_power_default mlstrustedsubject;
+
 # DT2W
 allow hal_power_default proc_tp_gesture:dir search;
 allow hal_power_default proc_tp_gesture:file rw_file_perms;
@@ -18,6 +20,10 @@ allow hal_power_default vendor_sysfs_devfreq:dir search;
 allow hal_power_default vendor_sysfs_devfreq:file rw_file_perms;
 allow hal_power_default vendor_sysfs_kgsl:file rw_file_perms;
 allow hal_power_default vendor_sysfs_graphics:file r_file_perms;
+
+# Set scheduling info for apps (for adpf)
+allow hal_power_default appdomain:process { getsched setsched };
+allow hal_power_default self:capability sys_nice;
 
 # To get/set powerhal state property
 set_prop(hal_power_default, vendor_power_prop)
