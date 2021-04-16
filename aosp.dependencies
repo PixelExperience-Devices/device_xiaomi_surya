@@ -1,10 +1,5 @@
 [
   {
-    "repository": "kernel_xiaomi_surya",
-    "target_path": "kernel/xiaomi/surya",
-    "branch": "eleven"
-  },
-  {
     "remote": "pixel-devices-blobs",
     "repository": "vendor_xiaomi_surya",
     "target_path": "vendor/xiaomi/surya",
@@ -32,5 +27,11 @@
     "target_path": "vendor/nubia/TP1803",
     "branch": "eleven",
     "remote": "pixel-devices-blobs"
+  },
+  {
+    "repository": "nullbytepl/surya-caf",
+    "target_path": "device/surya-caf",
+    "branch": "ten",
+    "remote": "gitlab"
   }
 ]
