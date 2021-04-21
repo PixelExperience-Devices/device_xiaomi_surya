@@ -104,7 +104,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-TARGET_KERNEL_CONFIG := vendor/surya-perf_defconfig
+TARGET_KERNEL_CONFIG := vendor/surya_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 TARGET_KERNEL_USE_LATEST_CLANG := true
 TARGET_KERNEL_ADDITIONAL_FLAGS += LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
