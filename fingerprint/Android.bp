@@ -1,0 +1,26 @@
+cc_defaults {
+    name: "surya_fingerprint_defaults",
+    defaults: ["hidl_defaults"],
+    vendor: true,
+    relative_install_path: "hw",
+    srcs: [
+        "BiometricsFingerprint.cpp",
+        "service.cpp",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "libhidlbase",
+        "libhardware",
+        "libutils",
+        "android.hardware.biometrics.fingerprint@2.1",
+    ],
+}
+
+cc_binary {
+    name: "android.hardware.biometrics.fingerprint@2.1-service.surya",
+    defaults: ["surya_fingerprint_defaults"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.surya.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.surya.xml"],
+}
