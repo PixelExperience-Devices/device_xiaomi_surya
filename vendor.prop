@@ -1,0 +1,75 @@
+# Audio
+persist.vendor.audio.voicecall.speaker.stereo=true
+
+# Bluetooth
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
+persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
+persist.vendor.qcom.bluetooth.enable.splita2dp=true
+persist.vendor.qcom.bluetooth.scram.enabled=true
+persist.vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.qcom.bluetooth.twsp_state.enabled=false
+ro.vendor.bluetooth.wipower=false
+vendor.qcom.bluetooth.soc=cherokee
+
+# Display
+debug.sf.disable_backpressure=1
+ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_idle_timer_ms=200
+ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.vendor.display.ad=1
+ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
+ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
+ro.vendor.display.sensortype=2
+vendor.display.disable_idle_time_hdr=1
+vendor.display.disable_idle_time_video=1
+vendor.display.idle_time=1100
+
+# DPM
+persist.vendor.dpmhalservice.enable=1
+
+# DRM
+drm.service.enabled=true
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# HVDCP
+persist.vendor.cp.fcc_main_ua=400000
+persist.vendor.cp.taper_term_mv=6500
+persist.vendor.cp.vbus_offset_mv=1040
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Incremental FS
+ro.incremental.enable=1
+
+# Keystore
+ro.hardware.keystore_desede=true
+ro.crypto.volume.filenames_mode=aes-256-cts
+
+# IWLAN
+persist.vendor.data.iwlan.enable=true
+ro.telephony.iwlan_operation_mode=legacy
+
+# Netflix
+vendor.netflix.bsp_rev=Q6150-17263-1
+
+# Radio
+persist.vendor.radio.add_power_save=1
+persist.vendor.radio.atfwd.start=true
+persist.vendor.radio.data_con_rprt=1
+persist.vendor.radio.force_on_dc=true
+persist.vendor.radio.manual_nw_rej_ct=1
+persist.vendor.radio.mt_sms_ack=30
+persist.vendor.radio.process_sups_ind=1
+persist.vendor.radio.redir_party_num=1
+persist.vendor.radio.report_codec=1
+
+# SSR
+persist.vendor.ssr.restart_level=ALL_ENABLE
