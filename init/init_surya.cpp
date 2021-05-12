@@ -132,5 +132,8 @@ void vendor_load_properties()
     }
 
     load_dalvik_properties();
+    //Safetynet workarounds
     set_device_fp();
+    property_override("ro.oem_unlock_supported", "0");
+    property_override("ro.boot.verifiedbootstate", "green");
 }
