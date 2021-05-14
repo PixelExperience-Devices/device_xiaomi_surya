@@ -31,7 +31,7 @@
   {
     "repository": "nullbytepl/surya-caf",
     "target_path": "device/surya-caf",
-    "branch": "ten",
+    "branch": "eleven",
     "remote": "gitlab"
   }
 ]
