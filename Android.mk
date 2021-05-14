@@ -16,6 +16,8 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),surya)
+$(call add-radio-file,dynamic-add-system_ext)
+
 include $(CLEAR_VARS)
 LOCAL_SHARED_LIBRARIES := libhidltransport
 LOCAL_MODULE := android.hidl.base@1.0
