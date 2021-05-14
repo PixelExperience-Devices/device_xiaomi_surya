@@ -160,6 +160,5 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     perf \
     telephony \
-    wfd
 
 -include device/qcom/common/common.mk
