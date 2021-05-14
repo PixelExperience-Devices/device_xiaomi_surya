@@ -18,6 +18,7 @@
     "branch": "eleven"
   },
   {
+    "remote": "pixel-devices-blobs",
     "repository": "device_qcom_common",
     "target_path": "device/qcom/common",
     "branch": "eleven"
