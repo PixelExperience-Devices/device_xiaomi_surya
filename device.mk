@@ -128,6 +128,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # NFC
 TARGET_NFC_SKU := surya
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
+
 # Overlays
 PRODUCT_PACKAGES += \
     AOSPASuryaFrameworks \
