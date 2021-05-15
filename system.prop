@@ -128,7 +128,7 @@ ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
 
 #Expose aux camera for below packages
-vendor.camera.aux.packagelist=org.codeaurora.snapcam
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
 #enable IZat OptInApp overlay
 persist.vendor.overlay.izat.optin=rro
