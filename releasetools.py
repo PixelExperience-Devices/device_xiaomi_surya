@@ -62,4 +62,22 @@ def OTA_InstallEnd(info):
   AddImageRadio(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
   AddImage(info, "vbmeta_system.img", "/dev/block/bootdevice/by-name/vbmeta_system")
+
+  # Firmware
+  AddImageRadio(info, "cmnlib64.mbn", "/dev/block/bootdevice/by-name/cmnlib64")
+  AddImageRadio(info, "cmnlib.mbn", "/dev/block/bootdevice/by-name/cmnlib")
+  AddImageRadio(info, "hyp.mbn", "/dev/block/bootdevice/by-name/hyp")
+  AddImageRadio(info, "tz.mbn", "/dev/block/bootdevice/by-name/tz")
+  AddImageRadio(info, "aop.mbn", "/dev/block/bootdevice/by-name/aop")
+  AddImageRadio(info, "xbl_config.elf", "/dev/block/bootdevice/by-name/xbl_config")
+  AddImageRadio(info, "storsec.mbn", "/dev/block/bootdevice/by-name/storsec")
+  AddImageRadio(info, "uefi_sec.mbn", "/dev/block/bootdevice/by-name/uefisecapp")
+  AddImageRadio(info, "imagefv.elf", "/dev/block/bootdevice/by-name/imagefv")
+  AddImageRadio(info, "qupv3fw.elf", "/dev/block/bootdevice/by-name/qupfw")
+  AddImageRadio(info, "abl.elf", "/dev/block/bootdevice/by-name/abl")
+  AddImageRadio(info, "km4.mbn", "/dev/block/bootdevice/by-name/keymaster")
+  AddImageRadio(info, "devcfg.mbn", "/dev/block/bootdevice/by-name/devcfg")
+  AddImageRadio(info, "xbl.elf", "/dev/block/bootdevice/by-name/xbl")
+  AddImageRadio(info, "ffu.img", "/dev/block/bootdevice/by-name/ffu")
+
   return
