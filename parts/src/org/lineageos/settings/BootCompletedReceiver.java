@@ -17,25 +17,20 @@
 package org.lineageos.settings;
 
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.PowerManager;
+import android.provider.Settings;
 
-import org.lineageos.settings.PowerSaveModeChangeReceiver;
 import org.lineageos.settings.doze.DozeUtils;
-import org.lineageos.settings.utils.RefreshRateUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        // Refresh rate
-        RefreshRateUtils.setFPS(RefreshRateUtils.getRefreshRate(context));
-        IntentFilter filter = new IntentFilter();
-        PowerSaveModeChangeReceiver receiver = new PowerSaveModeChangeReceiver();
-        filter.addAction(PowerManager.ACTION_POWER_SAVE_MODE_CHANGED);
-        context.getApplicationContext().registerReceiver(receiver, filter);
+        ContentResolver mContentResolver = context.getContentResolver();
+
+        Settings.System.putFloat(mContentResolver, "min_refresh_rate", 60.0f);
 
         // Doze
         DozeUtils.checkDozeService(context);

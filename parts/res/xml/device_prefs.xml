@@ -18,24 +18,10 @@
     <PreferenceCategory
         android:title="@string/device_min_refresh_rate">
 
-        <ListPreference
-            android:key="pref_min_refresh_rate"
-            android:title="@string/device_min_refresh_rate"
-            android:entries="@array/device_refresh_rates"
-            android:entryValues="@array/device_refresh_rates_val"
-            android:defaultValue="3" />
-
          <SwitchPreference
-            android:key="pref_power_save_refresh_rate_switch"
-            android:title="@string/device_power_save_refresh_rate_switch"
-            android:defaultValue="true" />
-
-        <ListPreference
-            android:key="pref_power_save_refresh_rate"
-            android:title="@string/device_power_save_refresh_rate"
-            android:entries="@array/device_power_save_refresh_rates"
-            android:entryValues="@array/device_power_save_refresh_rates_val"
-            android:defaultValue="2" />
+            android:key="pref_force_60"
+            android:title="@string/force_60_fps"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 </PreferenceScreen>

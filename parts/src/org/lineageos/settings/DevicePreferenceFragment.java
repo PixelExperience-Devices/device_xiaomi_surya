@@ -16,59 +16,44 @@
 
 package org.lineageos.settings;
 
+import android.content.ContentResolver;
 import android.content.Context;
-import android.content.om.IOverlayManager;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.widget.Toast;
+import android.provider.Settings;
 
-import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
-import org.lineageos.settings.utils.RefreshRateUtils;
-
 public class DevicePreferenceFragment extends PreferenceFragment {
-    private static final String KEY_MIN_REFRESH_RATE = "pref_min_refresh_rate";
-    private static final String KEY_POWER_SAVE_REFRESH_RATE = "pref_power_save_refresh_rate";
-    private static final String KEY_POWER_SAVE_REFRESH_RATE_SWITCH = "pref_power_save_refresh_rate_switch";
+    private static final String KEY_FORCE_60 = "pref_force_60";
 
-    private PowerManager mPowerManagerService;
+    private SwitchPreference mPrefForce60Switch;
 
-    private ListPreference mPrefMinRefreshRate;
-    private ListPreference mPrefPowerSaveRefreshRate;
-    private SwitchPreference mPrefPowerSaveRefreshRateSwitch;
+    private ContentResolver mContentResolver;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mContentResolver = getActivity().getContentResolver();
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
-        mPowerManagerService = (PowerManager) getContext().getSystemService(Context.POWER_SERVICE);
     }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.device_prefs);
-        mPrefMinRefreshRate = (ListPreference) findPreference(KEY_MIN_REFRESH_RATE);
-        mPrefMinRefreshRate.setOnPreferenceChangeListener(PrefListener);
-        mPrefPowerSaveRefreshRate = (ListPreference) findPreference(KEY_POWER_SAVE_REFRESH_RATE);
-        mPrefPowerSaveRefreshRate.setOnPreferenceChangeListener(PrefListener);
-        mPrefPowerSaveRefreshRateSwitch = (SwitchPreference) findPreference(KEY_POWER_SAVE_REFRESH_RATE_SWITCH);
-        mPrefPowerSaveRefreshRateSwitch.setOnPreferenceChangeListener(PrefListener);
+        mPrefForce60Switch = (SwitchPreference) findPreference(KEY_FORCE_60);
+        mPrefForce60Switch.setOnPreferenceChangeListener(PrefListener);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        mPrefMinRefreshRate.setValue(Integer.toString(RefreshRateUtils.getRefreshRate(getActivity())));
-        mPrefMinRefreshRate.setSummary(mPrefMinRefreshRate.getEntry());
-        mPrefPowerSaveRefreshRate.setValue(Integer.toString(RefreshRateUtils.getPowerSaveRefreshRate(getActivity())));
-        mPrefPowerSaveRefreshRate.setSummary(mPrefPowerSaveRefreshRate.getEntry());
-        mPrefPowerSaveRefreshRate.setEnabled(RefreshRateUtils.getPowerSaveRefreshRateSwitch(getActivity()));
-        mPrefPowerSaveRefreshRateSwitch.setChecked(RefreshRateUtils.getPowerSaveRefreshRateSwitch(getActivity()));
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("parts_pref", Context.MODE_PRIVATE);
+        mPrefForce60Switch.setChecked(sharedPref.getBoolean("force_60", false));
     }
 
     private final Preference.OnPreferenceChangeListener PrefListener =
@@ -77,32 +62,13 @@ public class DevicePreferenceFragment extends PreferenceFragment {
                 public boolean onPreferenceChange(Preference preference, Object value) {
                     final String key = preference.getKey();
 
-                    if (KEY_MIN_REFRESH_RATE.equals(key)) {
-                        RefreshRateUtils.setRefreshRate(getActivity(), Integer.parseInt((String) value));
-                        if (!mPowerManagerService.isPowerSaveMode()) {
-                            RefreshRateUtils.setFPS(Integer.parseInt((String) value));
-                        }
-                        int minRefreshRateIndex = mPrefMinRefreshRate
-                                .findIndexOfValue((String) value);
-                        mPrefMinRefreshRate
-                                .setSummary(mPrefMinRefreshRate.getEntries()[minRefreshRateIndex]);
-                    } else if (KEY_POWER_SAVE_REFRESH_RATE.equals(key)) {
-                        RefreshRateUtils.setPowerSaveRefreshRate(getActivity(), Integer.parseInt((String) value));
-                        if (mPowerManagerService.isPowerSaveMode()) {
-                            RefreshRateUtils.setFPS(Integer.parseInt((String) value));
-                        }
-                        int powerSaveRefreshRateIndex = mPrefPowerSaveRefreshRate
-                                .findIndexOfValue((String) value);
-                        mPrefPowerSaveRefreshRate
-                                .setSummary(mPrefPowerSaveRefreshRate.getEntries()[powerSaveRefreshRateIndex]);
-                    } else if (KEY_POWER_SAVE_REFRESH_RATE_SWITCH.equals(key)) {
-                        RefreshRateUtils.setPowerSaveRefreshRateSwitch(getActivity(), (boolean) value);
-                        if ((boolean) value && mPowerManagerService.isPowerSaveMode()) {
-                            RefreshRateUtils.setFPS(RefreshRateUtils.getPowerSaveRefreshRate(getActivity()));
-                        } else {
-                            RefreshRateUtils.setFPS(RefreshRateUtils.getRefreshRate(getActivity()));
-                        }
-                        mPrefPowerSaveRefreshRate.setEnabled((boolean) value ? true : false);
+                    if (KEY_FORCE_60.equals(key)) {
+                        SharedPreferences sharedPref = getActivity().getSharedPreferences("parts_pref", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPref.edit();
+
+                        Settings.System.putFloat(mContentResolver, "peak_refresh_rate", (boolean) value ? 60f : 120f);
+                        editor.putBoolean("force_60", (boolean) value);
+                        editor.commit();
                     }
                     return true;
                 }
