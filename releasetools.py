@@ -50,11 +50,14 @@ def AddImageRadio(info, basename, dest):
 
 def OTA_InstallVendor(info):
   # Magic fuckery begins here
-  info.script.Print("Patching vendor image unconditionally...") # Deception
   AddImageRadio(info, "vendor_op_list", "") # Add the dynamic operations list file to the zip
   AddImageRadio(info, "cafvendor.img", "") # Add the vendor image to the zip
   info.script.AppendExtra('# hello there') # egg
-  info.script.AppendExtra('assert(update_dynamic_partitions(package_extract_file("vendor_op_list")));') # resize vendor lp
+
+  info.script.Print("Resizing vendor...") # Be more verbose about the process so that if something goes wrong it's easier to diagnose
+  info.script.AppendExtra('ifelse(is_mounted("/vendor"), unmount("/vendor"));') # Doesn't hurt
+  info.script.AppendExtra('update_dynamic_partitions(package_extract_file("vendor_op_list"));') # resize vendor lp
+  info.script.Print("Patching vendor image unconditionally...") # Deception
   info.script.AppendExtra('package_extract_file("cafvendor.img", map_partition("vendor"));') # yup, it's that simple
 
 def OTA_InstallEnd(info):
