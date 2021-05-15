@@ -753,6 +753,7 @@ vendor/lib64/unnhal-acc-hvx.so|c3ce5a9f20cd459a1d697322463048adb3ba8e0f
 # NFC
 vendor/etc/libnfc-nxp.conf
 vendor/lib/libpn553_fw.so
+vendor/libnfc-nxp_RF.conf
 
 # Peripheral manager - from LA.UM.9.1.r1-09600-SMxxx0.0
 vendor/bin/pm-proxy|0704192692efb4b79e8cb1a2252625ad24468805
