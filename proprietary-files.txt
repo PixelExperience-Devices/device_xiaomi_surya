@@ -1075,9 +1075,6 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f96
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|11a2f94c613282410f09f4df1daee6e2330af06a
 
-# Vibration calibration
-vendor/bin/vibrator_calibration
-
 # Vibrator firmware - AW8624
 vendor/firmware/aw8624_haptic.bin
 vendor/firmware/aw8624_rtp.bin
