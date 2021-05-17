@@ -75,6 +75,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+# FM
+BOARD_HAVE_QCOM_FM := true
+
 # GPS
 LOC_HIDL_VERSION := 4.0
 
