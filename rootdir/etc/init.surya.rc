@@ -58,13 +58,6 @@ service mi_thermald /system/vendor/bin/mi_thermald
     user root
     group system
 
-service batterysecret /vendor/bin/batterysecret
-    override
-    class last_start
-    user root
-    group system system wakelock
-    disabled
-
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
