@@ -171,7 +171,22 @@ MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 
 # QTI
-TARGET_COMMON_QTI_COMPONENTS := all
+TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    media-legacy \
+    nq-nfc \
+    overlay \
+    perf \
+    telephony \
+    usb \
+    vibrator \
+    wlan
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -196,3 +211,14 @@ PRODUCT_PACKAGES += \
 
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
+    libnl \
+    libwfdaac \
+    libwfdaac_vendor
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
