@@ -1060,10 +1060,6 @@ vendor/bin/time_daemon|acdff380d035a301ed6344197196c9e5277a9025
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|413126618d0ebe4351d473674dbf39d196f8ea21
 
-# TLOC - from LA.UM.9.1.r1-09600-SMxxx0.0
-vendor/bin/tloc_daemon|9bd37d3e79626e207350eb89f7bdeba312eca52b
-vendor/etc/init/tloc_daemon.rc|9dd38e92847bc34f8a3228f4cd81ef14b6e89785
-
 # Touchscreen firmware
 vendor/firmware/novatek_ts_huaxing_fw.bin
 vendor/firmware/novatek_ts_huaxing_mp.bin
