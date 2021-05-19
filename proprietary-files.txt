@@ -1,4 +1,4 @@
-# Common proprietary files - from surya MIUI V12.0.6.7.RJGEUXM package, unless pinned
+# Common proprietary files - from surya MIUI V12.0.8.0.RJGEUXM package, unless pinned
 
 # ADSP - from LA.UM.9.1.r1-09600-SMxxx0.0
 vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
