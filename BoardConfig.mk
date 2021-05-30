@@ -84,7 +84,7 @@ LOC_HIDL_VERSION := 4.0
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/configs/hidl/manifest.xml \
-    $(DEVICE_PATH)/configs/hidl/c2_manifest.xml
+    hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
 ODM_MANIFEST_SKUS := surya
 ODM_MANIFEST_SURYA_FILES := \
     $(DEVICE_PATH)/configs/hidl/manifest-qva.xml \
