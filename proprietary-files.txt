@@ -751,8 +751,8 @@ vendor/lib64/unnhal-acc-hta.so|6cb1ca10aa1c82e59641d545d9f1ac7f00df8621
 vendor/lib64/unnhal-acc-hvx.so|c3ce5a9f20cd459a1d697322463048adb3ba8e0f
 
 # NFC
-vendor/etc/libnfc-nxp.conf:vendor/etc/libnfc-mtp-SN100.conf
-vendor/lib/libpn553_fw.so:vendor/lib/libsn100u_fw.so
+vendor/etc/libnfc-nxp.conf
+vendor/lib/libpn553_fw.so
 vendor/libnfc-nxp_RF.conf
 
 # Peripheral manager - from LA.UM.9.1.r1-09600-SMxxx0.0
