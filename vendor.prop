@@ -172,6 +172,10 @@ debug.sf.high_fps_late_app_phase_offset_ns=1000000
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# DRM
+drm.service.enabled=true
+media.mediadrmservice.enable=true
+
 # HVDCP
 persist.vendor.cp.fcc_main_ua=400000
 persist.vendor.cp.taper_term_mv=6500
