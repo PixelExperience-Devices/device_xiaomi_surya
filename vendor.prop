@@ -23,6 +23,7 @@ debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
+ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.set_idle_timer_ms=500
 ro.surface_flinger.set_touch_timer_ms=750
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
@@ -34,7 +35,6 @@ vendor.display.disable_idle_time_hdr=1
 vendor.display.disable_idle_time_video=1
 vendor.display.disable_rotator_downscale=1
 vendor.display.idle_time=1100
-vendor.display.use_smooth_motion=1
 
 # Display (phase offsets)
 debug.sf.early_app_phase_offset_ns=500000
