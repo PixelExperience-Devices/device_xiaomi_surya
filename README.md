@@ -1,8 +1,8 @@
 # Unified Device Tree for Xiaomi POCO X3/X3 NFC
 
-The POCO X3 NFC (codenamed "surya") is a mid-range smartphone from Xiaomi's sub-brand POCO. It was announced and released in September 2020.
+The POCO X3 (codenamed "karna") is a mid-range smartphone from Xiaomi's sub-brand POCO. It was announced and released in India, in September 2020.
 
-The POCO X3 (codenamed "karna") is a mid-range smartphone from Xiaomi's sub-brand POCO. It rocks a larger battery than the POCO X3 NFC but lacks the NFC communication module. It was announced and released in late September 2020, and is exclusive to India.
+The POCO X3 NFC (codenamed "surya") is a mid-range smartphone from Xiaomi's sub-brand POCO. It has a smaller battery than the POCO X3 but includes an NFC module from NXP. It was announced and released globally in September 2020.
 
 ## Device specifications
 
