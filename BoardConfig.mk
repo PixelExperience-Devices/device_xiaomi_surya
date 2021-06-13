@@ -60,8 +60,9 @@ BOARD_KERNEL_CMDLINE += kpti=off cgroup.memory=nokmem,nosocket
 
 KERNEL_DEFCONFIG := vendor/surya-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
-TARGET_KERNEL_APPEND_DTB := true
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_MKBOOTIMG_ARGS += --header_version 2
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
