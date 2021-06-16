@@ -95,6 +95,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshim_megvii
 
+# Device properties
+include $(LOCAL_PATH)/device_prop.mk
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
