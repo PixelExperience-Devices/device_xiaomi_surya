@@ -55,3 +55,11 @@ on property:ro.boot.hwname=*
 
 on property:ro.boot.product.hardware.sku=surya
     enable vendor.nfc_hal_service
+
+on property:graphics.display.kernel_idle_timer.enabled=true
+    # Switch display mode to 60hz when idle
+    write /sys/devices/platform/soc/soc:qcom,dsi-display-primary/idle_mode "@60"
+
+on property:graphics.display.kernel_idle_timer.enabled=false
+    # Disable agressive idle mode switching
+    write /sys/devices/platform/soc/soc:qcom,dsi-display-primary/idle_mode "none"
