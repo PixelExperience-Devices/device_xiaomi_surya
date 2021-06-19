@@ -1,9 +1,5 @@
 on post-fs && property:ro.product.device=karna
     mount none /dev/null /system/app/NfcNci/NfcNci.apk bind
-    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.xml bind
-    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.hce.xml bind
-    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.hcef.xml bind
-    mount none /dev/null /vendor/etc/permissions/android.hardware.nfc.uicc.xml bind
 
 on init 
     # Setup permissions for schedtune boost to allow parts to write to it
