@@ -162,7 +162,7 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera - from surya
-vendor/lib64/hw/camera.qcom.so|f173f01620b8cf166cce5e6113b1cdee49499834
+vendor/lib64/hw/camera.qcom.so|8611da369175249b63db399a213fc81352819dfa
 vendor/lib64/hw/com.qti.chi.override.so|8327d6cce1a5676a086734196800786e096bd3d9
 vendor/lib64/libalAILDC.so|cd3436990cf35dfa6592074a413b3b9fd0660ca6
 vendor/lib64/libalCFR.so|e7473ff79ed9cfe0f798b5ce6f83a54611c43abf
@@ -234,88 +234,76 @@ vendor/lib64/libxmi_high_dynamic_range.so|50386475945b07b0e368a1caea664e3b72047d
 vendor/lib64/libxml2_vendor.so|336de129dd9072f31d8aaee3286e5f10c1bf32fe
 
 # Camera components - from surya
-vendor/lib64/camera/components/com.almalence.node.sr.so|577e4fcecf7132da634fc3b4677497345d85fda5
-vendor/lib64/camera/components/com.altek.node.depurple.so|4429fefb1ddbf6d2ec2a1dd67b753c3521ff0b84
-vendor/lib64/camera/components/com.altek.node.distortioncorrection.so|58965531957b9c640eda779728ac0300d2e47d7d
+vendor/lib64/camera/components/com.almalence.node.sr.so|8e8309f5e2336a61c03ed2dbee6c58b6aa3838d5
+vendor/lib64/camera/components/com.altek.node.depurple.so|2067914942879e1e265291bd612e56aab6041963
+vendor/lib64/camera/components/com.altek.node.distortioncorrection.so|d982dc247f51cd38ee872becaf07d871f16ad8c3
 vendor/lib64/camera/components/com.arcsoft.node.bodyslim.so|99d8a19d864b0d1e564ce2de3387964e54aa5b11
 vendor/lib64/camera/components/com.arcsoft.node.capturebokeh.so|ca459144d57278b0f439cc5cdd45e96adb2fdc08
 vendor/lib64/camera/components/com.arcsoft.node.capturefusion.so|8496d86fc42e7539b7e62d799e4e62fa012e4d3a
 vendor/lib64/camera/components/com.arcsoft.node.deflicker.so|ad703c5248750e998a09940b7d32bed582ae7d73
 vendor/lib64/camera/components/com.arcsoft.node.distortioncorrection.so|76967fde3ab6393b9e9b58a78afccec1cc387b96
-vendor/lib64/camera/components/com.arcsoft.node.hdrchecker.so|e22749c978c772901c6a414ff031605670091f5d
-vendor/lib64/camera/components/com.arcsoft.node.hdr.so|d714f6d17ccbd3b2d34e56846125d7ea965cec4f
+vendor/lib64/camera/components/com.arcsoft.node.hdrchecker.so|ca9639b47be6627fe8b10beab3f9f2e7fe916fd9
+vendor/lib64/camera/components/com.arcsoft.node.hdr.so|a8e148ac78cb881bb87503288925d836826ecdbe
 vendor/lib64/camera/components/com.arcsoft.node.realtimebokeh.so|f0511fe9bd0a887a1b7fc6aa1c50c1ad8c6e24bd
 vendor/lib64/camera/components/com.arcsoft.node.skinbeautifier.so|dfb6e85306a380c9fc555a3ac00b7f509af35736
 vendor/lib64/camera/components/com.arcsoft.node.smooth_transition.so|e5b9d96dc24c3d1b640eca116321d71d23ea8c6b
 vendor/lib64/camera/components/com.arcsoft.node.superlowlight.so|a726d79c741bf19a1e3f1889818bf3bd32937cc6
-vendor/lib64/camera/components/com.miai.node.portraitsupernight.so|c6e115e8343e5b416fda9de67a67c8fb172a5564
-vendor/lib64/camera/components/com.miai.node.supernight.so|a6639f76a67753e88f7fed9596312d3371b19f03
-vendor/lib64/camera/components/com.mi.node.aiasd.so|996d931e2b9be3d84a9be89181d5e08aa6127206
+vendor/lib64/camera/components/com.miai.node.portraitsupernight.so|1551ff05a58b4a5770dd51b8ef5968e7010dc2a1
+vendor/lib64/camera/components/com.miai.node.supernight.so|b947ba910a75916521ab7adbee3ac8c17e65434e
+vendor/lib64/camera/components/com.mi.node.aiasd.so|461d68161b1be5fe1521c1796dd68c83fcde061c
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so|a36b5942e53d78ec8f9fa0a06e32a450ebf11f8e
 vendor/lib64/camera/components/com.qti.eisv2.so|95ede076574c05d7ce68f2763e416a6bffd6bfe7
 vendor/lib64/camera/components/com.qti.eisv3.so|eb3582c9e36b9410aef05c7138932516853bc3d2
 vendor/lib64/camera/components/com.qti.hvx.addconstant.so|2c2925e4bd43db73b5cea99fa5bf47ab05674b03
 vendor/lib64/camera/components/com.qti.hvx.binning.so|854fc201e083ee05c496fff2565bd0ed2a7d38e3
 vendor/lib64/camera/components/com.qti.node.depth.so|db2a6f2cc23e80196579bb400f96594a60057f6a
-vendor/lib64/camera/components/com.qti.node.dewarp.so|6362950fb141d82a33285f39b6f822add93207f2
+vendor/lib64/camera/components/com.qti.node.dewarp.so|431477e6c34fa8e880ccb1483a2803330010b564
 vendor/lib64/camera/components/com.qti.node.dummyrtb.so|eb693febff586aa16749a1fa0407fe75b528d202
 vendor/lib64/camera/components/com.qti.node.dummysat.so|da19e15e47148b5ff43e12c6926c2cbf1fe43e3b
-vendor/lib64/camera/components/com.qti.node.eisv2.so|b5867d758f19e9925e275b34cab998f81c5c507e
-vendor/lib64/camera/components/com.qti.node.eisv3.so|2011b76771a6d2df5f1d395cf90c10f415b1fd79
+vendor/lib64/camera/components/com.qti.node.eisv2.so|c56aad13eedd5b138799babcd7f96459e6b0be85
+vendor/lib64/camera/components/com.qti.node.eisv3.so|93b834fee0ca695b87d17864751ae804cd55a11b
 vendor/lib64/camera/components/com.qti.node.fcv.so|9cffc8825870d49d417dba419e8cd60b0c8a9408
 vendor/lib64/camera/components/com.qti.node.gpu.so|9405cc5262837ea25b9d54ca3a952c4a92f3700a
 vendor/lib64/camera/components/com.qti.node.memcpy.so|b5d5b7cde64f8f2f60295a3e2a351ebcfa7b0e2b
-vendor/lib64/camera/components/com.qti.node.photosolid.so|f4629d7aa9dbfe925912ebb966008ccd1d791869
+vendor/lib64/camera/components/com.qti.node.photosolid.so|bf212b61464f6c4872182e24a663088609e0564b
 vendor/lib64/camera/components/com.qti.node.remosaic.so|4eda3f0ec10e4cfb82b4f29a9675dad13bd44724
 vendor/lib64/camera/components/com.qti.node.stich.so|3bd6e354c09c4d03deda1b55f692d1a836bd4949
 vendor/lib64/camera/components/com.qti.node.swregistration.so|4dade02307f62c4ef49e6331fa8f21a5c1271ab3
-vendor/lib64/camera/components/com.qti.node.watermark.so|904933d2617b2a455b5fc7a64522616dcc4df55f
-vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so|2880e1c98b8966826183cb69955260328e67de74
-vendor/lib64/camera/components/com.qtistatic.stats.aec.so|9d1dadea9de79d58f56983bff4192bea302b94f4
-vendor/lib64/camera/components/com.qtistatic.stats.af.so|5b0768902df92fe1139db109e4711fc815acf5a4
-vendor/lib64/camera/components/com.qtistatic.stats.awb.so|2eba6f00258d836367ad04faaa2d48fdce7f769d
-vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so|776d7e3b4ebf28e3664c508ef9492edc98bee870
+vendor/lib64/camera/components/com.qti.node.watermark.so|b72a5c656cab29dd11b7aed34ef91afc8f467220
+vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so|2fbbb16d970e7bdb8e4689fb4c87d56538075f09
+vendor/lib64/camera/components/com.qtistatic.stats.aec.so|b8b3f4cf4def132af55344bd2a56413b69e52c32
+vendor/lib64/camera/components/com.qtistatic.stats.af.so|6d6ee9395e103c96bde9ecfe1147096df32f51e6
+vendor/lib64/camera/components/com.qtistatic.stats.awb.so|ee6743eee108d774e2797b0c42f8e37613194881
+vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so|12bd4bb6ae2cd749c9d5a0eb193155c50b6e9c85
 vendor/lib64/camera/components/com.qti.stats.aec.so|b26276bd60404b5dc760ec112060cfd2fd0b8bc2
-vendor/lib64/camera/components/com.qti.stats.aecwrapper.so|fe7a899a0b3a6e03014000d91baa7d4ce8908204
+vendor/lib64/camera/components/com.qti.stats.aecwrapper.so|d3d6fbcbeede7861c6b2967627715c9a6608a540
 vendor/lib64/camera/components/com.qti.stats.afd.so|d935654233ff922392d28451fd401f2c2cc796de
 vendor/lib64/camera/components/com.qti.stats.af.so|ec5bb090fd7f1d316dca843aeacfa960338962da
-vendor/lib64/camera/components/com.qti.stats.afwrapper.so|c04c3f1976bc9393e03b6a7070791a013a843e98
+vendor/lib64/camera/components/com.qti.stats.afwrapper.so|560757c296d073ca66ae71568937650801bb0790
 vendor/lib64/camera/components/com.qti.stats.asd.so|7d585625966f88511df49f4abfca56fe398d66bd
 vendor/lib64/camera/components/com.qti.stats.awb.so|27ee2eb4bd9d876a3f5fc9e7f89d79b36dbe8b04
-vendor/lib64/camera/components/com.qti.stats.awbwrapper.so|816b540542a5d4036c5d61096f453cd88f17352b
+vendor/lib64/camera/components/com.qti.stats.awbwrapper.so|80ab9a1125ea51a7071e35f710f2a1edacacb6e2
 vendor/lib64/camera/components/com.qti.stats.hafoverride.so|1a6c8555e93871c2a527ed11db9f62d74c91b0d0
 vendor/lib64/camera/components/com.qti.stats.haf.so|12ea97c9f3e8ed1fdf533f0d89c710ed3d1f1f90
 vendor/lib64/camera/components/com.qti.stats.localhistogram.so|719885f2f8d81c2389a0bd69631354697f9f1b6f
 vendor/lib64/camera/components/com.qti.stats.pdlib.so|e75dabd8eeb7c89f477750840405e930752768e8
 vendor/lib64/camera/components/com.qti.stats.pdlibsony.so|e176d64d532bb59496860505f59440edb02ed318
 vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so|2d6828ef7acde33acff77b7313cede38fc14f863
-vendor/lib64/camera/components/com.st.node.sr.so|df36093ede9645c856d5637f5070b0ce0dad9349
-vendor/lib64/camera/components/com.vidhance.node.eis.so|a90c5330372e2841dc2a69fd25218734ca9f838f
-vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so|54ea14f501139b668f9e2300ff6cafd456bbad99
-vendor/lib64/camera/components/com.visidon.node.clearshot.so|8f7e4802eded348bf777702b0a8e76aa33583a1b
-vendor/lib64/camera/components/com.visidon.node.sr.so|eba3e39583d65ce5c8a6e2f93b72c99251dec636
-vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so|5932f619a3ede00436c414363771f1fde757907f
+vendor/lib64/camera/components/com.st.node.sr.so|47702f2ebb43ea6ae5eaac2e76af787918cb6564
+vendor/lib64/camera/components/com.vidhance.node.eis.so|d12663b3f8044de729570269717f7689ab42daf8
+vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so|ae7604b0a7315cd16dc22475a18ea22ff22765dd
+vendor/lib64/camera/components/com.visidon.node.clearshot.so|6190e264619c517378959eb0579132d84bb073bc
+vendor/lib64/camera/components/com.visidon.node.sr.so|e98620691a7a4a940f18ddcdf3703ad76ffbda75
+vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so|ed11627e4271ee44a161c9fb318bb5940c8ae319
 vendor/lib64/camera/components/com.xiaomi.node.mifilter.so|4b376124e8b8be26f8056aaa9c3cdce0f8a7b548
-vendor/lib64/camera/components/com.xiaomi.node.mifragment.so|c14027c49122be4dd067bc69951242ca8634574f
-vendor/lib64/camera/components/com.xiaomi.node.mimovie.so|12c6a023f6fbfcb5337298da76f824be00a53886
-vendor/lib64/camera/components/com.xiaomi.node.misegment.so|73ccb52f6f7472329d472da513a34074322dd48d
+vendor/lib64/camera/components/com.xiaomi.node.mifragment.so|22e73fe9a6a4d99240ca40613536b025d4d46e3e
+vendor/lib64/camera/components/com.xiaomi.node.mimovie.so|bc98c96faebf97f3cded03a180cf06ee81166eae
+vendor/lib64/camera/components/com.xiaomi.node.misegment.so|cacabeb10ff89c52cc1a633025d62074b6fa4919
 vendor/lib64/camera/components/etc/visidon_clearshot_params.xml|ee064b324f3e4369a2d081b774076d2b71f6246a
 vendor/lib64/camera/components/libdepthmapwrapper.so|292b6c004a16b0bdd97049816f1ce7c87fcc8e92
 vendor/lib64/camera/components/libmmcamera_cac3.so|738924eb3550cbc79d3b4efd7364f17919e8bdde
 
 # Camera configs - from surya
-vendor/etc/camera/102_SummerDay.png|e27c1ad14c763cbc0159aa5a0357b934cbc16ced
-vendor/etc/camera/103_Fantasy.png|0eb52c60f767c4a9b26b22f4ee35ec646545a123
-vendor/etc/camera/104_Meet.png|6311603a50532eece3f92cce50898a29c1d4995c
-vendor/etc/camera/105_WindSing.png|8d07722a63e5619fbd3b293078ae67dfe271a72c
-vendor/etc/camera/106_Lost.png|61a35b9eb3c6286357ba213cfce0b3e1fc112fd6
-vendor/etc/camera/107_Central.png|64c1e291c873ff7715ee9017c3a0d6cae48a9b6a
-vendor/etc/camera/108_NorthernEurope.png|b6a0847fcf1d87d5db0cae2c9a589b9780e1cbbe
-vendor/etc/camera/109_Rome.png|d5eb2a236ff03ef1a18a06323ed7ea1e10d3216f
-vendor/etc/camera/110_BlackGold.png|bf0b84c9cc417a78f38fa01606160a80d0fda3d2
-vendor/etc/camera/111_GreenOrange.png|7ccb8c48068296275ab440129750cddc47e26f4d
-vendor/etc/camera/112_Cyberpunk.png|a8245aafb5cf4a2bf2aa1ed58ad35dc3140607bb
-vendor/etc/camera/113_BlackIce.png|00bb1b9b499aca960475b79414b5a076324c8b46
 vendor/etc/camera/almalence_sr_params_tele.config|a5216343ebac981b47670522cf0a56960181f5cd
 vendor/etc/camera/almalence_sr_params_wide.config|9567cf89e5347348ea5e10035c3f2635b9fd8162
 vendor/etc/camera/beauty_ui9_intelligent_params.config|fc812ab1766b927e7366bd9472624b8b5d0dda81
@@ -377,27 +365,27 @@ vendor/lib64/camera/com.qti.sensor.ofilm_s5k3t2.so|d671faa5ee7e9f17e6105859fff95
 vendor/lib64/camera/com.qti.sensor.sunny_hi1337.so|e65416ad1593d9a964efb712d0067779d5477daa
 vendor/lib64/camera/com.qti.sensor.sunny_imx682.so|c7aa76560281d7ab707dbd779aa722264a7e6490
 vendor/lib64/camera/com.qti.sensor.sunny_s5k3t2.so|8eb9552259cb93cfa471fa1d00f9046c6f3dd6d1
-vendor/lib64/camera/com.qti.tuned.default.bin|960c9914f7e36096d4e0463ed8575d36e7a5a003
-vendor/lib64/camera/com.qti.tuned.j20c_aac_gc02m1b_depth_global.bin|b5feade8e51905a6fd216be394f8a53e6cc4e384
-vendor/lib64/camera/com.qti.tuned.j20c_aac_gc02m1b_depth_india.bin|b5feade8e51905a6fd216be394f8a53e6cc4e384
-vendor/lib64/camera/com.qti.tuned.j20c_aac_hi1337_ultra_global.bin|2dd6e67403f873668513218c3c66361d6306cbf5
-vendor/lib64/camera/com.qti.tuned.j20c_aac_hi1337_ultra_india.bin|2dd6e67403f873668513218c3c66361d6306cbf5
-vendor/lib64/camera/com.qti.tuned.j20c_aac_hi259_macro_global.bin|2dd6e67403f873668513218c3c66361d6306cbf5
-vendor/lib64/camera/com.qti.tuned.j20c_aac_hi259_macro_india.bin|2dd6e67403f873668513218c3c66361d6306cbf5
-vendor/lib64/camera/com.qti.tuned.j20c_ofilm_hi259_macro_global.bin|b667b3f891a6b49be6c5ed5213c669e607475cd3
-vendor/lib64/camera/com.qti.tuned.j20c_ofilm_hi259_macro_india.bin|86658f3e1b3a03b6b8b097742d26bf93d524417c
-vendor/lib64/camera/com.qti.tuned.j20c_ofilm_imx682_wide_global.bin|71f45b0aa1bd56cfc4af489737f94ba0b7642e8b
-vendor/lib64/camera/com.qti.tuned.j20c_ofilm_imx682_wide_india.bin|c789be08dffed6a24e4e739d2af98e0d2de797f9
-vendor/lib64/camera/com.qti.tuned.j20c_ofilm_ov02b1b_depth_global.bin|79c096ea382f211c536ba4d2fa15ce23bcd2340c
-vendor/lib64/camera/com.qti.tuned.j20c_ofilm_ov02b1b_depth_india.bin|2e68e98c932314ff47f8bba5b396414253a2452f
-vendor/lib64/camera/com.qti.tuned.j20c_ofilm_s5k3t2_front_global.bin|755c67100fd2edabdbca02c3aa05580ebcd67eb4
-vendor/lib64/camera/com.qti.tuned.j20c_ofilm_s5k3t2_front_india.bin|755c67100fd2edabdbca02c3aa05580ebcd67eb4
-vendor/lib64/camera/com.qti.tuned.j20c_sunny_hi1337_ultra_global.bin|db0b7203a15c707a0f6190d1d219d1aba7bc65b8
-vendor/lib64/camera/com.qti.tuned.j20c_sunny_hi1337_ultra_india.bin|8b3efc91b69880ac2c627d5060b9115cc86f0cc8
-vendor/lib64/camera/com.qti.tuned.j20c_sunny_imx682_wide_global.bin|755c67100fd2edabdbca02c3aa05580ebcd67eb4
-vendor/lib64/camera/com.qti.tuned.j20c_sunny_imx682_wide_india.bin|755c67100fd2edabdbca02c3aa05580ebcd67eb4
-vendor/lib64/camera/com.qti.tuned.j20c_sunny_s5k3t2_front_global.bin|7cec023bef17f2b77ac0934748e03e0cc842e647
-vendor/lib64/camera/com.qti.tuned.j20c_sunny_s5k3t2_front_india.bin|ab7968e8cbfe330a5b0a6fe9037e37a50111cddb
+vendor/lib64/camera/com.qti.tuned.default.bin|f6f17aa82f4f63a7349d777e4cc22c1bdf673709
+vendor/lib64/camera/com.qti.tuned.j20c_aac_gc02m1b_depth_global.bin|8c66a9c8d5a37e2ce514cb0d65cded8f58222435
+vendor/lib64/camera/com.qti.tuned.j20c_aac_gc02m1b_depth_india.bin|8c66a9c8d5a37e2ce514cb0d65cded8f58222435
+vendor/lib64/camera/com.qti.tuned.j20c_aac_hi1337_ultra_global.bin|b4f315bc7d4953ba9034c9d45da428170a96595e
+vendor/lib64/camera/com.qti.tuned.j20c_aac_hi1337_ultra_india.bin|b4f315bc7d4953ba9034c9d45da428170a96595e
+vendor/lib64/camera/com.qti.tuned.j20c_aac_hi259_macro_global.bin|b4f315bc7d4953ba9034c9d45da428170a96595e
+vendor/lib64/camera/com.qti.tuned.j20c_aac_hi259_macro_india.bin|b4f315bc7d4953ba9034c9d45da428170a96595e
+vendor/lib64/camera/com.qti.tuned.j20c_ofilm_hi259_macro_global.bin|c610b7612fe999b53553fecd9543204ac2f6a520
+vendor/lib64/camera/com.qti.tuned.j20c_ofilm_hi259_macro_india.bin|08baa6fe96b1a605d06b8229dbfb5ae5838dd23c
+vendor/lib64/camera/com.qti.tuned.j20c_ofilm_imx682_wide_global.bin|75e22944338a5b8c7d7293bdbd296a8258816f57
+vendor/lib64/camera/com.qti.tuned.j20c_ofilm_imx682_wide_india.bin|3efecf3298b936ea2528fb56c7b0169377ef026e
+vendor/lib64/camera/com.qti.tuned.j20c_ofilm_ov02b1b_depth_global.bin|8abf708fd4ebb83e4d4ce32d1e5285c5b566bdb3
+vendor/lib64/camera/com.qti.tuned.j20c_ofilm_ov02b1b_depth_india.bin|1aa195907aae2eb27e6c8e3d820efa547be2f5b0
+vendor/lib64/camera/com.qti.tuned.j20c_ofilm_s5k3t2_front_global.bin|1159e507a73d30cd0ac38d739cc3545a9e835621
+vendor/lib64/camera/com.qti.tuned.j20c_ofilm_s5k3t2_front_india.bin|1159e507a73d30cd0ac38d739cc3545a9e835621
+vendor/lib64/camera/com.qti.tuned.j20c_sunny_hi1337_ultra_global.bin|45796663b8b75bd0a98444a567038065b3a738ae
+vendor/lib64/camera/com.qti.tuned.j20c_sunny_hi1337_ultra_india.bin|ca5867b02c81855b1911f3f1c19d0bc3117df1ea
+vendor/lib64/camera/com.qti.tuned.j20c_sunny_imx682_wide_global.bin|1159e507a73d30cd0ac38d739cc3545a9e835621
+vendor/lib64/camera/com.qti.tuned.j20c_sunny_imx682_wide_india.bin|1159e507a73d30cd0ac38d739cc3545a9e835621
+vendor/lib64/camera/com.qti.tuned.j20c_sunny_s5k3t2_front_global.bin|857a1d65e05258a8f30894f57037e27b57a24d3c
+vendor/lib64/camera/com.qti.tuned.j20c_sunny_s5k3t2_front_india.bin|ca02275025f0ab710ede7b89d93a740f25a03e5a
 vendor/lib64/camera/fdconfigpreview.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
 vendor/lib64/camera/fdconfigpreviewlite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
 vendor/lib64/camera/fdconfigvideo.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
@@ -428,8 +416,8 @@ vendor/bin/init.qti.chg_policy.sh|ecbd0df01254fb28ddfe8174b1a16b96a87303ff
 vendor/etc/charger_fstab.qti|8464c139d93f05e86ff9c9d31b3e8617b8d9476e
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
 
-# Charger - HVDCP
-vendor/bin/hvdcp_opti
+# Charger - from surya
+vendor/bin/hvdcp_opti|c29dc9035322d0734a616b55c5e35c4bcea2c3d5
 
 # CNE - from LA.UM.9.1.r1-09600-SMxxx0.0
 -vendor/app/CneApp/CneApp.apk|c7f1a32077c09abc838ade8f6849138b94f93321
@@ -677,11 +665,11 @@ vendor/lib64/libhdr_tm.so|b4d129efafedbc82e122ef7edff26ca65204b630
 
 # Graphics (SDM) - from LA.UM.9.1.r1-09600-SMxxx0.0
 vendor/lib64/libqseed3.so|7f2a659fb9acd84d79c11dbd6901b816d5d1214f
-vendor/lib64/libsdm-color.so|a39b8aeeeec1fe99c76ffaccfa1f4c3756498264
+vendor/lib64/libsdm-color.so|4c61d8c1e82b673917356e6c210959c7795e5369
 vendor/lib64/libsdm-colormgr-algo.so|073245d67ec606f7b73c34e2b4956ebcc81b350c
 vendor/lib64/libsdm-diag.so|c21a643ab4ec151e0374df8ce5b839f71d07df90
 vendor/lib64/libsdm-disp-vndapis.so|4fbf76da3a9eb5d227f948521bd4c80842446bb4
-vendor/lib64/libsdmextension.so|10b55d11368356ede3755a13a142391d29f25480
+vendor/lib64/libsdmextension.so|76ef1430f700480509b5f991e031447fea9ddb01
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
 # Graphics firmware - from surya
@@ -695,12 +683,12 @@ vendor/firmware/a630_sqe.fw|e25094f97b44244775cc38a9d909fba6bd4cf76b
 
 # IPA firmware - from surya
 vendor/firmware/ipa_fws.b00|bc93bd0d1ed662f475579a5d7e706b1ad970eb7c
-vendor/firmware/ipa_fws.b01|555611c11bbe4eb2659fc0bd19f03180122a305a
+vendor/firmware/ipa_fws.b01|9000bd1a2713903bee7afd1375945e02d9e7ab09
 vendor/firmware/ipa_fws.b02|a4f15a2345382514ef64d40f58dbaa3f1e35c4e7
 vendor/firmware/ipa_fws.b03|c07cfef57f8f694b4cee41e78700614efbedf2bc
 vendor/firmware/ipa_fws.b04|e3552692a635dceca369cab6d9349091b669c80a
-vendor/firmware/ipa_fws.elf|24d1c1216343182e531029b1037617765ba44124
-vendor/firmware/ipa_fws.mdt|a362534f5fba028a4b93f4c28211179b0193d115
+vendor/firmware/ipa_fws.elf|f29884df4a17552b0fa66ea9f39bf95021d737ad
+vendor/firmware/ipa_fws.mdt|35f23acac4ee7551ec4a362b447cf0856b688ae8
 
 # IR - from surya
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so|3f61dc184f902dd699638c4a7477f21b4743029d
@@ -713,11 +701,11 @@ vendor/lib64/libkeymasterutils.so|b9c888d579c9cf7a1c8f463be4048eb9d935daf8
 vendor/lib64/libqcbor.so|67acd94f3c7110c9419f0fd064b6eb69c09a0738
 vendor/lib64/libqtikeymaster4.so|9c45da4b7daa40d44592d94061858813e35473d0
 
-# Listen - from suryaa
-vendor/lib/hw/sound_trigger.primary.sm6150.so|e89cd58770340680fdf307cf75937481aeec67b6
+# Listen - from surya
+vendor/lib/hw/sound_trigger.primary.sm6150.so|e89c95a9e505ae28a7921473665a37b38dd98573
 vendor/lib/libadpcmdec.so|5232c32b93a8653612cd8fcdde161a9d7fe39c7f
-vendor/lib/librice.so|30f281ca3307bee5072c7b1eeea743b466af95ac
-vendor/lib/libsmwrapper.so|a3a0301b270e7bbf832fa6b7d9929400c057ee41
+vendor/lib/libmulawdec.so|4ad85b4982bf0cfed77c9bede75aac09a51ab062
+vendor/lib/libsmwrapper.so|a041e025afa7545eac0c51f6e421510af8eb89f1
 
 # Media - from LA.UM.9.1.r1-09100-SMxxx0.0
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|711fc86b6a7768ba844155b61debdda4e291767e
@@ -891,15 +879,15 @@ vendor/lib/libqmi_csi.so|9064d8610f10875107d9a00c99629a6d0b982707
 vendor/lib/libqmi_encdec.so|212eeb38d8590f760914ff485819253403552874
 vendor/lib/libqmiservices.so|7d2204d571b55959eb88333fd343067b0e1fe24d
 
-# QTEE (Qualcomm Trusted Execution Environment) - from LA.UM.9.1.r1-09100-SMxxx0.0
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|f8dc88c7166ffc2c1d997e7d5f16a8eb69c37cfc
+# QTEE connector - from LA.UM.9.1.r1-10200-SMxxx0.0
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|a12cd8a3d326609ee0f0a0cdb5cfc69bd2085f1e
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|9b7ba35a74f4414ba1ec5e8b14d38c6dc7a3ef97
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|01f78b7b4d0b196dc735994331b0a9a639a49b36
-vendor/lib64/libGPQTEEC_vendor.so|22bf79c99fffb5a96c5a674e9d002f6472267de1
-vendor/lib64/libGPTEE_vendor.so|d12dd2768dfbbf10a73a81ffc5dea69bd664e13b
-vendor/lib64/libQTEEConnector_vendor.so|62d8993f51e0d4a0c4d6ae2645512ddfc76577f3
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|aa77cf6a6fdf019df4c54daacd5a8e622346ca08
+vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|58a6886e582bb28391d6723450f6668dcd4680f1
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|f9d5e4f25cfca4da472f3c967153022e4f21e2af
+vendor/lib64/libGPQTEEC_vendor.so|64b5d081cc602ecd7d0183702c9110ca435045ba
+vendor/lib64/libGPTEE_vendor.so|527c8393ef416a9ddca4337fb4b5a1618551de44
+vendor/lib64/libQTEEConnector_vendor.so|bf3050ea3ef5435f0289092681f07a2fe834958b
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|131cdee67110cd0af1708ba31d81aef85456081a
 
 # QTI Telephony - from Nubia RKQ1.200826.002/nubia.20201029.204053:user/release-keys
 system_ext/framework/qti-telephony-common.jar|4bb49c73e447edb38a3044d9f5369c4391e97e27
@@ -1139,7 +1127,7 @@ vendor/etc/sensors/config/sns_wrist_pedo.json|078bbc91b4bde41ad214ee81276485e657
 vendor/etc/sensors/sns_reg_config|3615a65f046554993265cf9faeb718002f73c1e0
 
 # Soter - from surya
--app/SoterService/SoterService.apk|9d41ded29f97671f28874f1f4c5921844bc46a3a
+-app/SoterService/SoterService.apk|939423f0016034cf8676f64d384aafde308f779b
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|80ae6dfcb151cd0813b2d20442e540edede24772
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|64e17127e63d9e7c811eab805e518a0c572f7089
@@ -1184,11 +1172,11 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|938262f1c75299523dc8e5c4e6a7937
 # Vibrator firmware - from surya (AW8624)
 vendor/firmware/aw8624_haptic.bin|0d3ac505271e68d22c0c4960a6a580327c77f075
 vendor/firmware/aw8624_rtp.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
+vendor/firmware/osc_rtp_24K_5s.bin|9f32c9bf0776a566d3254129a028dae9bed76b81
 
 # Vibrator firmware - from surya (DRV2624)
 vendor/firmware/drv2624.bin|15ffeb248386181ccf6895726a618c8f7a579dd5
 vendor/firmware/drv2624.rtp|27e0cb028637b221c1a9967712bc49081ce5e65f
-vendor/firmware/Drv2624Date.ini|f5215284b7b899db83a2bffe6cc9eff1881ec769
 
 # WiFi Display - from LA.UM.9.1.r1-10200-SMxxx0.0
 -framework/WfdCommon.jar|de1adc7a4adbb117123aa5bb116c5df83c686433
@@ -1203,6 +1191,7 @@ system_ext/lib/libmmosal.so|e29bdf82903e2293dc3ee74a2b9d69a7f1df25dc
 system_ext/lib/libmmparser_lite.so|b1cd09b8d73ce5a0e7357c6f50719233224f28bc
 system_ext/lib/libmmrtpdecoder.so|0b41da1c84e4a5abc01b4dba18a121f73ad0c409
 system_ext/lib/libmmrtpencoder.so|a14a07eefd96889a7287640341d9fff0a7a4bb11
+system_ext/lib/libwfdaac.so|5fe6065f86d095c37f55f143e7fab28176dfd135
 system_ext/lib/libwfdavenhancements.so|b5339128aa1465420774b9056fe5b7a246d52048
 system_ext/lib/libwfdclient.so|9cf545e8011c762f81f3e095e4c55a1d2c8b9f25
 system_ext/lib/libwfdcommonutils.so|fb964d5581271162ff047a1738330ac482ea33de
