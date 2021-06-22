@@ -29,6 +29,51 @@
 
 target=`getprop ro.board.platform`
 
+function enable_swap() {
+    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+    MemTotal=${MemTotalStr:16:8}
+
+    SWAP_ENABLE_THRESHOLD=1048576
+    swap_enable=`getprop ro.vendor.qti.config.swap`
+
+    # Enable swap initially only for 1 GB targets
+    if [ "$MemTotal" -le "$SWAP_ENABLE_THRESHOLD" ] && [ "$swap_enable" == "true" ]; then
+        # Static swiftness
+        echo 1 > /proc/sys/vm/swap_ratio_enable
+        echo 70 > /proc/sys/vm/swap_ratio
+
+        # Swap disk - 200MB size
+        if [ ! -f /data/vendor/swap/swapfile ]; then
+            dd if=/dev/zero of=/data/vendor/swap/swapfile bs=1m count=200
+        fi
+        mkswap /data/vendor/swap/swapfile
+        swapon /data/vendor/swap/swapfile -p 32758
+    fi
+}
+
+function configure_read_ahead_kb_values() {
+    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+    MemTotal=${MemTotalStr:16:8}
+
+    dmpts=$(ls /sys/block/*/queue/read_ahead_kb | grep -e dm -e mmc)
+
+    # Set 128 for <= 3GB &
+    # set 512 for >= 4GB targets.
+    if [ $MemTotal -le 3145728 ]; then
+        echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
+        echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+        for dm in $dmpts; do
+            echo 128 > $dm
+        done
+    else
+        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
+        echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+        for dm in $dmpts; do
+            echo 512 > $dm
+        done
+    fi
+}
+
 function configure_memory_parameters() {
     # Set Memory parameters.
     #
@@ -76,6 +121,10 @@ function configure_memory_parameters() {
     # use Google default LMK series for all 64-bit targets >=2GB.
     echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
     echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
+
+    echo 1 > /proc/sys/vm/watermark_scale_factor
+    configure_read_ahead_kb_values
+    enable_swap
 }
 
 if [ -f /sys/devices/soc0/soc_id ]; then
@@ -98,33 +147,17 @@ case "$soc_id" in
     echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
     echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
 
-    # Configure governor settings for little cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    echo 1000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-    echo 1000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-    echo 1516800 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-    echo 1017600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl
+    # default sched up and down migrate values are 100 and 95
+    echo 85 > /proc/sys/kernel/sched_group_downmigrate
+    echo 100 > /proc/sys/kernel/sched_group_upmigrate
+    echo 0 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
-    # Configure governor settings for big cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-    echo 1000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
-    echo 1000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
-    echo 1516800 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
-    echo 979200 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
-    echo 1 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl
+    # colocation v3 settings
+    echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
 
-    # Set hispeed load to 85 on big cluster
-    # sched_load_boost as -6 is equivalent to target load as 85
+    # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
     echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
     echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
-    echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
-
-    # Configure CPU input boost
-    echo "0:1363200 6:1363200" > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 100 > /sys/module/cpu_boost/parameters/input_boost_ms
-    echo "0:1804800 6:2016000" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
-    echo 500 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
     # Set memory parameters
     configure_memory_parameters
@@ -186,6 +219,9 @@ case "$soc_id" in
             echo 10 > $latfloor/polling_interval
         done
     done
+
+    # Turn off scheduler boost at the end
+    echo 0 > /proc/sys/kernel/sched_boost
     ;;
 esac
 
@@ -203,33 +239,17 @@ case "$soc_id" in
     echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
     echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
 
-    # Configure governor settings for little cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    echo 1000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-    echo 1000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-    echo 1497600 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-    echo 1017600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl
+    # default sched up and down migrate values are 100 and 95
+    echo 85 > /proc/sys/kernel/sched_group_downmigrate
+    echo 100 > /proc/sys/kernel/sched_group_upmigrate
+    echo 0 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
-    # Configure governor settings for big cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-    echo 1000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
-    echo 1000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
-    echo 1555200 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
-    echo 979200 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
-    echo 1 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/pl
+    # colocation v3 settings
+    echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
 
-    # Set hispeed load to 85 on big cluster
-    # sched_load_boost as -6 is equivalent to target load as 85
+    # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
     echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
     echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
-    echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
-
-    # Configure CPU input boost
-    echo "0:1324800 6:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 100 > /sys/module/cpu_boost/parameters/input_boost_ms
-    echo "0:1804800 6:2169600" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
-    echo 500 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
     # Set Memory parameters
     configure_memory_parameters
@@ -308,6 +328,9 @@ case "$soc_id" in
             echo 10 > $latfloor/polling_interval
         done
     done
+
+    # Turn off scheduler boost at the end
+    echo 0 > /proc/sys/kernel/sched_boost
     ;;
 esac
 

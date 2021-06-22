@@ -6,6 +6,19 @@ on init
     chown system system /proc/tp_gesture
     chmod 0644 /proc/tp_gesture
 
+    chmod 0664 /sys/class/thermal/thermal_message/sconfig
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    chmod 0666 /sys/class/thermal/thermal_message/temp_state
+    chown system system /sys/class/thermal/thermal_message/temp_state
+
+on post-fs
+    chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
+    chown system system /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
+    chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
+    chown system system /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
+    chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
+    chown system system /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
