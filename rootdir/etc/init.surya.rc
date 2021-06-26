@@ -14,6 +14,9 @@ on init
     chown system system /sys/module/battery_saver/parameters/enabled
     chmod 0664 /sys/module/battery_saver/parameters/enabled
 
+    # Change permissions for /dev/diag
+    chmod 0666 /dev/diag
+
 on post-fs
     chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
     chown system system /mnt/vendor/persist/camera/rear_dc_cal_wt.bin
