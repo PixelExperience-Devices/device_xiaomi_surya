@@ -835,6 +835,9 @@ vendor/lib64/vendor.display.color@1.2.so|dbcd7400047d7df55dd37bb1eb256756ab41b7e
 vendor/lib64/vendor.display.color@1.3.so|1491a3cfb1a3348d9a687586ac8ecfd958c80316
 vendor/lib64/vendor.display.postproc@1.0.so|db2f8dd5e5c1dec83bd10b27d6c977137a270be7
 
+# Power-off charging daemon
+-sbin/charger:bin/chargeonlymode
+
 # QCV (SOC Helper) - from LA.UM.9.1.r1-09100-SMxxx0.0
 vendor/bin/init.qti.qcv.sh|6c333493697aaf33acf16e73c8d2500145404862
 vendor/etc/init/init.qti.qcv.rc|c0c97f5674e24307440da1e166dc405ac1694d55
