@@ -94,4 +94,7 @@
     <!-- Integer thresholds for low network score, should be somewhat less than the entry thresholds -->
     <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-90</integer>
     <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-93</integer>
+
+    <!-- Do not translate. Default access point SSID used for tethering -->
+    <string translatable="false" name="wifi_tether_configure_ssid_default">Poco X3 NFC</string>
 </resources>
