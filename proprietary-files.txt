@@ -406,7 +406,6 @@ vendor/lib64/libsysmon_cdsp_skel.so|8a951e039071107317e0e7541ff4df7ad35d87ad
 
 # Certificate Authority - from LA.UM.9.1.r1-10200-SMxxx0.0
 -vendor/app/CACertService/CACertService.apk|b08fa7c9d2faba99547db99df908909dfc0c8e90
-vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 vendor/lib64/libcacertclient.so|69ae73b9be13507ff39398ac5813ad709b8b7c32
 vendor/lib64/libjnihelper.so|d3687f06782adc074a38b9ff3c1aacd57ec7a6e7
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so|1633c31212d1ea9338b79ebfc2476f83424f36ee
@@ -578,43 +577,46 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e4134405110
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|e294d0c15fd2f34a3f6db4a6a5e8ae9ffb31849f
 
-# GPS - from LA.UM.9.1.r1-09100-SMxxx0.0
-vendor/bin/loc_launcher|47dacb321c80ff7b1f458632b71552f6ecb01635
-vendor/bin/lowi-server|b202795c68b7bc7b8752b4d6171220e866b1d610
-vendor/bin/mlid|488469c3d8124976febe22ec03b53c28b4585e91
-vendor/bin/slim_daemon|61cb025cc5a9532199c6cc942bd95aa6ee68d631
-vendor/bin/xtra-daemon|fcbe0987393fbe568cb6e618202b8dab92aa3934
+# GPS - from LA.UM.9.1.r1-10200-SMxxx0.0
+vendor/bin/garden_app|942023accc55d8a09e647014548b8a3f8429d999
+vendor/bin/loc_launcher|3f459689fb80a2fb0f70b0a5fa4b3ddd36db79c4
+vendor/bin/lowi-server|2b977425e0b226e627c525f25c2f80e84823e4cd
+vendor/bin/mlid|af74a478130dd494f6b67134b8adf3324d165699
+vendor/bin/slim_daemon|5ce1a1a9fdd3e37a5fd583abeb2e127107eb97a5
+vendor/bin/xtra-daemon|d6a02929d1f61945a6a35ef0288cf9f9eea5b266
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
-vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|7eaa08a7015d3bab8c80aa602be8ede29bb0acb1
-vendor/lib64/libcdfw.so|36c7409b96cc2d523e65cd2753d7c8a1c234bc11
-vendor/lib64/libcdfw_remote_api.so|3b10c3c4c998e1b2bae10193ce4d1fa6d5a3f0bd
-vendor/lib64/libdataitems.so|124df02fd84364cf6fa9cb4e41dd2765018e4ed9
-vendor/lib64/libgdtap.so|1ecdf14c318489908abba8f589826a2c5825e15b
-vendor/lib64/libgnsspps.so|b68e930e0a1e7bc6ab30f73f9ccd1726ddfa3bc6
-vendor/lib64/libizat_client_api.so|55b9d0f3c76d21ecd75951c03c1143c42082677a
-vendor/lib64/libizat_core.so|e27814d33e8ec54e56bfb3818f2b7817d67b57dc
-vendor/lib64/liblbs_core.so|94953e7117c5b5e82e428d9ed2465f7cecb9b5b0
-vendor/lib64/libloc_api_v02.so|ada60a0565b400c152e0bd37631fd97080d74d35
-vendor/lib64/libloc_socket.so|c1798f21bf3971298628c219c4d9607952ed9f61
-vendor/lib64/liblocationservice.so|890dc4ae7cafe871ef7226ec8e43a14cbd3ad95a
-vendor/lib64/liblocationservice_glue.so|d2591db2addab4c313b53364e506ff82dc176409
-vendor/lib64/liblowi_client.so|00505663d09132c344faf1aab87a0ad65d7ae8af
-vendor/lib64/liblowi_wifihal.so|8be4b6ad3e471a58e56df639416b59fb6af5cf5b
-vendor/lib64/libqcc_file_agent.so|7eafd838c18b7bf372f70ec0391da76e9e19ac2b
-vendor/lib64/libslimclient.so|168be9939aecb3476a8d00af4c1a7c628184bf76
-vendor/lib64/libsynergy_loc_api.so|fbdbb98608b84992c912ee538beb3fa6594a6e99
-vendor/lib64/libxtadapter.so|8038961c9cdbac960ac898c53bcda260d361f339
-vendor/lib64/vendor.qti.gnss@1.0.so|5ba3dee741212fc79657fb85a7027e5bb7368f34
-vendor/lib64/vendor.qti.gnss@1.1.so|d8f646279197c4256139cbf5b0330d53d678cc2e
-vendor/lib64/vendor.qti.gnss@1.2.so|fc76247d8059d09568c0f408b824dbbd589aa5f9
-vendor/lib64/vendor.qti.gnss@2.0.so|c811aa8deb0fd5abd417f30dbd12dcc19cb88644
-vendor/lib64/vendor.qti.gnss@2.1.so|040fff218095960e181e230ba11f583d731e9e06
-vendor/lib64/vendor.qti.gnss@3.0.so|f349b1461977aa04639eee2249e4f3dad4f9e31d
-vendor/lib64/vendor.qti.gnss@4.0.so|ed08caa6716b6097586f1e23e2e47287f6106661
-vendor/lib64/vendor.qti.gnss@4.0-service.so|55597f44596544d07a1bddb55cc7223ed67f4ae7
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|19a1f7ffb8118c207aa8cb2318996605771c339a
+vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|91867be10a5ac6b4f7f2997ed8cdde05de3a8848
+vendor/lib64/libcdfw.so|543b8282f4b6719113f04e14dd908137521e2bb5
+vendor/lib64/libcdfw_remote_api.so|558636f4fa4c17f29cb644c8c6e07766b7240005
+vendor/lib64/libdataitems.so|8606106e70e8d6b75ff9677ed3989cad541c96c0
+vendor/lib64/libgarden.so|14330556e3d63f71176911e9ddb77ae0a8e16425
+vendor/lib64/libgarden_haltests_e2e.so|485fe6b87dbdc90837da68d235b57b6d6b4292db
+vendor/lib64/libgdtap.so|b46b7f6caaf2c2d4f43ed263bcdff3edfdc9f0f1
+vendor/lib64/libgnsspps.so|6a69dfa3722b374cf3724b1fab49625739350b9c
+vendor/lib64/libizat_client_api.so|0cef68ca51292f9d2108111a5db4f13e7e85ec30
+vendor/lib64/libizat_core.so|e5b6eb1ff904ca5f29c5aa82df80686d1cf16076
+vendor/lib64/liblbs_core.so|49e49724bd10af7aa6406cd8780bd28015ed97c5
+vendor/lib64/libloc_api_v02.so|31ea31f3a53cc73825d7bb61dbee23303a7f145b
+vendor/lib64/libloc_socket.so|e2634ddb3a08b37f98a7e723f898730bdf19dd2b
+vendor/lib64/liblocationservice.so|e843422481191ad275efb4c2639aae715e9f4705
+vendor/lib64/liblocationservice_glue.so|7f2ba1268ce869e96fa476f80231e5377d04a887
+vendor/lib64/liblowi_client.so|db016f12f10a5d32e47fefefa391d4f267109a40
+vendor/lib64/liblowi_wifihal.so|8826ae44e3ed3739fb7f5cb9c2f361561c16fb5b
+vendor/lib64/libqcc_file_agent.so|3707206276c3f8a37d0ab6ee7b2360b5bffe2b3e
+vendor/lib64/libslimclient.so|73964d15fafca696134ee0688c5c7f7014bc0707
+vendor/lib64/libsynergy_loc_api.so|f5bcbbf7078f012b534010c4cc15f83afae4f4b3
+vendor/lib64/libxtadapter.so|495af82c252ccca8257c5281ba699da214fd1539
+vendor/lib64/vendor.qti.gnss@1.0.so|9cb7921c8310d1bca9385c997965abf64e8937df
+vendor/lib64/vendor.qti.gnss@1.1.so|62d38c1b5e02205f64ca98cce2f8309054fd6d70
+vendor/lib64/vendor.qti.gnss@1.2.so|1ea87dffaebb7071fa4098efe239a0da583841ff
+vendor/lib64/vendor.qti.gnss@2.0.so|8af004202ed9d4ace2352e3053f1c5f941dcd8df
+vendor/lib64/vendor.qti.gnss@2.1.so|62d2036fb2fec16c00fd3f04f9b8a846719f5f49
+vendor/lib64/vendor.qti.gnss@3.0.so|491917101ba1182d0a6f849323690f5636277447
+vendor/lib64/vendor.qti.gnss@4.0.so|5ef1845cf0a310a52bfbdbc719685270ea4e39b3
+vendor/lib64/vendor.qti.gnss@4.0-service.so|f02b266ff4869cd38bd39f02d01d1586593c5d0a
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
 
 # Graphics (Adreno) - from LA.UM.9.1.r1-09600-SMxxx0.0
 vendor/lib64/libC2D2.so|175115cc36fd471f9eb83af76be21b5f602b9460
