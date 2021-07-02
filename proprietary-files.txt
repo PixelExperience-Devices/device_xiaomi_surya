@@ -1282,5 +1282,4 @@ vendor/lib64/libmm-hdcpmgr.so|83c232564e9c828b67492207a75ef85866839040
 vendor/lib64/libwfdhdcpcp.so|bb4fc9d0020a7ec996310f1588c256f659b7809c
 
 # WLAN - from surya
-vendor/bin/nv_mac|292eab960355eae44a338b2011b0032bc7df422e
 vendor/bin/cnss-daemon|8eca8a7f38d8d4a974a65b891df4404b33efaccf
