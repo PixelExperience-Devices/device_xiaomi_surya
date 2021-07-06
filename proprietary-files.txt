@@ -12,6 +12,9 @@ vendor/lib64/libadsprpc.so|77bcb86aceb726f45ef853f10d27d86211db4429
 vendor/lib64/libmdsprpc.so|0e3d865eb12827de8bef517e54be1b42c4c82484
 vendor/lib64/libsdsprpc.so|f1f31d4a306dbd6fef2f1b54cf1c7410c37900aa
 
+# ADSP modules - from daisy-user-10-QKQ1.191002.002-V11.0.18.0.QDLMIXM-release-keys
+vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
+
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so|67e36bfe46b82bc3e0603bf58d638293fcadd4aa
