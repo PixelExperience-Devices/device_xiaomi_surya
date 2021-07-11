@@ -16,8 +16,9 @@ vendor.bluetooth.soc=cherokee
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
-# Charger
+# Battery Property
 ro.charger.enable_suspend=true
+persist.vendor.quick.charge=1
 
 # CNE
 persist.vendor.cne.feature=1
