@@ -40,6 +40,9 @@ persist.mm.enable.prefetch=true
 # Netflix custom property
 ro.netflix.bsp_rev=Q6150-17263-1
 
+# System prop for NFC DT
+ro.nfc.port=I2C
+
 # Radio
 persist.radio.multisim.config=dsds
 ril.subscription.types=RUIM
