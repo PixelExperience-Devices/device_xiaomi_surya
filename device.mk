@@ -248,6 +248,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsdmcore-shim
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
