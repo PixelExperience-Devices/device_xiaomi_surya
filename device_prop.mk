@@ -7,3 +7,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.support_kernel_idle_tim
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.defer_fps_frame_count=2
+
+# Blur
+ifeq ($(TARGET_SUPPORTS_BLUR), true)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
+endif
