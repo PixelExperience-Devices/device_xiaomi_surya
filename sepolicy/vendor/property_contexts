@@ -22,8 +22,6 @@ ro.boot.fpsensor                   u:object_r:vendor_fp_prop:s0
 ro.hardware.fp                     u:object_r:vendor_fp_prop:s0
 sys.panel.display                  u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.                    u:object_r:vendor_fp_prop:s0
-persist.vendor.fpc.                u:object_r:vendor_fp_prop:s0
-persist.sys.fp.                    u:object_r:vendor_fp_prop:s0
 
 # IR
 ro.lirc.dev                             u:object_r:lirc_prop:s0
