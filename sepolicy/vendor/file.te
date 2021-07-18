@@ -1,3 +1,4 @@
-]type persist_subsys_file, vendor_persist_type, file_type;
+type persist_subsys_file, vendor_persist_type, file_type;
 type proc_tp_gesture, fs_type, proc_type;
 type sysfs_battery_saver, fs_type, sysfs_type;
+

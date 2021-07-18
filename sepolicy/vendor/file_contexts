@@ -11,14 +11,10 @@
 /sys/devices/platform/soc/[a-f0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/panel_info u:object_r:vendor_sysfs_graphics:s0
 
 # Fingerprint
+/dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
 /data/vendor/fpc(/.*)?                                               u:object_r:fingerprint_data_file:s0
 /data/vendor/fpdump(/.*)?                                            u:object_r:fingerprint_data_file:s0
-/dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
 /data/vendor/goodix(/.*)?                                            u:object_r:fingerprint_data_file:s0
-/sys/devices/soc/soc:fpc1020.*/irq                                   u:object_r:fingerprint_device:s0
-/sys/devices/soc/soc:fpc1020.*/hw_reset                              u:object_r:fingerprint_device:s0
-/sys/devices/soc/soc:fpc1020.*/fingerdown_wait                       u:object_r:fingerprint_device:s0
-/sys/devices/soc/soc:fpc1020.*/wakeup_enable                         u:object_r:fingerprint_device:s0
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.surya u:object_r:hal_fingerprint_default_exec:s0
@@ -27,6 +23,11 @@
 
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                     u:object_r:persist_subsys_file:s0
+
+# Proximity
+/sys/bus/iio/devices                                                 u:object_r:vendor_sysfs_iio:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm6150l@4:vadc@3100/iio:device1(/.*)? u:object_r:vendor_sysfs_iio:s0
+/sys/devices/platform/us_prox.0/iio:device2(/.*)?                    u:object_r:vendor_sysfs_iio:s0
 
 # Remosaic
 /vendor/bin/remosaic_daemon                                          u:object_r:remosaic_daemon_exec:s0

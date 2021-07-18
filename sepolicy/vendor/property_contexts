@@ -1,5 +1,6 @@
 # Audio
 audio.soundtrigger.debug.          u:object_r:vendor_default_prop:s0
+tas.smartpa.debug.                 u:object_r:exported2_default_prop:s0
 
 # Camera
 vendor.camera.                     u:object_r:vendor_camera_prop:s0
@@ -9,11 +10,18 @@ camera.sensor.frontMain.fuseID     u:object_r:vendor_camera_prop:s0
 camera.sensor.rearUltra.fuseID     u:object_r:vendor_camera_prop:s0
 camera.sensor.rearTele.fuseID      u:object_r:vendor_camera_prop:s0
 persist.camera.                    u:object_r:vendor_camera_prop:s0
-persist.vendor.camera.mi.module.        u:object_r:vendor_camera_prop:s0
-vendor.camera.sensor.                   u:object_r:vendor_camera_prop:s0
-vendor.camera.aux.packageblacklist      u:object_r:vendor_camera_prop:s0
-vendor.camera.*                         u:object_r:vendor_camera_prop:s0
-persist.camera.*                        u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.mi.module.   u:object_r:vendor_camera_prop:s0
+vendor.camera.sensor.              u:object_r:vendor_camera_prop:s0
+vendor.camera.aux.packageblacklist u:object_r:vendor_camera_prop:s0
+vendor.camera.*                    u:object_r:vendor_camera_prop:s0
+persist.camera.*                   u:object_r:vendor_camera_prop:s0
+
+# Display
+ro.vendor.display.type             u:object_r:vendor_display_prop:s0
+
+# Elliptic ultrasound proximity
+elliptic.ultrasound.               u:object_r:vendor_sensors_prop:s0
+invn.hal                           u:object_r:vendor_sensors_prop:s0
 
 # Fingerprint
 gf.debug.                          u:object_r:vendor_fp_prop:s0
@@ -24,16 +32,10 @@ sys.panel.display                  u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.                    u:object_r:vendor_fp_prop:s0
 
 # IR
-ro.lirc.dev                             u:object_r:lirc_prop:s0
+ro.lirc.dev                        u:object_r:lirc_prop:s0
 
 # Sensors
 persist.sensor.                    u:object_r:persist_sensors_prop:s0
 
 # Xiaomi thermal daemon
 vendor.sys.thermal.                u:object_r:vendor_thermal_normal_prop:s0
-
-# Audio
-tas.smartpa.debug.                      u:object_r:exported2_default_prop:s0
-
-# Display
-ro.vendor.display.type                  u:object_r:vendor_display_prop:s0
