@@ -23,8 +23,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_ODM_PROPERTIES += \
     aaudio.mmap_policy=1 \
-    ro.vendor.audio.sdk.fluencetype=fluence
-    
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    vendor.audio.offload.buffer.size.kb=256
+
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundfx.type=mi \
     ro.vendor.audio.soundfx.usb=true \
