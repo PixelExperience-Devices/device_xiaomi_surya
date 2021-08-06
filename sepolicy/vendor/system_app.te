@@ -2,3 +2,5 @@
 allow system_app sysfs_thermal:file rw_file_perms;
 # allow system apps to read battery status
 r_dir_file(system_app, sysfs_battery_supply)
+
+get_prop(system_app, vendor_persist_camera_prop)
