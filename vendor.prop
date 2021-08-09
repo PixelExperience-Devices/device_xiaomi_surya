@@ -34,7 +34,8 @@ ro.vendor.display.sensortype=2
 vendor.display.disable_idle_time_hdr=1
 vendor.display.disable_idle_time_video=1
 vendor.display.disable_rotator_downscale=1
-vendor.display.idle_time=1100
+vendor.display.idle_time=0
+vendor.display.idle_time_inactive=0
 
 # Display (phase offsets)
 debug.sf.early_app_phase_offset_ns=500000
