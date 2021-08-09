@@ -15,7 +15,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.defer_fps_frame_count=2 \
     vendor.display.disable_idle_time_hdr=1 \
     vendor.display.disable_idle_time_video=1 \
-    vendor.display.idle_time=1100
+    vendor.display.idle_time=0 \
+    vendor.display.idle_time_inactive=0
 
 # Enable app/sf phase offset as durations. The numbers below are translated from the existing
 # positive offsets by finding the duration app/sf will have with the offsets.
