@@ -76,29 +76,11 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
 
-service nqnfc_2_0_hal_service /vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
-    override
-    class hal
-    user nfc
-    group nfc
-    disabled
-
-service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-service
-    override
-    class hal
-    user system
-    group system
-    disabled
-
 on property:ro.boot.hwversion=*
     setprop vendor.boot.hwversion ${ro.boot.hwversion}
 
 on property:ro.boot.hwname=*
     setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
-
-on property:ro.boot.product.hardware.sku=surya
-    enable nqnfc_2_0_hal_service
-    enable secureelement-hal_1_2
 
 on charger
     chown system system /sys/class/leds/white/brightness

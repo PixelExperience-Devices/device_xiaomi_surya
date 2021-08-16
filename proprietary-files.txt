@@ -754,9 +754,20 @@ vendor/lib64/unnhal-acc-hta.so|6cb1ca10aa1c82e59641d545d9f1ac7f00df8621
 vendor/lib64/unnhal-acc-hvx.so|00eb79608cb6e3f19eaf9389632fdbfa03b2df62
 
 # NFC
+vendor/bin/hw/vendor.nxp.hardware.nfc@1.2-service
+vendor/etc/init/vendor.nxp.hardware.nfc@1.2-service.rc
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
+vendor/etc/libnfc-nxp-pnscr.conf
+vendor/etc/nfc/nfc_whitelist.properties
 vendor/lib/libpn553_fw.so
+vendor/lib64/ese_spi_nxp.so
+vendor/lib64/hal_libnfc.so
+vendor/lib64/nfc_nci.nqx.default.hw.so
+vendor/lib64/vendor.nxp.hardware.nfc@1.0.so
+vendor/lib64/vendor.nxp.hardware.nfc@1.1.so
+vendor/lib64/vendor.nxp.nxpese@1.0.so
+vendor/lib64/vendor.nxp.nxpnfc@1.0.so
 vendor/libnfc-nxp_RF.conf
 
 # NFC - secure element
