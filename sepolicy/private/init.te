@@ -1,0 +1,1 @@
+allow init sysfs_devices_system_cpu:{ file lnk_file } rw_file_perms;

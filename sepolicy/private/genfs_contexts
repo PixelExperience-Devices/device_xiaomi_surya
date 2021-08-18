@@ -1,0 +1,3 @@
+genfscon proc /nvt_sensitivity_switch                                    u:object_r:proc_nvt_feature:s0
+genfscon proc /nvt_pf_switch                                             u:object_r:proc_nvt_feature:s0
+genfscon proc /nvt_er_range_switch                                       u:object_r:proc_nvt_feature:s0
