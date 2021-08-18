@@ -1,0 +1,4 @@
+allow init vendor_sysfs_cpu_boost:{ file lnk_file } rw_file_perms;
+allow init vendor_sysfs_devfreq:{ file lnk_file } rw_file_perms;
+allow init vendor_sysfs_kgsl:{ file lnk_file } rw_file_perms;
+allow init vendor_sysfs_msm_power:{ file lnk_file } rw_file_perms;
