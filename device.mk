@@ -93,6 +93,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-parts.xml
 
 PRODUCT_PRODUCT_PROPERTIES += \
+    persist.lcd.hbm_mode=0 \
     persist.lcd.cabc_mode=1
 
 # Camera
