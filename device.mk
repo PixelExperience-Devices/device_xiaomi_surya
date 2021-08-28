@@ -98,6 +98,8 @@ BOARD_HAVE_QCOM_FM := true
 
 # GPS
 LOC_HIDL_VERSION := 4.0
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+$(call inherit-product-if-exists, $(LOCAL_PATH)/gps/gps_vendor_product.mk)
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
