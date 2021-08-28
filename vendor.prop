@@ -99,6 +99,9 @@ persist.sys.binary_xml=false
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# WiFi
+wifi.aware.interface=wifi-aware0
+
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440
