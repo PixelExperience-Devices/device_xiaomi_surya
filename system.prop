@@ -1,8 +1,27 @@
+# Audio
+ro.config.media_vol_default=8
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_default=5
+ro.config.vc_call_vol_steps=6
+
+# Bluetooth
+persist.vendor.bt.a2dp.aac_whitelist=false
+persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.enable.twsplussho=true
+vendor.bluetooth.soc=cherokee
+
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+
+# Charger
+ro.charger.enable_suspend=true
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
 # Radio
 persist.sys.fflag.override.settings_provider_model=false
+
+# WFD
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0

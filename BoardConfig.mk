@@ -5,9 +5,11 @@
 #
 
 DEVICE_PATH := device/xiaomi/surya
+COMMON_PATH := device/qcom/common
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -32,6 +34,9 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 
+# Camera
+TARGET_USES_QTI_CAMERA_DEVICE := true
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
@@ -41,7 +46,7 @@ TARGET_TAP_TO_WAKE_NODE  := "/proc/tp_gesture"
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/device_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
-DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
+DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
 
 ODM_MANIFEST_SKUS += surya
 ODM_MANIFEST_SURYA_FILES := $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
@@ -53,17 +58,24 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 androidboot.usbcontroller=a600000.dwc3 earlycon=msm_geni_serial,0x880000 loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += kpti=off cgroup.memory=nokmem,nosocket
 
-KERNEL_DEFCONFIG := vendor/surya-perf_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version 2
+
+TARGET_KERNEL_CONFIG := vendor/surya-perf_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -84,9 +96,17 @@ BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 8585740288 # (BOARD_SUPER_PARTITION_SIZE - 4MB overhead)
 
+ifeq ($(VANILLA_BUILD),true) # Reserve 1GB free space
+BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1048576000
+BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1048576000
+else # Reserve 100MB free space
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 104857600
-BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 104857600
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 104857600
+endif
+
+BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 104857600
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 104857600
 
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -101,10 +121,15 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# QC common
+TARGET_SEPOLICY_DIR := msmsteppe
+include $(COMMON_PATH)/BoardConfigQcom.mk
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -125,7 +150,6 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 include device/xiaomi/J20C-sepolicy/J20C-sepolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-TARGET_SEPOLICY_DIR := msmsteppe
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

@@ -20,7 +20,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_wcd9375.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9375.xml
 
@@ -47,10 +47,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
-
-# Charger
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.charger.enable_suspend=true
 
 # ContextHub
 PRODUCT_PACKAGES += \
@@ -198,9 +194,8 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPASuryaFrameworks \
-    AOSPASuryaSettings \
-    AOSPASuryaSystemUI \
+    AOSPSuryaFrameworks \
+    AOSPSuryaSettings \
     KarnaFrameworks \
     KarnaWifiOverlay \
     KarnaSettingsProviderOverlay \
@@ -212,14 +207,6 @@ PRODUCT_PACKAGES += \
     SuryaChargingOverlay \
     SuryaSettingsLibOverlay \
     SuryaSettingsProviderOverlay
-
-# ParanoidDoze
-PRODUCT_PACKAGES += \
-    ParanoidDoze
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sensor.proximity=true \
-    ro.sensor.pickup=xiaomi.sensor.pickup
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -235,7 +222,7 @@ PRODUCT_COPY_FILES += \
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 
-# QTI
+# QC common
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     audio \
@@ -251,6 +238,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     usb \
     vibrator \
     wlan
+
+$(call inherit-product, device/qcom/common/common.mk)
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -290,3 +279,7 @@ PRODUCT_PACKAGES += \
 
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
+
+# Vibrator
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml

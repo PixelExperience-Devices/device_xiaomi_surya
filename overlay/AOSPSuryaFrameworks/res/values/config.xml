@@ -16,25 +16,6 @@
 -->
 <resources>
 
-    <!-- Whether to intercept inputs on screen off -->
-    <bool name="config_enableKeyHandler">true</bool>
-
-    <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
-    <integer name="config_doubleTapKeyCode">143</integer>
-
-    <!-- Default settings for gestures:
-             0 - Disabled
-             1 - Wake
-             2 - Pulse
-             3 - Flashlight
-             4 - Airplane
-             5 - Play/Pause
-             6 - Next
-             7 - Previous
-             8 - Camera
-             9 - Dialer -->
-    <integer name="config_doubleTapDefault">1</integer>
-
     <!-- Paths to the libraries that contain device specific key handlers -->
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
         <item>/system/priv-app/KeyHandler/KeyHandler.apk</item>
@@ -42,7 +23,7 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>co.aospa.keyhandler.KeyHandler</item>
+        <item>com.aosp.keyhandler.KeyHandler</item>
     </string-array>
 
     <!-- The list of components which should be automatically disabled for a specific device. -->
@@ -62,4 +43,8 @@
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">90</integer>
+
 </resources>

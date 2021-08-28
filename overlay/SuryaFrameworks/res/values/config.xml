@@ -513,4 +513,44 @@
     <!-- Delay that allows some content to arrive at the display before switching
          from DOZE to ON, in millis. -->
     <integer name="config_wakeUpDelayDoze">32</integer>
+
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/bin/surfaceflinger"</item>
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/system/framework/ext.jar"</item>
+        <item>"/system/framework/QPerformance.jar"</item>
+        <item>"/system/framework/UxPerformance.jar"</item>
+        <item>"/system/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/system/lib/libsurfaceflinger.so"</item>
+        <item>"/system/bin/surfaceflinger"</item>
+        <item>"/system/lib/libRScpp.so"</item>
+        <item>"/system/lib/libRS.so"</item>
+        <item>"/system/lib/libRS_internal.so"</item>
+        <item>"/system/lib/libbcinfo.so"</item>
+        <item>"/system/lib/libRSDriver.so"</item>
+        <item>"/system/lib/libRSCpuRef.so"</item>
+        <item>"/system/lib/libblas.so"</item>
+        <item>"/system/lib64/libRScpp.so"</item>
+        <item>"/system/lib64/libRS.so"</item>
+        <item>"/system/lib64/libRS_internal.so"</item>
+        <item>"/system/lib64/libbcinfo.so"</item>
+        <item>"/system/lib64/libRSDriver.so"</item>
+        <item>"/system/lib64/libRSCpuRef.so"</item>
+        <item>"/system/lib64/libblas.so"</item>
+        <item>"/vendor/lib/libCB.so"</item>
+        <item>"/vendor/lib/libgsl.so"</item>
+        <item>"/vendor/lib64/libCB.so"</item>
+        <item>"/vendor/lib64/libgsl.so"</item>
+        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+    </string-array>
+
+    <!-- Safe headphone volume index. When music stream volume is below this index
+    the SPL on headphone output is compliant to EN 60950 requirements for portable music
+    players. -->
+    <integer name="config_safe_media_volume_index">15</integer>
+
 </resources>

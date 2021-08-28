@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.keyhandler
+package com.aosp.keyhandler
 
 import android.content.Context
 import android.view.KeyEvent
