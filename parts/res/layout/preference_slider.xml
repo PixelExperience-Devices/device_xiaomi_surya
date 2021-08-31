@@ -53,11 +53,11 @@
         android:textColor="?android:attr/textColorSecondary" />
 
     <ImageView
-        android:id="@+id/icon"
+        android:id="@android:id/icon"
         android:layout_below="@android:id/summary"
         android:layout_gravity="center_vertical|start"
-        android:layout_width="48dp"
-        android:layout_height="48dp" />
+        android:layout_width="28dp"
+        android:layout_height="28dp" />
 
     <SeekBar
         android:id="@+id/seekbar"
