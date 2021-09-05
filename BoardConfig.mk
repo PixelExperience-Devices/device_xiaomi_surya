@@ -166,7 +166,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_BOARD_PLATFORM := sm6150
 
 # Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 TARGET_PROVIDES_POWERHAL := true
     
 # Properties
