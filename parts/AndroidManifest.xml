@@ -171,7 +171,7 @@
         </activity>
 
         <activity
-            android:name=".thermal.ThermalActivity"
+            android:name=".thermal.ThermalSettingsActivity"
             android:exported="true"
             android:label="@string/thermal_title"
             android:theme="@style/Theme.SubSettingsBase">
