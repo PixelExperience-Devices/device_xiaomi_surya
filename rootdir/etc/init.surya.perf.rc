@@ -75,14 +75,6 @@ on early-init
     write /sys/block/sde/queue/iostats 0
     write /sys/block/sdf/queue/iostats 0
 
-on late-init
-    # Start services early for bootanim
-    start surfaceflinger
-    start bootanim
-    start vendor.hwcomposer-2-4
-    start vendor.configstore-hal
-    start vendor.qti.hardware.display.allocator
-
 on property:sys.boot_completed=1
     # Reset maximum I/O requests for runtime.
     write /sys/block/dm-0/queue/nr_requests 128
