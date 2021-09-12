@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 
 import org.lineageos.settings.dirac.DiracUtils;
+import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -30,6 +31,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         // Dirac
         DiracUtils.initialize(context);
+
+        // Doze
+        DozeUtils.checkDozeService(context);
 
         // Thermal Profiles
         ThermalUtils.startService(context);
