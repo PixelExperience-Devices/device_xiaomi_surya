@@ -1,3 +1,5 @@
+# All unpinned blobs are extracted - from surya MIUI V12.0.1.0.RJGMIXM.
+
 # ADSP - from LA.UM.9.1.r1-10200-SMxxx0.0
 vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|77f5aaf6d773ee545e39bc5fdc99c65434c05379
@@ -10,7 +12,7 @@ vendor/lib64/libadsprpc.so|77bcb86aceb726f45ef853f10d27d86211db4429
 vendor/lib64/libmdsprpc.so|0e3d865eb12827de8bef517e54be1b42c4c82484
 vendor/lib64/libsdsprpc.so|f1f31d4a306dbd6fef2f1b54cf1c7410c37900aa
 
-# ADSP modules - from surya
+# ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so|67e36bfe46b82bc3e0603bf58d638293fcadd4aa
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so|7182a5728055dfdee15cd9518c1fdd576d813133
@@ -50,7 +52,7 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|7c89039a1d670ff6f92ada82bd1ff2c236
 vendor/lib/hw/com.dsi.ant@1.0-impl.so|d99ff0030ce14172d9d10e0b1f31b2d201aade10
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|0f8f5c3081d0ef745e0896b1fceea15f52fe3b21
 
-# Audio - from surya
+# Audio
 vendor/lib/liba2dpoffload.so|fd6421911c0dd7bf95e9cc2757f23ca935ee9ae0
 vendor/lib/libacdb-fts.so|6a3edbf3dc492b3a0962c9e6b58df64bd5bc92ff
 vendor/lib/libacdbloader.so|eb5f94a5b0f3d992fc9da3f0c9f8b21426412d6f
@@ -100,7 +102,7 @@ vendor/lib64/libssrec.so|4802f63763dfcbdd927927dd7edf05dc4807e4ca
 vendor/lib64/soundfx/libasphere.so|7d01becf38d808b232aef88025e4dd69839b788f
 vendor/lib64/soundfx/libshoebox.so|81b3312b54e147c8b5375c712a004661fb78e8bf
 
-# Audio ACDB - from surya
+# Audio ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb|07316aaca619fbceb5edc07e46fd0957e34afaa3
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb|c2d1681437a8f797c3e754deea07009a0b76da60
 vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb|8fb8542e31e65a75f1c3df1a8b01586565cb602b
@@ -112,16 +114,16 @@ vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb|df69949b8065e838114c9771b262dd675d7
 vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb|339b30d5295bd43e99933038814fc3846e50c28e
 vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp|bebd26cc50fcb1adf3d3fc48deaaee4670015f5a
 
-# Audio firmware - from surya
+# Audio firmware
 vendor/firmware/tas256x_reg.bin|e947b68b8e1f8ffede952aabef048c10e147f9c8
 
-# Audio HAL - from surya
+# Audio HAL
 vendor/lib/hw/audio.primary.sm6150.so|34db41796d835b8f6d9874411f97dd4ae0987413
 vendor/lib/libaudio_log_utils.so|71ec4d31ad6c9e9a4bee8db7b5ab55b70ef7c4c3
 vendor/lib64/hw/audio.primary.sm6150.so|77be11e783a9f6708ce625e56b9128333fa11fc7
 vendor/lib64/libaudio_log_utils.so|6091c30d5724adb31a3b4c71379cc004c235905a
 
-# Batterysecret - from surya
+# Batterysecret
 vendor/bin/batterysecret|c653ff3305229b3c2bd99162fbe35118de35abeb
 vendor/etc/init/init.batterysecret.rc|bf91962da6c8f77033f209d34434acc10c467699
 
@@ -161,7 +163,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|8c14f8120a37db2eb95239c6ca
 system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
-# Camera - from surya
+# Camera
 vendor/lib64/hw/camera.qcom.so|9c88440eca5bf0c0384e2d99fbd0e6373a42f979
 vendor/lib64/hw/com.qti.chi.override.so|8327d6cce1a5676a086734196800786e096bd3d9
 vendor/lib64/libalAILDC.so|cd3436990cf35dfa6592074a413b3b9fd0660ca6
@@ -231,7 +233,7 @@ vendor/lib64/libXMFD_AgeGender.so|1fcc9780c5873fa60f92070dbd7cecbf88e2bd6a
 vendor/lib64/libxmi_high_dynamic_range.so|50386475945b07b0e368a1caea664e3b72047dd0
 vendor/lib64/libxml2_vendor.so|336de129dd9072f31d8aaee3286e5f10c1bf32fe
 
-# Camera components - from surya
+# Camera components
 vendor/lib64/camera/components/com.almalence.node.sr.so|8e8309f5e2336a61c03ed2dbee6c58b6aa3838d5
 vendor/lib64/camera/components/com.altek.node.depurple.so|2067914942879e1e265291bd612e56aab6041963
 vendor/lib64/camera/components/com.altek.node.distortioncorrection.so|d982dc247f51cd38ee872becaf07d871f16ad8c3
@@ -301,7 +303,7 @@ vendor/lib64/camera/components/etc/visidon_clearshot_params.xml|ee064b324f3e4369
 vendor/lib64/camera/components/libdepthmapwrapper.so|292b6c004a16b0bdd97049816f1ce7c87fcc8e92
 vendor/lib64/camera/components/libmmcamera_cac3.so|738924eb3550cbc79d3b4efd7364f17919e8bdde
 
-# Camera configs - from surya
+# Camera configs
 vendor/etc/camera/almalence_sr_params_tele.config|a5216343ebac981b47670522cf0a56960181f5cd
 vendor/etc/camera/almalence_sr_params_wide.config|9567cf89e5347348ea5e10035c3f2635b9fd8162
 vendor/etc/camera/beauty_ui9_intelligent_params.config|fc812ab1766b927e7366bd9472624b8b5d0dda81
@@ -335,14 +337,14 @@ vendor/etc/camera/score_icon.png|8580e0abbf401a09c6581b82e9c00cd78fb8951f
 vendor/etc/camera/vidhance_calibration|9b7e71643edba9d6e6f193051ee4d7d9df0a17a1
 vendor/etc/camera/watermark_font_2300_3199.dat|470c10429888b89966af5eb610b13b843a1a0248
 
-# Camera firmware - from surya
+# Camera firmware
 vendor/firmware/CAMERA_ICP.elf|4eccbb6081b3171414e838f62f7d7936b8181594
 
-# Camera provider - from surya
+# Camera provider
 vendor/lib/android.hardware.camera.provider@2.4-legacy.so|3fdb131775f3daeb72df27e4f327227f33e10c68
 vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|e90855d38e25b174be097fc25d614ca767ab2c06
 
-# Camera sensors - from surya
+# Camera sensors
 vendor/lib64/camera/com.qti.sensormodule.j20c_aac_gc02m1b_depth.bin|64158c555de83ffcb0a7660cbefd9966920365d6
 vendor/lib64/camera/com.qti.sensormodule.j20c_aac_hi1337_ultra.bin|f6e87299dbd823c762ae0ec05730d205956f7c38
 vendor/lib64/camera/com.qti.sensormodule.j20c_aac_hi259_macro.bin|81ef37f8a347447bd145f0bccddea1d12856e7a5
@@ -388,7 +390,7 @@ vendor/lib64/camera/fdconfigpreviewlite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b
 vendor/lib64/camera/fdconfigvideo.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
 vendor/lib64/camera/fdconfigvideolite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
 
-# Camera service - from surya
+# Camera service
 lib/libcameraservice.so|87730c6b9e63ab8fe1928db1096034d9e133232a
 
 # CDSP - from LA.UM.9.1.r1-10200-SMxxx0.0
@@ -412,7 +414,7 @@ vendor/bin/init.qti.chg_policy.sh|ecbd0df01254fb28ddfe8174b1a16b96a87303ff
 vendor/etc/charger_fstab.qti|8464c139d93f05e86ff9c9d31b3e8617b8d9476e
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
 
-# Charger - from surya
+# Charger
 vendor/bin/hvdcp_opti|c29dc9035322d0734a616b55c5e35c4bcea2c3d5
 
 # CNE - from LA.UM.9.1.r1-09600-SMxxx0.0
@@ -480,7 +482,7 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|645da35014e8
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|e70fda0288c646d0daf0ed0eef2f21855dd8d024
 
-# Display calibration - from surya
+# Display calibration
 vendor/etc/hdr_config.cfg|14bd7906643998c6b6bb51be5f20007232eaccc3
 vendor/etc/sdr_config.cfg|4e0901a44be67f92b747e2c34d13f8858f9cc010
 
@@ -536,7 +538,7 @@ vendor/lib64/libssd.so|0a461a98eb314fe6e79bfe08457a88e48c52550a
 vendor/lib64/libtrustedapploader.so|e9ebd0130381cf60219d4c511a8e6908684cb7ab
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|ce94ef46eea7c32e8a0d47ce4aa372153cc339fb
 
-# DRM - Widevine - from surya
+# DRM - Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|07ac13a602f25788e54c1500c2957f561dd9f90a
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
@@ -557,7 +559,7 @@ system_ext/lib64/vendor.qti.hardware.fm@1.0.so|4ba97fa02808eb1d125c9b7ccd9d0a92b
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|5997d1f42e0ed9a546360315c5634dddc3410357
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|5503652c162d3472f8c23dc9331a81261b0d72e9
 
-# Fingerprint - from surya
+# Fingerprint
 vendor/etc/permissions/com.fingerprints.extension.xml|de711d8827e1d321b22b60fd75a204e8928f9c6d
 vendor/framework/com.fingerprints.extension.jar|da85473758ee143fad4d824d1fb95d9ad6b297a9
 vendor/lib64/com.fingerprints.extension@1.0.so|7a356aecd3e458db31fb7ebe4605f55bdee50863
@@ -683,7 +685,7 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 product/etc/permissions/privapp-permissions-google-hotword.xml
 product/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
 
-# Graphics firmware - from surya
+# Graphics firmware
 vendor/firmware/a615_zap.b00|1f966d9754aa6b971d39f5b3d9637480e67aa3fe
 vendor/firmware/a615_zap.b01|45470ff658c86e67d70ed004f16776dc61f346f6
 vendor/firmware/a615_zap.b02|4ae54047f9629f2470a5d58f3940c5eb51298b96
@@ -692,7 +694,7 @@ vendor/firmware/a615_zap.mdt|0c5505dc3d8420ff4df6633939b2262d15d88171
 vendor/firmware/a618_gmu.bin|0c211ef8a3246d649a4ae52a926d128b61e3c264
 vendor/firmware/a630_sqe.fw|e25094f97b44244775cc38a9d909fba6bd4cf76b
 
-# IPA firmware - from surya
+# IPA firmware
 vendor/firmware/ipa_fws.b00|bc93bd0d1ed662f475579a5d7e706b1ad970eb7c
 vendor/firmware/ipa_fws.b01|9000bd1a2713903bee7afd1375945e02d9e7ab09
 vendor/firmware/ipa_fws.b02|a4f15a2345382514ef64d40f58dbaa3f1e35c4e7
@@ -701,10 +703,10 @@ vendor/firmware/ipa_fws.b04|e3552692a635dceca369cab6d9349091b669c80a
 vendor/firmware/ipa_fws.elf|f29884df4a17552b0fa66ea9f39bf95021d737ad
 vendor/firmware/ipa_fws.mdt|35f23acac4ee7551ec4a362b447cf0856b688ae8
 
-# IR - from surya
+# IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so|3f61dc184f902dd699638c4a7477f21b4743029d
 
-# Keymaster - from surya
+# Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti|12777e1f7f44222c7afa1aa5ad9514a774175928
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc|c8999fb1bccbef81e6b362059e9a6ebd023de98f
 vendor/lib64/libkeymasterdeviceutils.so|342fec39fae05ad5c0946dfbe2ad39343ea556cb
@@ -712,7 +714,7 @@ vendor/lib64/libkeymasterutils.so|b9c888d579c9cf7a1c8f463be4048eb9d935daf8
 vendor/lib64/libqcbor.so|67acd94f3c7110c9419f0fd064b6eb69c09a0738
 vendor/lib64/libqtikeymaster4.so|9c45da4b7daa40d44592d94061858813e35473d0
 
-# Listen - from surya
+# Listen
 vendor/lib/hw/sound_trigger.primary.sm6150.so|e89c95a9e505ae28a7921473665a37b38dd98573
 vendor/lib/libadpcmdec.so|5232c32b93a8653612cd8fcdde161a9d7fe39c7f
 vendor/lib/libmulawdec.so|4ad85b4982bf0cfed77c9bede75aac09a51ab062
@@ -801,10 +803,10 @@ vendor/lib64/unnhal-acc-common.so|28bf113f063a01e7166e88859c4f3c5d2b0de396
 vendor/lib64/unnhal-acc-hta.so|6cb1ca10aa1c82e59641d545d9f1ac7f00df8621
 vendor/lib64/unnhal-acc-hvx.so|c0892ac04f9c3cb9bb25e240ff22ced3522c31e0
 
-# NFC - from surya
+# NFC
 vendor/lib/libpn553_fw.so|a8e29cc3ebb2e0df0fb505fc2da9c69a015680fb
 
-# Perf - from surya
+# Perf
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|98654005d78109d44fc1b53a41803184dd35939a
 vendor/bin/msm_irqbalance|0e967f5c7eaf8d863a50996459101be47adf96a2
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
@@ -1072,7 +1074,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|1218fbb37ed0b4480424d38cf10afa8ad58
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|25517caf74691b812320b46b477a3f4161cc1bcf
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|67546cc15dc588dd23fc13b85bec078ea56c4d36
 
-# Sensors - from surya
+# Sensors
 vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
 vendor/bin/sensors.qti|0230eb88665daaf7e6193d4461972111a02963a1
 vendor/etc/init/init.vendor.sensors.rc|76af799ee1c3b4a7fd0a29f1cb133e520e9721f2
@@ -1089,7 +1091,7 @@ vendor/lib64/libssc_default_listener.so|dc48790b62b5654138982e48182954790869bbb3
 vendor/lib64/libssc.so|dc699da89cfd72c99d6578bbad4e3cd8703b2bc7
 vendor/lib64/sensors.ssc.so|ca06ec62cc3cff830c7ca812bc8ed2ad6d86039c
 
-# Sensors config - from surya
+# Sensors config
 vendor/etc/sensors/config/adux1050_0.json|37f8f1084333d97c01bf655579a321a09e6f8c01
 vendor/etc/sensors/config/bmi160_0.json|4ca98f795c06f38244129608262ee2765f30cd5b
 vendor/etc/sensors/config/lsm6ds3c_0.json|48a902419487dc6f0b9c296c00a1af409e991eda
@@ -1137,14 +1139,14 @@ vendor/etc/sensors/config/sns_tilt_to_wake.json|374c0e79755910e2386dc2d359725649
 vendor/etc/sensors/config/sns_wrist_pedo.json|078bbc91b4bde41ad214ee81276485e657245a26
 vendor/etc/sensors/sns_reg_config|3615a65f046554993265cf9faeb718002f73c1e0
 
-# Soter - from surya
+# Soter
 -app/SoterService/SoterService.apk|939423f0016034cf8676f64d384aafde308f779b
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|80ae6dfcb151cd0813b2d20442e540edede24772
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|64e17127e63d9e7c811eab805e518a0c572f7089
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|f98b5eef4e9851ee4ff9546685e9c2fc2ba9e35a
 
-# Thermal - from surya
+# Thermal
 vendor/bin/mi_thermald|2cb2d46219c6bc7005b61a6960b9f674049a586c
 vendor/bin/thermal-engine|008f997c2bce7f1a8143be59ae960e9a284c8117
 vendor/etc/thermal-4k.conf|1648b94b29fcbacd65a5695eccae404274d9e1e0
@@ -1169,7 +1171,7 @@ vendor/bin/time_daemon|17377813bbc330c23d2fee77be21fe24d8aa131e
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|7b8bf7bf1eaa4df8f6613f4ece711a0797cd2e46
 
-# Touchscreen firmware - from surya
+# Touchscreen firmware
 vendor/firmware/novatek_ts_huaxing_fw.bin|92e8794fc832909af26d71eb5078e882428821b5
 vendor/firmware/novatek_ts_huaxing_mp.bin|575075ba6e0222fe33df9836d92e982cf3ef5f81
 vendor/firmware/novatek_ts_tianma_fw.bin|ab801fc1f8e5a87ddb442044d1eb0a6eb3769829
@@ -1180,12 +1182,12 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f96
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|938262f1c75299523dc8e5c4e6a793753b209c40
 
-# Vibrator firmware - from surya (AW8624)
+# Vibrator firmware - AW8624
 vendor/firmware/aw8624_haptic.bin|0d3ac505271e68d22c0c4960a6a580327c77f075
 vendor/firmware/aw8624_rtp.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
 vendor/firmware/osc_rtp_24K_5s.bin|9f32c9bf0776a566d3254129a028dae9bed76b81
 
-# Vibrator firmware - from surya (DRV2624)
+# Vibrator firmware - DRV2624
 vendor/firmware/drv2624.bin|15ffeb248386181ccf6895726a618c8f7a579dd5
 vendor/firmware/drv2624.rtp|27e0cb028637b221c1a9967712bc49081ce5e65f
 
@@ -1292,5 +1294,5 @@ vendor/lib64/libhdcpsrm.so|5058280e6273008851983ed4389f86fad9de68d4
 vendor/lib64/libmm-hdcpmgr.so|83c232564e9c828b67492207a75ef85866839040
 vendor/lib64/libwfdhdcpcp.so|bb4fc9d0020a7ec996310f1588c256f659b7809c
 
-# WLAN - from surya
+# WLAN
 vendor/bin/cnss-daemon|8eca8a7f38d8d4a974a65b891df4404b33efaccf
