@@ -80,21 +80,6 @@ void set_device_props(const string brand, const string device,
     }
 }
 
-void set_device_fp() {
-    // list of partitions to override props
-    string source_partitions[] = { "", "bootimage", "odm.", "product.",
-                                   "system", "system_ext.", "vendor." };
-
-    string fp = "google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys";
-    string desc = "redfin-user 11 RQ3A.210805.001.A1 7474174:user release-keys";
-
-    for (const string &source : source_partitions) {
-        set_ro_build_prop(source, "fingerprint", fp, false);
-        set_ro_build_prop(source, "description", desc, false);
-    }
-}
-
-
 void load_dalvik_properties() {
     struct sysinfo sys;
 
@@ -135,7 +120,6 @@ void vendor_load_properties()
 
     load_dalvik_properties();
     //Safetynet workarounds
-    set_device_fp();
     property_override("ro.oem_unlock_supported", "0");
     property_override("ro.boot.verifiedbootstate", "green");
 
