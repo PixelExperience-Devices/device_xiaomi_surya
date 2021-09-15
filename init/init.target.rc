@@ -33,6 +33,8 @@ on early-init
     mkdir /firmware 0771 system system
     mkdir /bt_firmware 0771 system system
     symlink /data/tombstones /tombstones
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.early_init.sh
+    setprop ro.soc.model ${ro.vendor.qti.soc_model}
 
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1

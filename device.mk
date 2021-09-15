@@ -206,7 +206,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
-    init.qti.dcvs.sh
+    init.qti.dcvs.sh \
+    init.qti.early_init.sh
 
 PRODUCT_PACKAGES += \
     fstab.zram \

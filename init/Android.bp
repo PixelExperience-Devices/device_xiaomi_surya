@@ -72,3 +72,9 @@ sh_binary {
     src: "init.qti.dcvs.sh",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.qti.early_init.sh",
+    src: "init.qti.early_init.sh",
+    vendor: true,
+}
