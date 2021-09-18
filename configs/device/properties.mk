@@ -70,6 +70,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
    vendor.display.disable_idle_time_video=1 \
    vendor.display.disable_rotator_downscale=1
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.has_wide_color_display=false
+
 # Disable vsync for cpu rendered apps
 PRODUCT_SYSTEM_PROPERTIES += \
    debug.cpurend.vsync=false
