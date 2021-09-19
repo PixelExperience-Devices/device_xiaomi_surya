@@ -12,7 +12,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_color_management=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.display.defer_fps_frame_count=2 \
+    vendor.display.defer_fps_frame_count=4 \
     vendor.display.disable_idle_time_hdr=1 \
     vendor.display.disable_idle_time_video=1 \
     vendor.display.idle_time=0 \
