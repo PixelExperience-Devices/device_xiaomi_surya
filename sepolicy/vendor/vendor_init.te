@@ -4,3 +4,9 @@ set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_ims_prop)
 set_prop(vendor_init, vendor_cnd_prop)
 set_prop(vendor_init, vendor_camera_prop)
+
+# Dirac
+set_prop(vendor_init, dirac_prop)
+set_prop(vendor_init, vendor_audio_prop)
+
+allow vendor_init dirac_prop:property_service set;

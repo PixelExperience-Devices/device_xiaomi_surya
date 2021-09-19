@@ -113,6 +113,13 @@ persist.vendor.cne.feature=1
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
+# Dirac
+ro.audio.soundfx.dirac=true
+persist.audio.dirac.speaker=true
+persist.dirac.acs.controller=qem
+persist.dirac.acs.storeSettings=1
+persist.dirac.acs.ignore_error=1
+
 # DPM
 persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
