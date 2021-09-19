@@ -30,7 +30,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         // Dirac
-        DiracUtils.initialize(context);
+        new DiracUtils(context).onBootCompleted();
 
         // Doze
         DozeUtils.checkDozeService(context);
