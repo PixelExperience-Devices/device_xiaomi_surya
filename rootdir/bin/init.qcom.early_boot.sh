@@ -35,3 +35,7 @@ if [ "$boot_reason" = "3" ] || [ "$reboot_reason" = "true" ]; then
 else
     setprop ro.vendor.alarm_boot false
 fi
+
+# Allow system_graphics group to access pmic secure_mode node
+set_perms /sys/class/lcd_bias/secure_mode system.graphics 0660
+set_perms /sys/class/leds/wled/secure_mode system.graphics 0660
