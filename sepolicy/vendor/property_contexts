@@ -17,6 +17,8 @@ vendor.camera.*                    u:object_r:vendor_camera_prop:s0
 persist.camera.*                   u:object_r:vendor_camera_prop:s0
 
 # Dirac
+audio.dirac.                       u:object_r:dirac_prop:s0
+audio.dirac.logging                u:object_r:dirac_prop:s0
 persist.audio.dirac.               u:object_r:dirac_prop:s0
 persist.dirac.acs.controller       u:object_r:vendor_audio_prop:s0
 persist.dirac.acs.storeSettings    u:object_r:vendor_audio_prop:s0
