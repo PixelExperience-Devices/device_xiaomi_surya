@@ -196,13 +196,15 @@ PRODUCT_PACKAGES += \
     AOSPASuryaSystemUI \
     KarnaFrameworks \
     KarnaWifiOverlay \
+    KarnaSettingsProviderOverlay \
     SuryaNoCutoutOverlay \
     NotchBarKiller \
     SuryaFrameworks \
     SuryaSystemUI \
     SuryaWifiOverlay \
     SuryaChargingOverlay \
-    SuryaSettingsLibOverlay
+    SuryaSettingsLibOverlay \
+    SuryaSettingsProviderOverlay
 
 # ParanoidDoze
 PRODUCT_PACKAGES += \
