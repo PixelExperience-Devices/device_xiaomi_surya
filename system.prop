@@ -25,3 +25,6 @@ persist.sys.fflag.override.settings_provider_model=false
 # WFD
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
