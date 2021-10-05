@@ -83,6 +83,12 @@ on late-init
     start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
 
+on property:init.svc.vendor.hwcomposer-2-4=stopped
+    stop ppd
+
+on property:init.svc.vendor.hwcomposer-2-4=running
+    start ppd
+
 on property:sys.boot_completed=1
     # Reset maximum I/O requests for runtime.
     write /sys/block/dm-0/queue/nr_requests 128
