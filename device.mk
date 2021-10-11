@@ -7,6 +7,9 @@
 # Inherit the proprietary setup
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
