@@ -12,6 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+on boot
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/cabc
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/cabc
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/hbm
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/hbm
+
+on property:persist.lcd.hbm_mode=*
+    write /sys/devices/platform/soc/soc:qcom,dsi-display/hbm ${persist.lcd.hbm_mode}
+
+on property:persist.lcd.cabc_mode=*
+    write /sys/devices/platform/soc/soc:qcom,dsi-display/cabc ${persist.lcd.cabc_mode}
+
 on property:sys.perf_profile=1
     write /dev/stune/top-app/schedtune.boost 10
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
@@ -47,9 +59,3 @@ on property:sys.perf_profile=0
     write /sys/module/cpu_boost/parameters/input_boost_ms 100
     write /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor bw_hwmon
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
-
-on property:persist.lcd.hbm_mode=*
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/hbm ${persist.lcd.hbm_mode}
-
-on property:persist.lcd.cabc_mode=*
-    write /sys/devices/platform/soc/soc:qcom,dsi-display/cabc ${persist.lcd.cabc_mode}

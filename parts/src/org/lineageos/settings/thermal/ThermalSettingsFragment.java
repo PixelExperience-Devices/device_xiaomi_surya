@@ -16,7 +16,6 @@
 package org.lineageos.settings.thermal;
 
 import android.annotation.Nullable;
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -104,8 +103,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
-        final ActionBar actionBar = getActivity().getActionBar();
-        actionBar.setTitle(getResources().getString(R.string.thermal_title));
+        getActivity().setTitle(getResources().getString(R.string.thermal_title));
         rebuild();
     }
 
