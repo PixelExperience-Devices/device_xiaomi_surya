@@ -21,11 +21,11 @@
 
 #include "BiometricsFingerprint.h"
 
-using android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint;
-using android::hardware::biometrics::fingerprint::V2_1::implementation::BiometricsFingerprint;
+using android::sp;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
-using android::sp;
+using android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint;
+using android::hardware::biometrics::fingerprint::V2_1::implementation::BiometricsFingerprint;
 
 using android::status_t;
 
@@ -63,5 +63,5 @@ int main() {
 
     joinRpcThreadpool();
 
-    return 0; // should never get here
+    return 0;  // should never get here
 }
