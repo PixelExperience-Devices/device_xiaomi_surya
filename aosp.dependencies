@@ -1,21 +1,18 @@
 [
    {
        "repository"  : "kernel_xiaomi_surya",
-       "target_path" : "kernel/xiaomi/surya",
-       "remote"      : "pixel-devices",
-       "branch"      : "eleven"
+       "target_path" : "kernel/xiaomi/surya"
    },
    {
+       "remote"      : "blobs",
        "repository"  : "vendor_xiaomi_surya",
        "target_path" : "vendor/xiaomi/surya",
-       "remote"      : "pixel-devices-blobs",
-       "branch"      : "eleven"
+       "branch"      : "twelve"
    },
    {
-       "repository"  : "LineageOS/android_hardware_xiaomi",
+       "repository"  : "AOSPK/hardware_xiaomi",
        "target_path" : "hardware/xiaomi",
        "remote"      : "github",
-       "branch"      : "lineage-18.1"
+       "branch"      : "twelve"
    }
-
 ]
