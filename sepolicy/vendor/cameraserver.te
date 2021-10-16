@@ -1,5 +1,3 @@
-allow cameraserver nfc_service:service_manager { find };
-
 # Camera service uses gralloc, gralloc mapper wants to talk to the GPU
 # and use debug properties
 get_prop(cameraserver, vendor_display_prop)
