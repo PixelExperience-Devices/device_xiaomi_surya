@@ -756,7 +756,6 @@ vendor/lib64/unnhal-acc-hvx.so|00eb79608cb6e3f19eaf9389632fdbfa03b2df62
 # NFC
 vendor/bin/hw/vendor.nxp.hardware.nfc@1.2-service
 vendor/etc/init/vendor.nxp.hardware.nfc@1.2-service.rc
-vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-nxp-pnscr.conf
 vendor/etc/nfc/nfc_whitelist.properties
