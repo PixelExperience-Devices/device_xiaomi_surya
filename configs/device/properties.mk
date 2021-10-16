@@ -105,6 +105,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.incremental.enable=1
 
+# IORap
+PRODUCT_PRODUCT_PROPERTIES += \
+   persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
 # IWLAN
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.iwlan.enable=true \
