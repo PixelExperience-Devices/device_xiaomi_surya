@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     libbtconfigstore \
@@ -77,6 +78,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libdng_sdk.vendor
@@ -111,6 +113,7 @@ include $(LOCAL_PATH)/device_prop.mk
 
 # Display
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
@@ -137,6 +140,9 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3 \
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.3-service.widevine \
     android.hardware.drm@1.3-service.clearkey
 
 # Fastbootd
@@ -163,10 +169,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0 \
+    android.hardware.gatekeeper@1.0.vendor
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti
+    android.hardware.gnss@2.1-service-qti \
+    android.hardware.gnss@2.1 \
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss.measurement_corrections@1.1 \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0 \
+    android.hardware.gnss.visibility_control@1.0.vendor
 
 PRODUCT_PACKAGES += \
     libbatching \
@@ -197,7 +214,13 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0_system \
+    android.hidl.allocator@1.0 \
+    android.hidl.allocator@1.0.vendor \
+    libhidltransport \
     libhidltransport.vendor \
+    libhwbinder \
     libhwbinder.vendor
 
 # IDC
@@ -241,6 +264,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout)
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1 \
+    android.hardware.keymaster@4.1.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.surya
@@ -281,6 +309,16 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
+
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1 \
+    android.system.net.netd@1.1.vendor
+
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3 \
+    android.hardware.neuralnetworks@1.3.vendor
 
 # Network
 PRODUCT_COPY_FILES += \
@@ -347,6 +385,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.2 \
+    android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
     android.hardware.power.stats@1.0-service.mock
 
@@ -366,6 +406,7 @@ PRODUCT_COPY_FILES += \
 # RIL
 PRODUCT_PACKAGES += \
     libjson \
+    libjson.vendor \
     libril \
     librilutils \
     librmnetctl
@@ -377,9 +418,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
 
+#Secure element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2.vendor
+
 # Sensors
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0 \
     android.hardware.sensors@2.0-service.multihal \
     vendor.qti.hardware.display.mapper@1.1.vendor
 
@@ -426,6 +470,15 @@ PRODUCT_COPY_FILES += \
 # Uevent
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6 \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3 \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio.deprecated@1.0.vendor
 
 # USB
 PRODUCT_PACKAGES += \
