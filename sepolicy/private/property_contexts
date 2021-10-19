@@ -8,5 +8,8 @@ ro.miui.                       u:object_r:exported_system_prop:s0
 ro.product.mod_device          u:object_r:build_prop:s0
 ro.product.marketname          u:object_r:build_prop:s0
 
+# Graphics
+ro.gfx.driver.1                u:object_r:graphics_config_prop:s0
+
 # XiaomiParts
 persist.lcd.                   u:object_r:persist_lcd_prop:s0
