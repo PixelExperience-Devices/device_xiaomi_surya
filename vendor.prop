@@ -95,6 +95,9 @@ persist.vendor.radio.report_codec=1
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
+# System
+persist.sys.binary_xml=false
+
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
