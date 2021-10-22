@@ -19,4 +19,8 @@
     <!-- Whether to show a preference item for regulatory information in About phone -->
     <bool name="config_show_regulatory_info">true</bool>
 
+    <!-- Fingerprint sensor -->
+    <dimen name="fingerprint_dot_radius">0dp</dimen>
+    <dimen name="fingerprint_pulse_radius">0dp</dimen>
+
 </resources>
