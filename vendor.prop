@@ -104,10 +104,6 @@ vendor.qcom.bluetooth.soc=cherokee
 # Camera
 camera.disable_zsl_mode=1
 
-# Chipset
-ro.soc.manufacturer=Qualcomm
-ro.soc.model=SM7150
-
 # CNE
 persist.vendor.cne.feature=1
 
@@ -159,12 +155,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # DRM
 drm.service.enabled=true
 media.mediadrmservice.enable=true
-
-# Graphics
-ro.hardware.egl=adreno
-ro.hardware.vulkan=adreno
-ro.opengles.version=196610
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
 
 # HVDCP
 persist.vendor.cp.fcc_main_ua=400000
