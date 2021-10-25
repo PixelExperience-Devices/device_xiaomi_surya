@@ -14,5 +14,11 @@
        "target_path" : "hardware/xiaomi",
        "remote"      : "github",
        "branch"      : "twelve"
+   },
+   {
+       "repository"  : "PixelExperience/packages_resources_devicesettings-custom",
+       "target_path" : "packages/resources/devicesettings-custom",
+       "remote"      : "github",
+       "branch"      : "eleven"
    }
 ]
