@@ -121,15 +121,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    vendor.qti.hardware.display.allocator-service
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor
 
 PRODUCT_PACKAGES += \
     gralloc.sm6150 \
     hwcomposer.sm6150 \
     memtrack.sm6150
-
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.mapper@2.0.vendor
 
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -422,8 +421,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
-    vendor.qti.hardware.display.mapper@1.1.vendor
+    android.hardware.sensors@2.0-service.multihal
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
