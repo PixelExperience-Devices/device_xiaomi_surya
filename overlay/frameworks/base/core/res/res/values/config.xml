@@ -623,4 +623,7 @@
 
     <!-- Whether device has a big physical display cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
+
+    <!-- Indicates whether device has a power button fingerprint sensor. -->
+    <bool name="config_is_powerbutton_fps" translatable="false" >true</bool>
 </resources>
