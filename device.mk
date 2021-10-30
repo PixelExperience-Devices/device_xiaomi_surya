@@ -530,9 +530,4 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 28 29 30
 PRODUCT_PACKAGES += \
     libavservices_minijail_32 \
     libdisplayconfig.qti \
-    libnl \
-    libqdMetaData \
-    libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-#    WfdCommon
+    libqdMetaData

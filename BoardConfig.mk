@@ -88,7 +88,6 @@ DEVICE_MANIFEST_FILE := \
     hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
 ODM_MANIFEST_SKUS := surya
 ODM_MANIFEST_SURYA_FILES := \
-    $(DEVICE_PATH)/configs/hidl/manifest-qva.xml \
     $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
 
 # Init
