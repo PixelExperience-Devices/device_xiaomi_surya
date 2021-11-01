@@ -1,1 +1,2 @@
 type persist_lcd_prop, property_type, system_property_type;
+type vendor_ro_camera_prop, property_type;
