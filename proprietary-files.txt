@@ -910,9 +910,6 @@ vendor/lib64/libGPTEE_vendor.so|527c8393ef416a9ddca4337fb4b5a1618551de44
 vendor/lib64/libQTEEConnector_vendor.so|bf3050ea3ef5435f0289092681f07a2fe834958b
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|131cdee67110cd0af1708ba31d81aef85456081a
 
-# QTI Telephony - from Nubia RKQ1.200826.002/nubia.20201029.204053:user/release-keys
-system_ext/framework/qti-telephony-common.jar|4bb49c73e447edb38a3044d9f5369c4391e97e27
-
 # Radio - from LA.UM.9.1.r1-09100-SMxxx0.0
 etc/permissions/privapp-permissions-qti.xml|3eda27003bad39514039190d0d7eb675ba034cb9
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml|42f4553b61731e56d253766554d4479519cea3ff
@@ -920,7 +917,6 @@ product/etc/permissions/telephony_product_privapp-permissions-qti.xml|42f4553b61
 -system_ext/app/DynamicDDSService/DynamicDDSService.apk|502329cf448eb3b7e2736fcad59e4eacc48f93e6
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|a32f88ddcc8f9cba18aa5697ee5bd52201e89b13
 -system_ext/app/atfwd/atfwd.apk|1224a0ea61601cf002262aa5f042a68e55e30c3b
--system_ext/app/datastatusnotification/datastatusnotification.apk|2fcf2e570818eb317de45f42c0a674db875b6ee4
 -system_ext/app/embms/embms.apk|e30c32f9e2e5ee2580ff788c76a8969b45199a96
 system_ext/etc/permissions/embms-noship_product_privapp_permissions_qti.xml|fe893ef12f3fe036e3d462e010f031b94f218e38
 system_ext/etc/permissions/embms.xml|22e7474091f9f71f02dd0cfc76cfa8848a46f079
