@@ -54,16 +54,6 @@ on post-fs
     chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
     chown system system /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
 
-on post-fs-data
-    mkdir /data/vendor/thermal 0771 root system
-    mkdir /data/vendor/thermal/config 0771 root system
-    mkdir /data/vendor/nfc 0770 nfc nfc
-
-service mi_thermald /system/vendor/bin/mi_thermald
-    class core
-    user root
-    group system
-
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal

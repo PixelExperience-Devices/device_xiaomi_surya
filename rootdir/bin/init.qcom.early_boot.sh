@@ -1,5 +1,5 @@
 #!/vendor/bin/sh
-# Copyright (c) 2012-2013,2016,2018 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013,2016,2018-2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -27,14 +27,6 @@
 #
 
 export PATH=/vendor/bin
-
-boot_reason=`cat /proc/sys/kernel/boot_reason`
-reboot_reason=`getprop ro.boot.alarmboot`
-if [ "$boot_reason" = "3" ] || [ "$reboot_reason" = "true" ]; then
-    setprop ro.vendor.alarm_boot true
-else
-    setprop ro.vendor.alarm_boot false
-fi
 
 # Allow system_graphics group to access pmic secure_mode node
 set_perms /sys/class/lcd_bias/secure_mode system.graphics 0660

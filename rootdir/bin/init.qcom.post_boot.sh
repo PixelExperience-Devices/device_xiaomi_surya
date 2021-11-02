@@ -1,6 +1,6 @@
 #! /vendor/bin/sh
 
-# Copyright (c) 2012-2013, 2016-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013, 2016-2019, 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -28,51 +28,6 @@
 #
 
 target=`getprop ro.board.platform`
-
-function enable_swap() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
-
-    SWAP_ENABLE_THRESHOLD=1048576
-    swap_enable=`getprop ro.vendor.qti.config.swap`
-
-    # Enable swap initially only for 1 GB targets
-    if [ "$MemTotal" -le "$SWAP_ENABLE_THRESHOLD" ] && [ "$swap_enable" == "true" ]; then
-        # Static swiftness
-        echo 1 > /proc/sys/vm/swap_ratio_enable
-        echo 70 > /proc/sys/vm/swap_ratio
-
-        # Swap disk - 200MB size
-        if [ ! -f /data/vendor/swap/swapfile ]; then
-            dd if=/dev/zero of=/data/vendor/swap/swapfile bs=1m count=200
-        fi
-        mkswap /data/vendor/swap/swapfile
-        swapon /data/vendor/swap/swapfile -p 32758
-    fi
-}
-
-function configure_read_ahead_kb_values() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
-
-    dmpts=$(ls /sys/block/*/queue/read_ahead_kb | grep -e dm -e mmc)
-
-    # Set 128 for <= 3GB &
-    # set 512 for >= 4GB targets.
-    if [ $MemTotal -le 3145728 ]; then
-        echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-        for dm in $dmpts; do
-            echo 128 > $dm
-        done
-    else
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-        for dm in $dmpts; do
-            echo 512 > $dm
-        done
-    fi
-}
 
 function configure_memory_parameters() {
     # Set Memory parameters.
@@ -121,11 +76,13 @@ function configure_memory_parameters() {
     # use Google default LMK series for all 64-bit targets >=2GB.
     echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
     echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
-
-    echo 1 > /proc/sys/vm/watermark_scale_factor
-    configure_read_ahead_kb_values
-    enable_swap
 }
+
+# Apply settings for sm6150
+# Set the default IRQ affinity to the silver cluster. When a
+# CPU is isolated/hotplugged, the IRQ affinity is adjusted
+# to one of the CPU from the default IRQ affinity mask.
+echo 3f > /proc/irq/default_smp_affinity
 
 if [ -f /sys/devices/soc0/soc_id ]; then
     soc_id=`cat /sys/devices/soc0/soc_id`
@@ -220,8 +177,15 @@ case "$soc_id" in
         done
     done
 
-    # Turn off scheduler boost at the end
-    echo 0 > /proc/sys/kernel/sched_boost
+    # cpuset parameters
+    echo 0-7     > /dev/cpuset/top-app/cpus
+    echo 0-5,7 > /dev/cpuset/foreground/cpus
+    echo 4-5     > /dev/cpuset/background/cpus
+    echo 2-5     > /dev/cpuset/system-background/cpus
+    echo 2-5     > /dev/cpuset/restricted/cpus
+
+    # Turn on sleep modes.
+    echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
     ;;
 esac
 
@@ -229,27 +193,26 @@ esac
 case "$soc_id" in
     "365" | "366" )
 
-    # Core control parameters on silver
-    echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
-    echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
-    echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
-    echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
-    echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
-    echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
-    echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
-    echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
+    # Setting b.L scheduler parameters
+    echo 25 > /proc/sys/kernel/sched_downmigrate_boosted
+    echo 25 > /proc/sys/kernel/sched_upmigrate_boosted
+    echo 85 > /proc/sys/kernel/sched_downmigrate
+    echo 95 > /proc/sys/kernel/sched_upmigrate
 
-    # default sched up and down migrate values are 100 and 95
-    echo 85 > /proc/sys/kernel/sched_group_downmigrate
-    echo 100 > /proc/sys/kernel/sched_group_upmigrate
-    echo 0 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+    # configure governor settings for little cluster
+    echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    echo 500 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
+    echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
 
-    # colocation v3 settings
-    echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
+    # configure governor settings for big cluster
+    echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
+    echo 500 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
+    echo 20000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
 
-    # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
-    echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
-    echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
+    # Configure default schedTune value for foreground/top-app
+    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+    echo 10 > /dev/stune/top-app/schedtune.boost
+    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
 
     # Set Memory parameters
     configure_memory_parameters
@@ -329,8 +292,19 @@ case "$soc_id" in
         done
     done
 
-    # Turn off scheduler boost at the end
-    echo 0 > /proc/sys/kernel/sched_boost
+    # cpuset parameters
+    echo 0-7     > /dev/cpuset/top-app/cpus
+    echo 0-5,7 > /dev/cpuset/foreground/cpus
+    echo 4-5     > /dev/cpuset/background/cpus
+    echo 2-5     > /dev/cpuset/system-background/cpus
+    echo 2-5     > /dev/cpuset/restricted/cpus
+
+    # Enable idle state listener
+    echo 1 > /sys/class/drm/card0/device/idle_encoder_mask
+    echo 100 > /sys/class/drm/card0/device/idle_timeout_ms
+
+    # Turn on sleep modes.
+    echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
     ;;
 esac
 

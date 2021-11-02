@@ -1,4 +1,4 @@
-# Copyright (c) 2009-2012, 2014-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2009-2012, 2014-2019, 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -32,7 +32,6 @@ import /vendor/etc/init/hw/init.xiaomiparts.rc
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug/tracing
 
     # Change ownership of hw_recovery related nodes
     chown system graphics /sys/kernel/debug/dri/0/debug/dump
@@ -204,10 +203,6 @@ on post-fs-data
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
 
-    # Create PERFD deamon related dirs
-    mkdir /data/vendor/perfd 2770 root system
-    rm /data/vendor/perfd/default_values
-
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
@@ -233,9 +228,6 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
 
     start vendor.qcom-post-boot
-
-    # Reinit lmkd to reconfigure lmkd properties
-    setprop lmkd.reinit 1
 
 service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     class core
@@ -306,17 +298,6 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system
     oneshot
-
-service vendor.atfwd /vendor/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
-
-on property:persist.vendor.radio.atfwd.start=false
-    stop vendor.atfwd
-
-on property:vendor.radio.atfwd.start=false
-    stop vendor.atfwd
 
 service vendor.hwcomposer-2-4 /vendor/bin/hw/android.hardware.graphics.composer@2.4-service
     override
