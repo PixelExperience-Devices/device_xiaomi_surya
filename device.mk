@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# RefreshRate Settings
+$(call inherit-product, device/xiaomi/surya/refreshrate.mk)
+USE_DYNAMIC_REFRESH_RATE := true
+
 # ANT+
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor

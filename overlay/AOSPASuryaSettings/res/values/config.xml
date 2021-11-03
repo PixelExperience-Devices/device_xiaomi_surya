@@ -25,7 +25,4 @@
     -->
     <integer name="config_fingerprintSensorLocation">3</integer>
 
-    <!-- Whether to show min/max refresh rate in display settings -->
-    <bool name="config_show_refresh_rate_controls">true</bool>
-
 </resources>
