@@ -24,6 +24,10 @@ $(call inherit-product, vendor/aosp/config/common.mk)
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
+# RefreshRate Settings
+$(call inherit-product, device/xiaomi/surya/refreshrate.mk)
+USE_DYNAMIC_REFRESH_RATE := true
+
 # Device identifier
 PRODUCT_NAME := aosp_surya
 PRODUCT_DEVICE := surya
