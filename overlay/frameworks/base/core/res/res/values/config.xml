@@ -386,7 +386,7 @@
 
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
-    <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+    <bool name="config_dozeAfterScreenOffByDefault">false</bool>
 
     <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
          device from the display on/off state.
@@ -402,22 +402,7 @@
          to maximize power savings but not all devices support it.
          Refer to autosuspend.h for details.
     -->
-    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
-
-    <!-- Power Management: Specifies whether to decouple the interactive state of the
-         device from the display on/off state.
-         When false, setInteractive(..., true) will be called before the display is turned on
-         and setInteractive(..., false) will be called after the display is turned off.
-         This mode provides best compatibility for devices that expect the interactive
-         state to be tied to the display state.
-         When true, setInteractive(...) will be called independently of whether the display
-         is being turned on or off.  This mode enables the power manager to reduce
-         clocks and disable the touch controller while the display is on.
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-         Refer to power.h for details.
-    -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool>
 
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
@@ -490,6 +475,10 @@
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
 
+    <!-- If true, the screen can be rotated via the accelerometer in all 4
+         rotations as the default behavior. -->
+    <bool name="config_allowAllRotations">true</bool>
+
     <!-- Flag indicating if the speed up audio on mt call code should be executed -->
     <bool name="config_speed_up_audio_on_mt_calls">true</bool>
 
@@ -514,8 +503,11 @@
         <item>"/system/bin/surfaceflinger"</item>
     </string-array>
 
+    <!-- Should the pinner service pin the Camera application? -->
+    <bool name="config_pinnerCameraApp">false</bool>
+
     <!-- Should the pinner service pin the Home application? -->
-    <bool name="config_pinnerHomeApp">true</bool>
+    <bool name="config_pinnerHomeApp">false</bool>
 
     <!-- List of files pinned by the Pinner Service with the JIT Zygote boot image b/119800099 -->
     <string-array translatable="false" name="config_jitzygoteBootImagePinnerServiceFiles">
@@ -587,45 +579,6 @@
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
 
-    <!-- The default journal mode to use use when Write-Ahead Logging is not active.
-         Choices are: OFF, DELETE, TRUNCATE, PERSIST and MEMORY.
-         PERSIST may improve performance by reducing how often journal blocks are
-         reallocated (compared to truncation) resulting in better data block locality
-         and less churn of the storage media.
-         The PERSIST mode results in data persisting in the journal beyond the life of
-         a transaction, so it interacts poorly with SECURE_DELETE. -->
-    <string name="db_default_journal_mode">MEMORY</string>
-
-    <!-- The database synchronization mode when using the default journal mode.
-         FULL is safest and preserves durability at the cost of extra fsyncs.
-         NORMAL also preserves durability in non-WAL modes and uses checksums to ensure
-         integrity although there is a small chance that an error might go unnoticed.
-         Choices are: FULL, NORMAL, OFF. -->
-    <string name="db_default_sync_mode">OFF</string>
-
-    <!-- The database synchronization mode when using Write-Ahead Logging.
-         From https://www.sqlite.org/pragma.html#pragma_synchronous:
-         WAL mode is safe from corruption with synchronous=NORMAL, and probably DELETE mode is safe
-         too on modern filesystems. WAL mode is always consistent with synchronous=NORMAL, but WAL
-         mode does lose durability. A transaction committed in WAL mode with
-         synchronous=NORMAL might roll back following a power loss or system crash.
-         Transactions are durable across application crashes regardless of the synchronous setting
-         or journal mode. The synchronous=NORMAL setting is a good choice for most applications
-         running in WAL mode.
-         Choices are: FULL, NORMAL, OFF. -->
-    <string name="db_wal_sync_mode">OFF</string>
-
-    <!-- The list of components which should be automatically disabled for a specific device. -->
-    <string-array name="config_deviceDisabledComponents" translatable="false">
-        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
-        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
-    </string-array>
-
-    <!-- Safe headphone volume index. When music stream volume is below this index
-    the SPL on headphone output is compliant to EN 60950 requirements for portable music
-    players. -->
-    <integer name="config_safe_media_volume_index">15</integer>
-
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
     -->
@@ -646,9 +599,7 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
          @see https://www.w3.org/TR/SVG/paths.html#PathData
     -->
-    <string name="config_mainBuiltInDisplayCutout">
-        M 0,0 H -36 V 100 H 36 V 0 H 0 Z
-    </string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 H -36 V 91 H 36 V 0 H 0 Z</string>
 
     <!-- The default refresh rate for a given device. Change this value to set a higher default
          refresh rate. If the hardware composer on the device supports display modes with a higher
@@ -666,9 +617,6 @@
 
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">90</integer>
-
-    <!-- Whether device has fingerprint on power button -->
-    <bool name="config_powerButtonFingerprint">true</bool>
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>

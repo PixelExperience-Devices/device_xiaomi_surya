@@ -19,10 +19,7 @@
 
 <resources>
     <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">true</bool>
-
-    <!-- Doze: does this device support STATE_DOZE_SUSPEND?  -->
-    <bool name="doze_suspend_display_state_supported">true</bool>
+    <bool name="doze_display_state_supported">false</bool>
 
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
      vibrator is capable of subtle vibrations -->
@@ -30,9 +27,6 @@
 
     <!-- FPSInfoService FPS node file path -->
     <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
-
-    <!-- The CPU temperature divider, if needed -->
-    <integer name="config_cpuTempDivider" translatable="false">1000</integer>
 
     <!-- Whether global actions should show an informational message about changes in S -->
     <bool name="global_actions_show_change_info">true</bool>

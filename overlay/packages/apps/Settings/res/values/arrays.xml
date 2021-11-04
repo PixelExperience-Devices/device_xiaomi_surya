@@ -2,7 +2,7 @@
 <!--
 /*
 **
-** Copyright 2015 The Android Open Source Project
+** Copyright 2007 The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -17,7 +17,12 @@
 ** limitations under the License.
 */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- [CHAR_LIMIT=20] Battery use screen.  Battery status shown in chart label when charging speed is fast.  -->
-    <string name="battery_info_status_charging_fast">Turbo charging</string>
+<resources>
+    <!-- IDs for each color mode. The values must match the corresponding constants in
+         android.view.Display -->
+    <integer-array name="color_mode_ids">
+        <item>0</item>
+        <item>-1</item>
+        <item>-1</item>
+    </integer-array>
 </resources>
