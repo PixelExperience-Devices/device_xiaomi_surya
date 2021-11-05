@@ -20,5 +20,11 @@
        "target_path" : "packages/resources/devicesettings-custom",
        "remote"      : "github",
        "branch"      : "eleven"
+   },
+   {
+       "repository"  : "chrisw444/firmware_xiaomi_surya",
+       "target_path" : "firmware/xiaomi/surya",
+       "remote"      : "gitlab",
+       "branch"      : "master"
    }
 ]

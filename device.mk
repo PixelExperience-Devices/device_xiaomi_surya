@@ -7,6 +7,9 @@
 # Inherit the proprietary setup
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
+# Firmware Surya
+$(call inherit-product, firmware/xiaomi/surya/Android.mk)
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Disable APEX compression
@@ -440,7 +443,8 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/xiaomi \
+    firmware/xiaomi/surya
 
 # Telephony
 PRODUCT_PACKAGES += \
