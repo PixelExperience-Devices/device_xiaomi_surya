@@ -15,6 +15,9 @@ ro.build.flavor                u:object_r:build_prop:s0
 ro.product.mod_device          u:object_r:build_prop:s0
 ro.product.marketname          u:object_r:build_prop:s0
 
+# Hardware
+ro.hardware.chipname           u:object_r:exported_default_prop:s0
+
 # IR
 ro.lirc.dev                    u:object_r:lirc_prop:s0
 
