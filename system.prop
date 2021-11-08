@@ -14,7 +14,8 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 vendor.bluetooth.soc=cherokee
 
 # Camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.pixelexperience.faceunlock
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,org.lineageos.snap,com.android.camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.snap,com.android.camera
 
 # Battery Property
 ro.charger.enable_suspend=true
@@ -39,17 +40,19 @@ ro.netflix.bsp_rev=Q6150-17263-1
 ro.nfc.port=I2C
 
 # Radio
+DEVICE_PROVISIONED=1
 persist.radio.multisim.config=dsds
 persist.sys.fflag.override.settings_provider_model=false
-ril.subscription.types=RUIM
+ril.subscription.types=NV,RUIM
 ro.telephony.default_cdma_sub=0
-ro.telephony.default_network=22,22
+ro.telephony.default_network=22,20
 telephony.lteOnCdmaDevice=1
 
 # Recovery
 ro.recovery.ui.margin_height=48
 
 # Time
+persist.timed.enable=true
 persist.vendor.delta_time.enable=true
 
 #property to enable user to access Google WFD settings
@@ -67,3 +70,6 @@ ro.zram.periodic_wb_delay_hours=24
 
 # Supported AOSP Feature
 ro.support_one_handed_mode=true
+
+# support otg reverse charge
+persist.vendor.otg_control=true
