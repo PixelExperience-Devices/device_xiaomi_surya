@@ -26,47 +26,54 @@
     android:paddingStart="?android:attr/listPreferredItemPaddingStart"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
 
+    <FrameLayout
+        android:id="@android:id/icon_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/summary">
+
+        <ImageView
+            android:id="@android:id/icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="12dp"
+            android:layout_gravity="start|center_vertical" />
+
+    </FrameLayout>
+
     <TextView
         android:id="@android:id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toEndOf="@android:id/icon_frame"
         android:ellipsize="marquee"
         android:fadingEdge="horizontal"
-        android:paddingStart="56dp"
-        android:paddingEnd="8dp"
         android:singleLine="true"
         android:textAppearance="?android:attr/textAppearanceListItem"
         android:textColor="?android:attr/textColorPrimary" />
 
     <TextView
         android:id="@android:id/summary"
-        android:layout_below="@android:id/title"
-        android:layout_alignStart="@android:id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@android:id/title"
+        android:layout_toEndOf="@android:id/icon_frame"
         android:maxLines="4"
         android:paddingTop="8dp"
         android:paddingBottom="5dp"
-        android:paddingStart="56dp"
-        android:paddingEnd="8dp"
         android:textAppearance="?android:attr/textAppearanceListItemSecondary"
         android:textColor="?android:attr/textColorSecondary" />
 
-    <ImageView
-        android:id="@android:id/icon"
-        android:layout_below="@android:id/summary"
-        android:layout_gravity="center_vertical|start"
-        android:layout_width="28dp"
-        android:layout_height="28dp" />
 
     <SeekBar
         android:id="@+id/seekbar"
-        android:layout_below="@android:id/summary"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_below="@android:id/summary"
         android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@android:id/icon_frame"
         android:tickMark="@null"
-        android:paddingStart="58dp"
+        android:paddingStart="0dp"
         android:paddingEnd="12dp"
         style="@android:style/Widget.Material.SeekBar.Discrete" />
 
