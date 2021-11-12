@@ -11,10 +11,7 @@ camera.sensor.rearUltra.fuseID     u:object_r:vendor_camera_prop:s0
 camera.sensor.rearTele.fuseID      u:object_r:vendor_camera_prop:s0
 persist.camera.                    u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.mi.module.   u:object_r:vendor_camera_prop:s0
-vendor.camera.sensor.              u:object_r:vendor_camera_prop:s0
 vendor.camera.aux.packageblacklist u:object_r:vendor_camera_prop:s0
-vendor.camera.*                    u:object_r:vendor_camera_prop:s0
-persist.camera.*                   u:object_r:vendor_camera_prop:s0
 
 # Dirac
 audio.dirac.                       u:object_r:dirac_prop:s0
