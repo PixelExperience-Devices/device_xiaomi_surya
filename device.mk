@@ -78,6 +78,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+PRODUCT_PACKAGES += \
+    libshim_megvii
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
@@ -100,10 +103,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.lcd.hbm_mode=0 \
     persist.lcd.cabc_mode=1
-
-# Camera
-PRODUCT_PACKAGES += \
-    libshim_megvii
 
 # Device properties
 include $(LOCAL_PATH)/device_prop.mk
