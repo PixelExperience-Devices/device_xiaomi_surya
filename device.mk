@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Inherit the proprietary setup
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
