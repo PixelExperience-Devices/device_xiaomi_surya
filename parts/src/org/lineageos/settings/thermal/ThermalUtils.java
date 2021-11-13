@@ -19,12 +19,7 @@ package org.lineageos.settings.thermal;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.RemoteException;
-import android.os.SystemProperties;
 import android.os.UserHandle;
-import android.view.Display;
-import android.view.Surface;
-import android.view.WindowManager;
 
 import androidx.preference.PreferenceManager;
 
@@ -53,16 +48,10 @@ public final class ThermalUtils {
 
     private static final String THERMAL_SCONFIG = "/sys/class/thermal/thermal_message/sconfig";
 
-    private boolean mTouchModeChanged;
-
-    private Display mDisplay;
     private SharedPreferences mSharedPrefs;
 
     protected ThermalUtils(Context context) {
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-
-        WindowManager mWindowManager = context.getSystemService(WindowManager.class);
-        mDisplay = mWindowManager.getDefaultDisplay();
     }
 
     public static void startService(Context context) {
@@ -151,46 +140,5 @@ public final class ThermalUtils {
             }
         }
         FileUtils.writeLine(THERMAL_SCONFIG, state);
-
-        if (state == THERMAL_STATE_BENCHMARK || state == THERMAL_STATE_GAMING) {
-            updateTouchModes(packageName);
-        } else if (mTouchModeChanged) {
-            resetTouchModes();
-        }
-    }
-
-    private void updateTouchModes(String packageName) {
-        String values = mSharedPrefs.getString(packageName, null);
-        resetTouchModes();
-
-        if (values == null || values.isEmpty()) {
-            return;
-        }
-
-        String[] value = values.split(",");
-        String gameMode = value[Constants.TOUCH_GAME_MODE];
-        String touchResponse = value[Constants.TOUCH_RESPONSE];
-        String touchSensitivity = value[Constants.TOUCH_SENSITIVITY];
-        String touchResistant = value[Constants.TOUCH_RESISTANT];
-
-        FileUtils.writeLine(Constants.FILE_TOUCH_TOLERANCE, touchSensitivity);
-        FileUtils.writeLine(Constants.FILE_TOUCH_UP_THRESHOLD, touchResponse);
-        FileUtils.writeLine(Constants.FILE_TOUCH_EDGE_FILTER, touchResistant);
-        SystemProperties.set(Constants.PROP_TOUCH_GAME_MODE, gameMode);
-
-        mTouchModeChanged = true;
-    }
-
-    protected void resetTouchModes() {
-        if (!mTouchModeChanged) {
-            return;
-        }
-
-        FileUtils.writeLine(Constants.FILE_TOUCH_TOLERANCE, Constants.DEFAULT_TOUCH_TOLERANCE);
-        FileUtils.writeLine(Constants.FILE_TOUCH_UP_THRESHOLD, Constants.DEFAULT_TOUCH_UP_THRESHOLD);
-        FileUtils.writeLine(Constants.FILE_TOUCH_EDGE_FILTER, Constants.DEFAULT_TOUCH_EDGE_FILTER);
-        SystemProperties.set(Constants.PROP_TOUCH_GAME_MODE, "0");
-
-        mTouchModeChanged = false;
     }
 }
