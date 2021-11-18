@@ -195,10 +195,12 @@ PRODUCT_PACKAGES += \
     AOSPASuryaSettings \
     AOSPASuryaSystemUI \
     KarnaFrameworks \
+    KarnaWifiOverlay \
     SuryaNoCutoutOverlay \
     NotchBarKiller \
     SuryaFrameworks \
-    SuryaSystemUI
+    SuryaSystemUI \
+    SuryaWifiOverlay
 
 # ParanoidDoze
 PRODUCT_PACKAGES += \
