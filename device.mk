@@ -363,9 +363,6 @@ PRODUCT_COPY_FILES += \
 # Overlay
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
-
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
@@ -422,6 +419,10 @@ PRODUCT_PACKAGES += \
     libril \
     librilutils \
     librmnetctl
+
+# RIL Overlay
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay
 
 # Recovery
 PRODUCT_PACKAGES += \
