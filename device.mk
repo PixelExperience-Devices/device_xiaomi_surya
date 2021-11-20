@@ -14,7 +14,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
 # Firmware Surya
-$(call inherit-product, firmware/xiaomi/surya/Android.mk)
+$(call inherit-product, vendor/xiaomi-firmware/surya/Android.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)

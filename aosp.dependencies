@@ -1,30 +1,27 @@
 [
    {
+       "remote"      : "pixel-devices",
        "repository"  : "kernel_xiaomi_surya",
-       "target_path" : "kernel/xiaomi/surya"
+       "target_path" : "kernel/xiaomi/surya",
+       "branch"      : "twelve"
    },
    {
-       "remote"      : "blobs",
+       "remote"      : "pixel-devices-blobs",
        "repository"  : "vendor_xiaomi_surya",
        "target_path" : "vendor/xiaomi/surya",
        "branch"      : "twelve"
    },
    {
-       "repository"  : "AOSPK/hardware_xiaomi",
-       "target_path" : "hardware/xiaomi",
-       "remote"      : "github",
+       "remote"      : "pixel-devices-blobs",
+       "repository"  : "vendor_xiaomi-firmware",
+       "target_path" : "vendor/xiaomi-firmware",
        "branch"      : "twelve"
    },
    {
-       "repository"  : "PixelExperience/packages_resources_devicesettings-custom",
-       "target_path" : "packages/resources/devicesettings-custom",
-       "remote"      : "github",
-       "branch"      : "eleven"
-   },
-   {
-       "repository"  : "chrisw444/firmware_xiaomi_surya",
-       "target_path" : "firmware/xiaomi/surya",
-       "remote"      : "gitlab",
-       "branch"      : "master"
+       "remote"      : "pixel",
+       "repository"  : "hardware_xiaomi",
+       "target_path" : "hardware/xiaomi",
+       "branch"      : "twelve"
+
    }
 ]
