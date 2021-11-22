@@ -392,3 +392,9 @@ service vendor.contexthub-hal-1-0 /vendor/bin/hw/android.hardware.contexthub@1.0
     user system
     group system
     disabled
+
+on post-fs && property:ro.boot.hwname=surya
+    mount none /vendor/firmware_mnt/image/bdf_j20g.bin /vendor/firmware_mnt/image/bdwlan.bin bind
+
+on post-fs && property:ro.boot.hwname=karna
+    mount none /vendor/firmware_mnt/image/bdf_j20i.bin /vendor/firmware_mnt/image/bdwlan.bin bind
