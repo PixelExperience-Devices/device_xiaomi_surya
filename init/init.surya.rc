@@ -76,9 +76,6 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
 
-on property:ro.boot.hwversion=*
-    setprop vendor.boot.hwversion ${ro.boot.hwversion}
-
 on property:ro.boot.hwname=*
     setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
 
