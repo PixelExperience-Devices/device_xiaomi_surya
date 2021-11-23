@@ -457,7 +457,7 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi \
-    firmware/xiaomi/surya
+    vendor/xiaomi-firmware
 
 # Telephony
 PRODUCT_PACKAGES += \
