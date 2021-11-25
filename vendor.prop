@@ -15,6 +15,7 @@ vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 camera.disable_zsl_mode=1
+persist.vendor.camera.perflock.enable=0
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 
 # Chipset
