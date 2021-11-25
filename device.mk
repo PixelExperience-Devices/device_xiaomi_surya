@@ -132,14 +132,21 @@ include $(LOCAL_PATH)/device_prop.mk
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
+    android.hardware.graphics.composer@2.4-impl \
     android.hardware.graphics.composer@2.4-service \
+    android.hardware.graphics.composer@2.2-resources.vendor \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     vendor.qti.hardware.display.allocator-service \
+    endor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.composer@1.0.vendor \
+    vendor.qti.hardware.display.composer@2.0.vendor \
+    vendor.qti.hardware.display.allocator@1.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor    
 
 PRODUCT_PACKAGES += \
     libavservices_minijail_32 \
@@ -147,6 +154,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData
 
 PRODUCT_PACKAGES += \
+    gralloc.default \
     gralloc.sm6150 \
     hwcomposer.sm6150 \
     memtrack.sm6150
