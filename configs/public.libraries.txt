@@ -3,48 +3,34 @@ libadsprpc.so
 libcdsprpc.so
 libsdsprpc.so
 libfastcvopt.so
-liblistenjni.so
 liblistensoundmodel2.so
 libOpenCL.so
 libnpu.so
-libhta_hexagon_runtime.so
-libmpbase.so
-libmialgoengine.so
-libHalSuperSensorServer.so
-libSuperSensor.so
-libSuperSensorCPU.so
-libHalSuperSensorServerCWrapper.so
-libSuperSensor_skel.so
-libarcsoft_beautyshot.so
-libarcsoft_dualcam_refocus.so
-libarcsoft_dualcam_refocus_rear_t.so
-libarcsoft_dualcam_refocus_rear_w.so
-libarcsoft_dualcam_refocus_front.so
-libmiStereoFactoryRemapLib.so
-libmialgo_basic.so
-libmialgo_utils.so
-libarcsoft_portrait_lighting.so
-libarcsoft_portrait_lighting_c.so
-libarcsoft_high_dynamic_range.so
-libarcsoft_low_light_hdr.so
-libmibokeh_712.so
-libarcsoft_distortion_correction.so
-libarcsoft_bodyslim.so
-libalCFR.so
+libmpbase.so 64
+libmialgoengine.so 64
+libarcsoft_beautyshot.so 64
+libarcsoft_dualcam_refocus.so 64
+libarcsoft_dualcam_refocus_rear_t.so 64
+libarcsoft_dualcam_refocus_rear_w.so 64
+libarcsoft_dualcam_refocus_front.so 64
+libmialgo_basic.so 64
+libmialgo_utils.so 64
+libarcsoft_portrait_lighting.so 64
+libarcsoft_portrait_lighting_c.so 64
+libmibokeh_712.so 64
+libarcsoft_distortion_correction.so 64
+libarcsoft_bodyslim.so 64
+libalCFR.so 64
 libcvp.so
 libcvp_stub.so
 libcvp_common.so
-libalhLDC.so
-libalAILDC.so
-libVDClearShot.so
-libVDDualCameraClearShot.so
-libVDSuperPhotoAPI.so
-libflaw.so
-libsdk_sr.so
-libst_sr_models.so
-libarcsoft_high_dynamic_range.so
-libhvx_interface.so
-lib_denoiser3.so
-libxml2_vendor.so
-libprotobuf-cpp-full.so
-libprotobuf-cpp-lite.so
+libalhLDC.so 64
+libalAILDC.so 64
+libVDClearShot.so 64
+libVDSuperPhotoAPI.so 64
+libflaw.so 64
+libsdk_sr.so 64
+libst_sr_models.so 64
+libhvx_interface.so 64
+lib_denoiser3.so 64
+libxml2_vendor.so 64

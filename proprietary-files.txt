@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted - from surya MIUI V12.5.3.0.RJGMIXM.
+# All unpinned blobs are extracted - from surya MIUI V12.5.4.0.RJGMIXM.
 
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|5885c09b8446d8b0c1f665bd9522792d79201cd7
@@ -191,8 +191,6 @@ vendor/lib64/libft2vendor.so|fd87e8dbbb193d263d60bd352813b686633cba65
 vendor/lib64/libhvx_interface.so|e9db1741a4c685bf9259acc353f87d177178f959
 vendor/lib64/libmiStereoFactoryRemapLib.so|e9e37ea94b4add65b96e223016dcaff8e71af364
 vendor/lib64/libmiai_portraitsupernight.so|8aea7c276b0277729e7a927260e7cabb96063be4
-vendor/lib64/libmegface.so
-vendor/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libmiai_supernight.so|ee66cb2353ea34af8dc5d997558f4c92d291aaa6
 vendor/lib64/libmialgo_basic.so|f9dec35cf368faad12d32a99efcb20c8e12da3d7
 vendor/lib64/libmialgo_fs.so|d6ca2dcb85e9a7cd9c5ca6b5d11d86c415c4625f
@@ -311,7 +309,6 @@ vendor/etc/camera/hdr_ui9_params.config|ae257e7c20f64651b083e06bc75e4ae0658cfd54
 vendor/etc/camera/libsnpe_dsp_v66_domains_v2_skel.so|e3896008cce53c03adf1edace20a993f272eeb0e
 vendor/etc/camera/male_bg.png|2648ece202669141be45ccc09a688ec8e6465533
 vendor/etc/camera/male_icon.png|d17f76b5937bd3f6a9afb04bcf83da98600788e5
-vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/model_back.dlc|93072fd8b363b6aad637e063734b3c601f927869
 vendor/etc/camera/model_front.dlc|0605ed7ef2d45fd73bfc286a2e435cc4c3b7fbc8
 vendor/etc/camera/sceneDetection.xml|0e233ccba0e757b64c42e724f5f6150676b009ba
@@ -428,8 +425,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
-vendor/etc/cne/mwqem.conf|c51d3893b86ab89fae218f3a92c4f9c18ea401a8
-vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml|c63c37d067e3009735fbc54d4603d43d7d6623e1
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
 vendor/lib64/libcne.so|5a308ef9bf22becb6d78288de1263dfdbd4bb4df
@@ -441,8 +436,6 @@ vendor/lib64/libwqe.so|93f76ab108a64f027f4d2e95ff09673366e793bf
 vendor/lib64/libxml.so|406b7784cf2157eb5c675e6062617b0cc8b5d635
 vendor/lib64/vendor.qti.data.factory@2.0.so|34861d24a889a31154408cd5bb4609818969131e
 vendor/lib64/vendor.qti.data.factory@2.1.so|0702cfc2425fc897c6b48c10790bc4c5f16fa83a
-vendor/lib64/vendor.qti.data.factory@2.2.so|6951ff98d20902678e8af584c7b4cf89e360f31b
-vendor/lib64/vendor.qti.data.mwqem@1.0.so|27d8b4a0a6cd063504db4a8b6246ac230f0ac3c2
 vendor/lib64/vendor.qti.data.slm@1.0.so|47a6dab40893e193f4ffb55c03c7db2c4dec95d0
 vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so|b1bc6c2b9767512da57501225d9e921a72085297
 vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so|cb2234bc3c7c2dee82b197749220bcd1e65896fc
@@ -453,7 +446,6 @@ vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|ff92db6ef054d15583c2bfa4
 vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so|16f4a9c89d79ed07b3ef52a85f2aef369111d31c
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|22b1d7ba691b5b2c3ca251240d74357f17ce63b7
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|01256a945becaa88788c384a70a15fe0eb5dcdc1
-vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so|c041dbfc99643e791e52c4e7f3a87050a8cd6c93
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|e039cd57df22cd762f7054b0f2ffe8ce50fade1f
 vendor/lib64/vendor.qti.latency@2.0.so|c4de1ba004bd8d07dbe92f58abb6250c7bbaf968
 
@@ -652,8 +644,8 @@ vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 
-# Graphics (Adreno - updatable apk) - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
--vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk|c3601f567e672f5493fd8015d858d78399b891f2
+# Graphics (Adreno - updatable apk)
+-vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk
 
 # Hotword enrollment
 product/etc/permissions/privapp-permissions-google-hotword.xml
@@ -785,21 +777,42 @@ vendor/lib64/unnhal-acc-hvx.so|00eb79608cb6e3f19eaf9389632fdbfa03b2df62
 vendor/lib/libpn553_fw.so|a8e29cc3ebb2e0df0fb505fc2da9c69a015680fb
 
 # Perf
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
 vendor/bin/msm_irqbalance
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
+vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
+vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
-vendor/lib64/libperfconfig.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libperfioctl.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
+vendor/etc/lm/AdaptLaunchFeature.xml
+vendor/etc/lm/AppClassifierFeature.xml
+vendor/etc/lm/GameOptimizationFeature.xml
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libperfioctl.so
-vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-iopd.so
+vendor/lib/libqti-iopd-client.so
 vendor/lib/libqti-perfd.so
+vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-util.so
+vendor/lib/libqti-utils.so
+vendor/lib/libskewknob.so
+vendor/lib64/libadaptlaunch.so
+vendor/lib64/libappclassifier.so
+vendor/lib64/libgameoptfeature.so
+vendor/lib64/liblearningmodule.so
+vendor/lib64/libmeters.so
+vendor/lib64/libmeters-ns.so
+vendor/lib64/libperfconfig.so
+vendor/lib64/libperfgluelayer.so
+vendor/lib64/libperfioctl.so
+vendor/lib64/libqti-iopd.so
+vendor/lib64/libqti-iopd-client.so
+vendor/lib64/libqti-perfd.so
+vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-util.so
+vendor/lib64/libqti-utils.so
+vendor/lib64/libreffeature.so
+vendor/lib64/libskewknob.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # Peripheral
 vendor/bin/pm-proxy|73caf1b46a861e623ec7538cc254783b301a4dfd
@@ -820,7 +833,7 @@ vendor/lib64/vendor.display.color@1.3.so|8f3c1f9be4e9f7b684fef7aa5f585693a9c1127
 vendor/lib64/vendor.display.postproc@1.0.so|9c7232cd75fd9df83e4a7b28c5ee796f488a6985
 
 # Power-off charging daemon
-sbin/charger:bin/chargeonlymode
+-sbin/charger:bin/chargeonlymode
 
 # QCV (SOC Helper) - from LA.UM.9.1.r1-10900-SMxxx0.0
 vendor/bin/init.qti.qcv.sh|0c0d80f0db99cec9259163c4d65a9c22ea5f69bf
@@ -961,8 +974,6 @@ vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so|34a4a4e8cc180895364c0c7ec
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so|2707f364a64ec36d2f837cd2d798a6235fad9632
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so|e210ffe00ff65f4f5b82198e18571a47b0e66d2b
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so|aeb08fb3b02357ef278198693c09c239bb9bb050
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so|399714700f47207fbcda46fd71802653ab05bd0d
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so|e553f3afcd143915606ec5b8c065758350f498ff
 vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so|d3df8284177636411fac2d389a3b77665b7452da
 vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|3abbb96c227e09909dbfda17a645d89be448fd7c
 vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so|5400ce026dc296a61209db2c6ac4475e727fba00
@@ -1016,7 +1027,6 @@ vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so|8529b2e365187d7e8c1d6b0b2351a1
 vendor/lib64/com.qualcomm.qti.uceservice@2.0.so|fdbad425489b51564b8294561808e402255057d4
 vendor/lib64/com.qualcomm.qti.uceservice@2.1.so|7bb5acd57799c3ca038441086325de1d9af66ca5
 vendor/lib64/com.qualcomm.qti.uceservice@2.2.so|bec09f0829f49b5011604f8259dc3ce87629a3ce
-vendor/lib64/com.qualcomm.qti.uceservice@2.3.so|b04e914dba1d1e85a88822cf9a22edb1a2c34d70
 vendor/lib64/lib-imscmservice.so|af1e841148b149683a7e0d024e2cbc4affbed10f
 vendor/lib64/lib-imsdpl.so|02232a19c0df155bd8a4962fd6b1406f19d7f62e
 vendor/lib64/lib-imsqimf.so|3b18c79c892de7b76b8143ba2d92d0058eabbf1e
@@ -1039,7 +1049,6 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.3.so|cdd21b4d8718f619d8c6493c8aabe0
 vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so|2fd45a72bdc91c1f9cda6ce26fc89a989539399c
 vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so|5a42e1e39a8c82937f18d01aabe3297752f64585
 vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so|7992ddb79fa570904be7b8bb0070791fac54e6e8
-vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so|fa7836df49215de7983a61d72488a643a93dad17
 vendor/lib64/vendor.qti.ims.callcapability@1.0.so|1828ff32abea12c086f131fa0ffcd11bf79b4b5c
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so|8b6af7bea94807eaf319ed3bb8fda1121e8afb0d
 vendor/lib64/vendor.qti.ims.factory@1.0.so|7398ec44bc146e83bcb48dad2bc6d356ac47bfa1
@@ -1049,6 +1058,10 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so|037c6a7ee282b3a08af1f0e735543bedb27
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|1218fbb37ed0b4480424d38cf10afa8ad5870251
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|daed5d425d6cd03cc5e23bd3493638cca46167bb
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|653cd6cae81499a416d97b9fb920ddcb2816c8a9
+
+# Sensor HAL
+vendor/lib/sensors.ssc.so
+vendor/lib64/sensors.ssc.so
 
 # Sensors
 vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
@@ -1065,7 +1078,6 @@ vendor/lib64/libsnsapi.so|0677c27dc8f47387332a0c64c41388df2ea00a37
 vendor/lib64/libsnsdiaglog.so|e43cdf03612aebdc98cc386f8df96dc92d8eeae2
 vendor/lib64/libssc.so|dc699da89cfd72c99d6578bbad4e3cd8703b2bc7
 vendor/lib64/libssc_default_listener.so|dc48790b62b5654138982e48182954790869bbb3
-vendor/lib64/sensors.ssc.so|ca06ec62cc3cff830c7ca812bc8ed2ad6d86039c
 
 # Sensors config
 vendor/etc/sensors/config/adux1050_0.json|37f8f1084333d97c01bf655579a321a09e6f8c01
