@@ -40,4 +40,7 @@
     <!-- Location on the screen of the center of the fingerprint sensor. -->
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">1100px</dimen>
 
+    <!-- dimensions for the navigation bar handle -->
+    <dimen name="navigation_home_handle_width">140dp</dimen>
+    
 </resources>
