@@ -41,7 +41,7 @@ PRODUCT_PACKAGES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.refresrate.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.refreshrate.rc
+    $(LOCAL_PATH)/rootdir/etc/init.refreshrate.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.refreshrate.rc
 
 # Smooth Display Refresh Rate Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
