@@ -200,7 +200,9 @@ PRODUCT_PACKAGES += \
     NotchBarKiller \
     SuryaFrameworks \
     SuryaSystemUI \
-    SuryaWifiOverlay
+    SuryaWifiOverlay \
+    SuryaChargingOverlay \
+    SuryaSettingsLibOverlay
 
 # ParanoidDoze
 PRODUCT_PACKAGES += \
