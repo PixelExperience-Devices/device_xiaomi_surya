@@ -381,7 +381,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     KarnaPowerProfile \
     KarnaSettingsProviderOverlay \
-    SuryaSettingsProviderOverlay
+    SuryaSettingsProviderOverlay \
+    NotchBarKiller
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
