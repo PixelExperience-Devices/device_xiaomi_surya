@@ -50,7 +50,7 @@ vendor/firmware/tas256x_reg.bin
 
 # Audio FX modules
 system_ext/etc/permissions/audiosphere.xml
-system_ext/framework/audiosphere.jar
+-system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libshoebox.so
@@ -470,14 +470,14 @@ vendor/etc/hdr_config.cfg|14bd7906643998c6b6bb51be5f20007232eaccc3
 vendor/etc/sdr_config.cfg|4e0901a44be67f92b747e2c34d13f8858f9cc010
 
 # DPM
-framework/tcmclient.jar|22858e8bb7e3f956e487dc6764ad8250f118d7ac
+-framework/tcmclient.jar|22858e8bb7e3f956e487dc6764ad8250f118d7ac
 system_ext/bin/dpmd|bc22fa258f3975744e248dc7d9f26a00a9981ca7
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
 system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
 system_ext/etc/permissions/dpmapi.xml|9158c9789cc7135a685b3fb27f8cc27108b51fef
-system_ext/framework/com.qti.dpmframework.jar|6c2a814d2a1b175b5be47640d75ebf7d23435a5a
-system_ext/framework/dpmapi.jar|a2c04b0850b02dc5ec01e08f856b4facfd08b997
+-system_ext/framework/com.qti.dpmframework.jar|6c2a814d2a1b175b5be47640d75ebf7d23435a5a
+-system_ext/framework/dpmapi.jar|a2c04b0850b02dc5ec01e08f856b4facfd08b997
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|f2d02195cca305fad78402c65d090bad72955262
 system_ext/lib64/libdiag_system.so|07a16cb2f3fd66c1e23500f8dd72e0bde1b06cae
 system_ext/lib64/libdpmctmgr.so|df8427f799e6a8cc5ff2ff39fe0323d8b60e815a
@@ -545,7 +545,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|86e247473332ecb950164eb115d7fea6214c7
 
 # Fingerprint
 vendor/etc/permissions/com.fingerprints.extension.xml|de711d8827e1d321b22b60fd75a204e8928f9c6d
-vendor/framework/com.fingerprints.extension.jar|da85473758ee143fad4d824d1fb95d9ad6b297a9
+-vendor/framework/com.fingerprints.extension.jar|da85473758ee143fad4d824d1fb95d9ad6b297a9
 vendor/lib64/hw/fingerprint.fpc.default.so|6f9433bf6cd0aaefa4275a7c2c124c8468d49868
 vendor/lib64/hw/fingerprint.goodix.default.so|dc62dd4cc72d3e930f6a709ff2771e1fe32f0cfc
 vendor/lib64/com.fingerprints.extension@1.0.so|7a356aecd3e458db31fb7ebe4605f55bdee50863
@@ -653,7 +653,7 @@ product/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Graphics firmware
 vendor/firmware/a615_zap.b00|1f966d9754aa6b971d39f5b3d9637480e67aa3fe
@@ -908,8 +908,8 @@ system_ext/etc/permissions/embms.xml|22e7474091f9f71f02dd0cfc76cfa8848a46f079
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
-system_ext/framework/embmslibrary.jar|b5fe26c1cea597af8a1751332d187f2f574816c1
-system_ext/framework/qcrilhook.jar|ad688364314100318f305ed4ab5defec8766b20a
+-system_ext/framework/embmslibrary.jar|b5fe26c1cea597af8a1751332d187f2f574816c1
+-system_ext/framework/qcrilhook.jar|ad688364314100318f305ed4ab5defec8766b20a
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|16cfcf7cd4076be0e0c97c8514305e03fbf5f571
 vendor/bin/hw/qcrild|5e39ba4874188ccdbf5fc1b421d28398e845cdb1
 vendor/bin/ATFWD-daemon|3532888b01083c08d5e37b68e8b50ee98b3710f2
