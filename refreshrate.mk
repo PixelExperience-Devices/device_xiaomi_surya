@@ -14,7 +14,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=0 \
     debug.sf.enable_gl_backpressure=1 \
-    vendor.display.defer_fps_frame_count=4 \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0
 
@@ -72,7 +71,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.app.duration=21000000
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.display.defer_fps_frame_count=2 \
     debug.sf.disable_backpressure=0 \
     debug.sf.enable_gl_backpressure=1
 endif
