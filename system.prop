@@ -1,2 +1,5 @@
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
