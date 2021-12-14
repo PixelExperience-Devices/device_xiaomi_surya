@@ -25,6 +25,8 @@
 
      <!-- Refresh Rate -->
      <integer-array name="refresh_rate_tile_blocklist">
-        <item>0</item>
+        <item>30</item>
+        <item>48</item>
+        <item>50</item>
      </integer-array>
 </resources>
