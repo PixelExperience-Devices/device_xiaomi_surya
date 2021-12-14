@@ -559,4 +559,7 @@
     players. -->
     <integer name="config_safe_media_volume_index">15</integer>
 
+    <!-- Exempt ImsService from privacy (location) indicators -->
+    <string name="config_systemAudioIntelligence" translatable="false">org.codeaurora.ims</string>
+
 </resources>
