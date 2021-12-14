@@ -1,2 +1,5 @@
 # Data files
 /data/per_boot(/.*)?                                                 u:object_r:per_boot_file:s0
+
+# Power
+/vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr   u:object_r:hal_power_default_exec:s0

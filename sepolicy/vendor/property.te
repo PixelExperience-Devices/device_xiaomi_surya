@@ -1,2 +1,5 @@
 # Dirac
 vendor_internal_prop(dirac_prop);
+
+# Power Hal
+vendor_internal_prop(vendor_power_prop);

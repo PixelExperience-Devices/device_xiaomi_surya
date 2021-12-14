@@ -77,7 +77,7 @@ ro.telephony.iwlan_operation_mode=legacy
 vendor.netflix.bsp_rev=Q6150-17263-1
 
 # Perf
-ro.vendor.perf.scroll_opt=true
+ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
 persist.vendor.radio.add_power_save=1

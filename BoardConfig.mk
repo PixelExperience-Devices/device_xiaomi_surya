@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_VENDOR := xiaomi
+
 DEVICE_PATH := device/xiaomi/surya
 COMMON_PATH := device/qcom/common
 
@@ -123,8 +125,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
-TARGET_USES_INTERACTION_BOOST := true
-
+TARGET_PROVIDES_POWERHAL := true
+    
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
