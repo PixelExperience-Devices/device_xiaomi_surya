@@ -22,4 +22,9 @@
 
      <integer name="touch_resistant_default">2</integer>
      <integer name="touch_resistant_max">3</integer>
+
+     <!-- Refresh Rate -->
+     <integer-array name="refresh_rate_tile_blocklist">
+        <item>0</item>
+     </integer-array>
 </resources>
