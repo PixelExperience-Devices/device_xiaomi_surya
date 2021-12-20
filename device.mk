@@ -378,15 +378,24 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Karna Overlays
 PRODUCT_PACKAGES += \
     KarnaPowerProfile \
     KarnaSettingsProviderOverlay \
+    KarnaWifiOverlay
+
+# Surya Overlays
+PRODUCT_PACKAGES += \
     SuryaSettingsProviderOverlay \
     SuryaChargingOverlay \
     SuryaSettingsLibOverlay \
     SuryaTelephonyOverlay \
-    NotchBarKiller
-    
+    SuryaWifiOverlay
+
+# More overlays
+PRODUCT_PACKAGES += \
+    NotchBarKiller \
+    WifiOverlay
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -536,11 +545,6 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
-
-PRODUCT_PACKAGES += \
-    KarnaWifiOverlay \
-    SuryaWifiOverlay \
-    WifiOverlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/hostapd.accept:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.accept \
