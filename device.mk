@@ -384,6 +384,7 @@ PRODUCT_PACKAGES += \
     SuryaSettingsProviderOverlay \
     SuryaChargingOverlay \
     SuryaSettingsLibOverlay \
+    SuryaTelephonyOverlay \
     NotchBarKiller
     
 
