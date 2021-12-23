@@ -1,10 +1,3 @@
-service vendor.charger /system/bin/chargeonlymode
-    class charger
-    user system
-    group system graphics input
-    capabilities SYS_BOOT
-    seclabel u:r:charger:s0
-
 on early-init
     # Disable EAS
     write /proc/sys/kernel/sched_energy_aware 0
@@ -199,6 +192,13 @@ on enable-low-power
 
 on property:sys.boot_completed=1
     trigger enable-low-power
+
+service vendor.charger /system/bin/chargeonlymode
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
