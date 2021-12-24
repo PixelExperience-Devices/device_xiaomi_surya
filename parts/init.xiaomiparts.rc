@@ -12,6 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+on boot
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/cabc
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/cabc
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/hbm
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/hbm
+
 on property:persist.lcd.hbm_mode=*
     write /sys/devices/platform/soc/soc:qcom,dsi-display/hbm ${persist.lcd.hbm_mode}
 
