@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Firmware Surya
+$(call inherit-product, firmware/xiaomi/surya/Android.mk)
+
 # RefreshRate Settings
 $(call inherit-product, device/xiaomi/surya/refreshrate.mk)
 USE_DYNAMIC_REFRESH_RATE := true
@@ -162,7 +165,8 @@ PRODUCT_COPY_FILES += \
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    firmware/xiaomi/surya
 
 # Net
 PRODUCT_PACKAGES += \
@@ -254,10 +258,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor
-
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_xiaomi
 
 #Secure element
 PRODUCT_PACKAGES += \

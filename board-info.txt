@@ -1,1 +1,0 @@
-require version-baseband=4.4.c6-00044,V12.5.4.0.RJGMIXM
