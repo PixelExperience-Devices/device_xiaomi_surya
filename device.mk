@@ -180,6 +180,9 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     libchrome.vendor
 
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_surya/com.nxp.mifare.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_surya/com.android.nfc_extras.xml \
