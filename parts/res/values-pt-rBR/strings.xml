@@ -10,13 +10,4 @@
      <string name="lcd_cabc_title">Modo CABC</string>
      <string name="lcd_features_info">O modo de brilho intenso (HBM) aumenta o brilho máximo da tela para melhorar a visibilidade sob a luz solar mas também aumenta o consumo de energia.\n\nO modo Content Adaptive Backlight Control (CABC) ajusta o brilho da tela e da retroiluminação tendo por base o conteúdo mostrado, reduzindo assim o consumo de energia sem degradar a qualidade da imagem.</string>
 
-     <!-- Haptic Level Settings -->
-     <string name="haptic_title">Controlador de vibração</string>
-     <string name="haptic_warning">Configurar um nível tátil muito alto pode causar danos permanentes ao hardware, use por sua própria conta e risco</string>
-     <string name="haptic_summary">Personalize a intensidade da vibração</string>
-     <string name="haptic_level_title">Nível</string>
-     <string name="haptic_level_summary">A quantidade de intensidade de vibração</string>
-     <string name="haptic_level_summary_incompatible">Kernel não suporta este recurso</string>
-
 </resources>
-
