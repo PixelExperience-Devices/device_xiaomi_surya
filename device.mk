@@ -361,6 +361,9 @@ $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
+PRODUCT_PACKAGES += \
+    libwpa_client
+
 # WiFi Display
 PRODUCT_PACKAGES += \
     libavservices_minijail \
