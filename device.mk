@@ -231,6 +231,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
 
 $(call inherit-product, device/qcom/common/common.mk)
 
+# Radio
+PRODUCT_PACKAGES += \
+    libwpa_client
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.multihal \
