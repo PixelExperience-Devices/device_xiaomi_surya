@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Indicate the driver support NL80211_REG_CHANGED event. -->
+    <bool name="config_wifiDriverSupportedNl80211RegChangedEvent" translatable="false">true</bool>
+
+</resources>
