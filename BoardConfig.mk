@@ -130,6 +130,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # QC common
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8150-common
 TARGET_SEPOLICY_DIR := msmsteppe
 include $(COMMON_PATH)/BoardConfigQcom.mk
 
