@@ -49,6 +49,9 @@ drm.service.enabled=true
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# Graphics
+debug.hwui.renderer=skiavk
+
 # HVDCP
 persist.vendor.cp.fcc_main_ua=400000
 persist.vendor.cp.taper_term_mv=6500
