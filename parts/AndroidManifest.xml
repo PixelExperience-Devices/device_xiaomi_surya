@@ -85,6 +85,28 @@
             </intent-filter>
         </service>
 
+        <service android:name=".doze.DozeService"
+                 android:permission="XiaomiDozeService">
+        </service>
+
+        <activity
+            android:name=".doze.DozeSettingsActivity"
+            android:label="@string/ambient_display_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.lockscreen" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:value="@string/ambient_display_summary" />
+             <meta-data
+                android:name="com.android.settings.order"
+                android:value="1001" />
+        </activity>
+
         <service
             android:name=".RefreshRateTileService"
             android:icon="@drawable/ic_qs_refresh_rate"
