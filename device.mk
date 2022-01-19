@@ -5,7 +5,7 @@
 #
 
 # Firmware Surya
-$(call inherit-product, firmware/xiaomi/surya/Android.mk)
+$(call inherit-product, vendor/xiaomi-firmware/surya/Android.mk)
 
 # RefreshRate Settings
 $(call inherit-product, device/xiaomi/surya/refreshrate.mk)
@@ -154,7 +154,7 @@ PRODUCT_COPY_FILES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    firmware/xiaomi/surya \
+    vendor/xiaomi-firmware \
     hardware/google/interfaces \
     hardware/google/pixel
 
