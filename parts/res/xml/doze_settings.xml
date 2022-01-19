@@ -19,7 +19,7 @@
     <com.android.settingslib.widget.MainSwitchPreference
         android:defaultValue="false"
         android:key="doze_enable"
-        android:title="@string/ambient_enable" />
+        android:title="@string/ambient_display_enable_title" />
 
     <SwitchPreference
         android:key="always_on_display"
@@ -35,8 +35,8 @@
         <SwitchPreference
             android:key="wake_on_gesture"
             android:defaultValue="false"
-            android:title="@string/wake_on_gesture_title"
-            android:summary="@string/wake_on_gesture_summary" />
+            android:title="@string/raise_to_wake_gesture_title"
+            android:summary="@string/raise_to_wake_gesture_summary" />
 
         <PreferenceCategory
             android:key="pickup_sensor"
@@ -52,7 +52,7 @@
 
         <PreferenceCategory
             android:key="proximity_sensor"
-            android:title="@string/proximity_sensor_title">
+            android:title="@string/allow_proximity_sensor_title">
 
             <SwitchPreference
                 android:key="gesture_hand_wave"
