@@ -44,8 +44,6 @@ PRODUCT_COPY_FILES += \
 
 # Smooth Display Refresh Rate Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    ro.surface_flinger.protected_contents=true \
     ro.surface_flinger.set_idle_timer_ms?=500 \
     ro.surface_flinger.set_touch_timer_ms=750 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
@@ -72,5 +70,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=0 \
-    debug.sf.enable_gl_backpressure=1
+    debug.sf.enable_gl_backpressure=1 \
+    vendor.display.idle_time=0 \
+    vendor.display.idle_time_inactive=0
 endif
