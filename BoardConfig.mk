@@ -73,6 +73,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version 2
 
 TARGET_KERNEL_CONFIG := vendor/surya-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+TARGET_KERNEL_VERSION := 4.14
 
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
