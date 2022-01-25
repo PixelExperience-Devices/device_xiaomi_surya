@@ -242,6 +242,11 @@ PRODUCT_COPY_FILES += \
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Telephony
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.telephony.sim_slots.count=2 \
+    telephony.active_modems.max_count=2
+
 # Userspace fastboot
 PRODUCT_PACKAGES += \
     fastbootd
