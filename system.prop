@@ -2,7 +2,7 @@
 ro.config.media_vol_default=8
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_default=5
-ro.config.vc_call_vol_steps=6
+ro.config.vc_call_vol_steps=10
 
 # Bluetooth
 persist.vendor.bt.a2dp.aac_whitelist=false
