@@ -76,9 +76,6 @@ ro.telephony.iwlan_operation_mode=legacy
 # Netflix
 vendor.netflix.bsp_rev=Q6150-17263-1
 
-# Perf
-ro.vendor.perf.scroll_opt=true
-
 # Radio
 persist.vendor.radio.add_power_save=1
 persist.vendor.radio.atfwd.start=true
