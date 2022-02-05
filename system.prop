@@ -19,9 +19,6 @@ ro.charger.enable_suspend=true
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
-# Radio
-persist.sys.fflag.override.settings_provider_model=false
-
 # WFD
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
