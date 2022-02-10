@@ -42,6 +42,9 @@ vendor.display.disable_rotator_downscale=1
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
+persist.vendor.dpm.idletimer.mode=default
+persist.vendor.dpm.nsrm.bkg.evt=3955
+persist.vendor.dpmhalservice.enable=1
 
 # DRM
 drm.service.enabled=true
@@ -87,6 +90,9 @@ persist.vendor.radio.process_sups_ind=1
 persist.vendor.radio.redir_party_num=1
 persist.vendor.radio.report_codec=1
 
+# Qcom
+persist.vendor.qcomsysd.enabled=1
+
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 debug.sensors.diag_buffer_log=false
@@ -99,6 +105,9 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
+# Thermal
+vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
