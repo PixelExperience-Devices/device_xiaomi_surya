@@ -14,9 +14,7 @@
      <string name="refresh_title">Taxa de atualização por Aplicativo</string>
      <string name="refresh_summary">Defina a taxa de atualização máxima para um aplicativo em específico</string>
      <string name="refresh_default">Padrão</string>
-     <string name="refresh_low">Baixa (30Hz)</string>
-     <string name="refresh_moderate">Moderada (50Hz)</string>
-     <string name="refresh_standard">Básica (60Hz)</string>
+     <string name="refresh_medium">Média (60Hz)</string>
      <string name="refresh_high">Alta (90Hz)</string>
      <string name="refresh_extreme">Extrema (120Hz)</string>
 
