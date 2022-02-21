@@ -1,15 +1,16 @@
-ifeq ($(USE_DYNAMIC_REFRESH_RATE), true)
+USE_REFRESH_RATE_LIST := true
+
+ifeq ($(USE_REFRESH_RATE_LIST), true)
 # Overlays
 PRODUCT_PACKAGES += \
-    SuryaRefreshRateSettings
+    SuryaRefreshRateListSettings
 
 # Refresh Rate Dynamic Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_idle_timer_ms?=500 \
     ro.surface_flinger.set_touch_timer_ms=750 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
-    ro.surface_flinger.protected_contents=true
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=0 \
@@ -38,18 +39,12 @@ else
 PRODUCT_PACKAGES += \
     SuryaSmoothDisplaySettings
 
-# Init scripts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.refreshrate.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.refreshrate.rc
-
 # Smooth Display Refresh Rate Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_idle_timer_ms?=500 \
     ro.surface_flinger.set_touch_timer_ms=750 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.support_kernel_idle_timer=true \
-    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
-    ro.surface_flinger.protected_contents=true
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # Enable app/sf phase offset as durations. The numbers below are translated from the existing
 # positive offsets by finding the duration app/sf will have with the offsets.

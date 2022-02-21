@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import /vendor/etc/init/hw/init.xiaomiparts.rc
-import /vendor/etc/init/init.refreshrate.rc
 
 on init
     chown system system /dev/goodix_fp
