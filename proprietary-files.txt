@@ -627,6 +627,7 @@ vendor/etc/sap.conf|b5ea86d9d9ee36dc13194474d343dae36f6fa032
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
 vendor/etc/xtwifi.conf|ac2189707c0016c31846ccec73e8857d7f566605
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|85d86cfcf3cf60dc69974ed71b17dc6dc8c40381
+vendor/lib64/libcapiv2svarnn.so|6786511acd1925926d09011ae3e22deb3162d142
 vendor/lib64/libcdfw.so|70ef0247c71d590b503471a03d4aaa76d99441e9
 vendor/lib64/libcdfw_remote_api.so|faaf6c57e4c1c40d5e604d6932704bf63d883e96
 vendor/lib64/libdataitems.so|942a04a284ca2c088f726d5cd40cbabaca12664c
@@ -638,6 +639,7 @@ vendor/lib64/libizat_client_api.so|67611af03e4622aa4ab8f00aca4c44678972016e
 vendor/lib64/libizat_core.so|3b197e431d6b311ec949ba8d2b565aaf45253d26
 vendor/lib64/liblbs_core.so|41b578c7fb1fd1e18c2eb64aebf6119182e9311a
 vendor/lib64/libloc_api_v02.so|515e8e2a2511c4ce30753e091f3f3286930948d4
+vendor/lib64/libloc_api_wds.so|e480e856dce66c825734da8cd6858a20c821471c
 vendor/lib64/libloc_socket.so|df799255c50ef4ee67fdb1042f2877ac5be8307a
 vendor/lib64/liblocationservice.so|a61183f6919d64ca0818cc95f3fa12abed784b63
 vendor/lib64/liblocationservice_glue.so|39087f6c4309f695864b7f0f2768ff85e2bce838
@@ -842,6 +844,7 @@ vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|1a0e734c388be549924e
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|7458e7f1f5a19dd0ffbd6122b702d791d0620066
 vendor/lib64/libGPQTEEC_vendor.so|d70f659c06a38dbae028f41ca6e0dece0ef1d5cd
 vendor/lib64/libGPTEE_vendor.so|92c0215dbd3271e597d536c259df44aac716a402
+vendor/lib64/libQTEEConnector_listener.so|90419f4618e44fa87f6734dbb9b7e4598f88bad2
 vendor/lib64/libQTEEConnector_vendor.so|30e5fd8d4fff50083f44f6d0bd09f4bd287a8366
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|131cdee67110cd0af1708ba31d81aef85456081a
 
