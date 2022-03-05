@@ -28,6 +28,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a76
 TARGET_OTA_ASSERT_DEVICE := surya,karna
 
 # Audio
+BOARD_SUPPORTS_SOUND_TRIGGER := false
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
 # Bootloader
