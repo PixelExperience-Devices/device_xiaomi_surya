@@ -10,6 +10,7 @@ $(call inherit-product, vendor/xiaomi-firmware/surya/Android.mk)
 # Device configs makefiles
 $(call inherit-product, $(LOCAL_PATH)/configs/device/hidl_vendor.mk)
 $(call inherit-product, $(LOCAL_PATH)/configs/device/refreshrate.mk)
+$(call inherit-product, $(LOCAL_PATH)/configs/device/properties.mk)
 
 # Inherit from the proprietary configuration
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
