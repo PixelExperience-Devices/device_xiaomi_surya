@@ -11,8 +11,8 @@
      <string name="lcd_features_info">O modo de brilho intenso (HBM) aumenta o brilho máximo da tela para melhorar a visibilidade sob a luz solar mas também aumenta o consumo de energia.\n\nO modo Content Adaptive Backlight Control (CABC) ajusta o brilho da tela e da retroiluminação tendo por base o conteúdo mostrado, reduzindo assim o consumo de energia sem degradar a qualidade da imagem.</string>
 
      <!-- Refresh Rate per-app -->
-     <string name="refresh_title">Taxa de atualização por Aplicativo</string>
-     <string name="refresh_summary">Defina a taxa de atualização máxima para um aplicativo em específico</string>
+     <string name="refresh_title">Taxa de atualização por aplicativo</string>
+     <string name="refresh_summary">Defina uma taxa de atualizacão especifica para cada aplicativo</string>
      <string name="refresh_default">Padrão</string>
      <string name="refresh_medium">Média (60Hz)</string>
      <string name="refresh_high">Alta (90Hz)</string>
