@@ -16,10 +16,7 @@
 
 package org.lineageos.settings.thermal;
 
-import android.app.ActivityManager;
 import android.app.ActivityTaskManager;
-import android.app.ActivityTaskManager.RootTaskInfo;
-import android.app.IActivityTaskManager;
 import android.app.TaskStackListener;
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -40,8 +37,6 @@ public class ThermalService extends Service {
     private String mPreviousApp;
     private ThermalUtils mThermalUtils;
 
-    private IActivityTaskManager mActivityTaskManager;
-
     private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -55,8 +50,7 @@ public class ThermalService extends Service {
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
         try {
-            mActivityTaskManager = ActivityTaskManager.getService();
-            mActivityTaskManager.registerTaskStackListener(mTaskListener);
+             ActivityTaskManager.getService().registerTaskStackListener(mTaskListener);
         } catch (RemoteException e) {
             // Do nothing
         }
@@ -87,15 +81,15 @@ public class ThermalService extends Service {
         @Override
         public void onTaskStackChanged() {
             try {
-                final RootTaskInfo info = mActivityTaskManager.getFocusedRootTaskInfo();
-                if (info == null || info.topActivity == null) {
-                    return;
-                }
-
-                String foregroundApp = info.topActivity.getPackageName();
-                if (!foregroundApp.equals(mPreviousApp)) {
-                    mThermalUtils.setThermalProfile(foregroundApp);
-                    mPreviousApp = foregroundApp;
+                final ActivityTaskManager.RootTaskInfo focusedTask =
+                        ActivityTaskManager.getService().getFocusedRootTaskInfo();
+                if (focusedTask != null && focusedTask.topActivity != null) {
+                    ComponentName taskComponentName = focusedTask.topActivity;
+                    String foregroundApp = taskComponentName.getPackageName();
+                    if (!foregroundApp.equals(mPreviousApp)) {
+                        mThermalUtils.setThermalProfile(foregroundApp);
+                        mPreviousApp = foregroundApp;
+                    }
                 }
             } catch (Exception e) {}
         }

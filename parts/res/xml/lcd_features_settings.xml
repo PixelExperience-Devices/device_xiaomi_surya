@@ -18,15 +18,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/lcd_features_title" >
 
-    <ListPreference
-        android:key="pref_hbm"
-        android:title="@string/lcd_hbm_title"
-        android:entries="@array/lcd_hbm_modes"
-        android:entryValues="@array/lcd_hbm_values"
-        android:defaultValue="0" />
+    <SwitchPreference
+        android:key="hbm_pref"
+        android:title="@string/lcd_hbm_title" />
 
     <ListPreference
-        android:key="pref_cabc"
+        android:key="cabc_pref"
         android:title="@string/lcd_cabc_title"
         android:entries="@array/lcd_cabc_modes"
         android:entryValues="@array/lcd_cabc_values"
@@ -35,6 +32,7 @@
     <com.android.settingslib.widget.FooterPreference
         android:key="lcd_features_footer"
         android:title="@string/lcd_features_info"
-        android:selectable="false" />
+        android:selectable="false"
+        android:layout="@layout/preference_footer" />
 
 </PreferenceScreen>

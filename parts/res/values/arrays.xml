@@ -92,26 +92,14 @@
         <item>"0,4,2,0,-2,-2,4"</item>
         <item>"2,0,0,-2,-4,0,0"</item>
     </string-array>
-    
-    <string-array name="lcd_hbm_modes">
-        <item>"Off"</item>
-        <item>"Medium"</item>
-        <item>"High"</item>
-    </string-array>
-    
-    <string-array name="lcd_hbm_values" translatable="false">
-        <item>"0"</item>
-        <item>"1"</item>
-        <item>"2"</item>
-    </string-array>
-    
+
     <string-array name="lcd_cabc_modes">
-        <item>"Off"</item>
-        <item>"Low (UI)"</item>
-        <item>"Medium (Videos)"</item>
-        <item>"High (Images)"</item>
+        <item>@string/lcd_cabc_off</item>
+        <item>@string/lcd_cabc_low</item>
+        <item>@string/lcd_cabc_medium</item>
+        <item>@string/lcd_cabc_high</item>
     </string-array>
-    
+
     <string-array name="lcd_cabc_values" translatable="false">
         <item>"0"</item>
         <item>"1"</item>

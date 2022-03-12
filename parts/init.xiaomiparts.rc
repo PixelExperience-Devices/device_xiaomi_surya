@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,6 +13,8 @@
 # limitations under the License.
 
 on boot
+
+# LCD Features
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/cabc
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/cabc
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/hbm
@@ -24,6 +26,7 @@ on property:persist.lcd.hbm_mode=*
 on property:persist.lcd.cabc_mode=*
     write /sys/devices/platform/soc/soc:qcom,dsi-display/cabc ${persist.lcd.cabc_mode}
 
+# Game Mode and Touch Profiles
 on property:sys.perf_profile=1
     write /dev/stune/top-app/schedtune.boost 10
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2

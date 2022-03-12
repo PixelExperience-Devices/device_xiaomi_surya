@@ -3,16 +3,26 @@
 <resources>
 
      <!-- LCD Features -->
-     <string name="lcd_features_title">Funcionalidades LCD</string>
-     <string name="lcd_features_summary">Modo de alto brilho (CABC)</string>
+     <string name="lcd_features_title">Recursos adicionais de Tela</string>
+     <string name="lcd_features_summary">Modo de alto brilho (HBM) &amp; Controle de luz de fundo adaptável de conteúdo (CABC).</string>
+     <string name="lcd_features_info">O modo de brilho intenso (HBM) aumenta o brilho máximo da tela para melhorar a visibilidade sob a luz solar mas também aumenta o consumo de energia.\n\nO modo Content Adaptive Backlight Control (CABC) ajusta o brilho da tela e da retroiluminação tendo por base o conteúdo mostrado, reduzindo assim o consumo de energia sem degradar a qualidade da imagem.</string>
+     <string name="kernel_not_supported">O kernel não suportava este recurso</string>
+
      <string name="lcd_hbm_title">Modo de alto brilho (HBM)</string>
      <string name="lcd_hbm_tile_title">HBM</string>
-     <string name="lcd_cabc_title">Modo CABC</string>
-     <string name="lcd_features_info">O modo de brilho intenso (HBM) aumenta o brilho máximo da tela para melhorar a visibilidade sob a luz solar mas também aumenta o consumo de energia.\n\nO modo Content Adaptive Backlight Control (CABC) ajusta o brilho da tela e da retroiluminação tendo por base o conteúdo mostrado, reduzindo assim o consumo de energia sem degradar a qualidade da imagem.</string>
+     <string name="lcd_hbm_title_enabled">Habilitado</string>
+     <string name="lcd_hbm_title_disabled">Desabilitado</string>
 
+     <string name="lcd_cabc_title">Modo CABC</string>
+     <string name="lcd_cabc_tile_title">CABC</string>
+     <string name="lcd_cabc_off">Desligado</string>
+     <string name="lcd_cabc_low">Baixo (UI)</string>
+     <string name="lcd_cabc_medium">Médio (Vídeos)</string>
+     <string name="lcd_cabc_high">Alto (Imagens)</string>
+ 
      <!-- Refresh Rate per-app -->
-     <string name="refresh_title">Taxa de atualização por Aplicativo</string>
-     <string name="refresh_summary">Defina a taxa de atualização máxima para um aplicativo em específico</string>
+     <string name="refresh_title">Taxa de atualização por aplicativo</string>
+     <string name="refresh_summary">Defina uma taxa de atualizacão especifica para cada aplicativo</string>
      <string name="refresh_default">Padrão</string>
      <string name="refresh_medium">Média (60Hz)</string>
      <string name="refresh_high">Alta (90Hz)</string>

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 Paranoid Android
+ * Copyright (C) 2022 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.display;
+package org.lineageos.settings.thermal;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -22,13 +22,17 @@ import android.view.MenuItem;
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.collapsingtoolbar.R;
 
-public class LcdFeaturesPreferenceActivity extends CollapsingToolbarBaseActivity {
+public class TouchSettingsActivity extends CollapsingToolbarBaseActivity {
+
+    private static final String TAG_TOUCH = "touch";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, new LcdFeaturesPreferenceFragment())
-                .commit();
+        TouchSettingsFragment touchSettingsFragment = new TouchSettingsFragment();
+        touchSettingsFragment.setArguments(getIntent().getExtras());
+        getFragmentManager().beginTransaction().replace(R.id.content_frame,
+        touchSettingsFragment, TAG_TOUCH).commit();
     }
 
     @Override

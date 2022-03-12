@@ -314,15 +314,10 @@ public class ThermalSettingsFragment extends PreferenceFragment
             holder.mode.setAdapter(new ModeAdapter(context));
             holder.mode.setOnItemSelectedListener(this);
             holder.touchIcon.setOnClickListener(v -> {
-                TouchSettingsFragment touchSettingsFragment = new TouchSettingsFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("appName", entry.label);
-                bundle.putString("packageName", entry.info.packageName);
-                touchSettingsFragment.setArguments(bundle);
-                getActivity().getFragmentManager().beginTransaction()
-                        .replace(R.id.content_frame, touchSettingsFragment, "touchSettingsFragment")
-                        .addToBackStack(null)
-                        .commit();
+            Intent intent = new Intent(getActivity(), TouchSettingsActivity.class);
+                intent.putExtra("appName", entry.label);
+                intent.putExtra("packageName", entry.info.packageName);
+                startActivity(intent);
             });
 
             holder.title.setText(entry.label);
