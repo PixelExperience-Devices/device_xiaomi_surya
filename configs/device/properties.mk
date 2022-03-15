@@ -85,10 +85,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# FUSE passthrough
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.sys.fuse.passthrough.enable=true
-
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
