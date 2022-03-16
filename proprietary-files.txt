@@ -403,9 +403,6 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 
-# Camera service
-lib/libcameraservice.so
-
 # CDSP - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/cdsprpcd|530bcfcf9a31dedcc6c8ff5ea33fbaf8c03ab877
 vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
@@ -581,13 +578,15 @@ vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/permissions/com.fingerprints.extension.xml
 -vendor/framework/com.fingerprints.extension.jar
 vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/fingerprint.goodix.default.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
+# Fingerprint - FPC
+vendor/lib64/hw/fingerprint.fpc.default.so|645bf256da2db3ce60dddab9b3282ab7241bbcb0
 
 # FM - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|1b238f6b0494313fb217c7af55a9d4a59f982d59
