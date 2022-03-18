@@ -136,6 +136,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.netflix.bsp_rev=Q6150-17263-1
 
+# NFC
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.nfc.port=I2C
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.add_power_save=1 \
