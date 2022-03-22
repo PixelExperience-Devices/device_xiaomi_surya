@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.doze;
+package org.lineageos.settings.sensors;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -24,11 +24,14 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
+import org.lineageos.settings.doze.DozeUtils;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class ProximitySensor implements SensorEventListener {
+
     private static final boolean DEBUG = false;
     private static final String TAG = "ProximitySensor";
 
@@ -53,14 +56,16 @@ public class ProximitySensor implements SensorEventListener {
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 
-    private Future<?> submit(Runnable runnable) { return mExecutorService.submit(runnable); }
+    private Future<?> submit(Runnable runnable) {
+        return mExecutorService.submit(runnable);
+    }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
         boolean isNear = event.values[0] < mSensor.getMaximumRange();
         if (mSawNear && !isNear) {
             if (shouldPulse(event.timestamp)) {
-                DozeUtils.wakeOrLaunchDozePulse(mContext);
+                DozeUtils.launchDozePulse(mContext);
             }
         } else {
             mInPocketTime = event.timestamp;
@@ -71,8 +76,8 @@ public class ProximitySensor implements SensorEventListener {
     private boolean shouldPulse(long timestamp) {
         long delta = timestamp - mInPocketTime;
 
-        if (DozeUtils.isHandwaveGestureEnabled(mContext)
-                && DozeUtils.isPocketGestureEnabled(mContext)) {
+        if (DozeUtils.isHandwaveGestureEnabled(mContext) &&
+                DozeUtils.isPocketGestureEnabled(mContext)) {
             return true;
         } else if (DozeUtils.isHandwaveGestureEnabled(mContext)) {
             return delta < HANDWAVE_MAX_DELTA_NS;
@@ -87,17 +92,18 @@ public class ProximitySensor implements SensorEventListener {
         /* Empty */
     }
 
-    protected void enable() {
-        if (DEBUG)
-            Log.d(TAG, "Enabling");
+    public void enable() {
+        if (DEBUG) Log.d(TAG, "Enabling");
         submit(() -> {
-            mSensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(this, mSensor,
+                    SensorManager.SENSOR_DELAY_NORMAL);
         });
     }
 
-    protected void disable() {
-        if (DEBUG)
-            Log.d(TAG, "Disabling");
-        submit(() -> { mSensorManager.unregisterListener(this, mSensor); });
+    public void disable() {
+        if (DEBUG) Log.d(TAG, "Disabling");
+        submit(() -> {
+            mSensorManager.unregisterListener(this, mSensor);
+        });
     }
 }
