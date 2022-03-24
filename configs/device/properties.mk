@@ -22,9 +22,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.bluetooth.wipower=false \
     vendor.qcom.bluetooth.soc=cherokee
 
-# Bluetooth
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.bt.a2dp.aac_whitelist=false \
+    persist.vendor.btstack.enable.lpa=true \
     persist.vendor.btstack.enable.twsplus=true \
     persist.vendor.btstack.enable.twsplussho=true \
     vendor.bluetooth.soc=cherokee
