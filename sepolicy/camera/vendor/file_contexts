@@ -1,4 +1,4 @@
-/mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
+/mnt/vendor/persist/camera(/.*)? u:object_r:vendor_persist_camera_file:s0
 /(vendor|system/vendor)/lib(64)?/vendor\.qti\.hardware\.camera\.device@3\.5\.so       u:object_r:same_process_hal_file:s0
 
 # libSNPE
