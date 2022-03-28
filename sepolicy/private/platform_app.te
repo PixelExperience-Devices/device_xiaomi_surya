@@ -1,2 +1,0 @@
-dontaudit platform_app default_android_hwservice:hwservice_manager { find };
-dontaudit platform_app hal_power_service:service_manager { find };

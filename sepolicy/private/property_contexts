@@ -7,8 +7,5 @@ audio.dirac.                   u:object_r:dirac_prop:s0
 audio.dirac.logging            u:object_r:dirac_prop:s0
 persist.audio.dirac.           u:object_r:dirac_prop:s0
 
-# NFC
-persist.nfc.factory.fwstatus   u:object_r:build_prop:s0
-
 # XiaomiParts
 persist.lcd.                   u:object_r:persist_lcd_prop:s0
