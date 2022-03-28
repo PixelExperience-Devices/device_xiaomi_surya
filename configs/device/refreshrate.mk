@@ -3,7 +3,7 @@ USE_REFRESH_RATE_LIST := true
 ifeq ($(USE_REFRESH_RATE_LIST), true)
 # Overlays
 PRODUCT_PACKAGES += \
-    SuryaRefreshRateListSettings
+    J20CRefreshRateListSettings
 
 # Refresh Rate Dynamic Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -37,7 +37,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 else
 # Overlays
 PRODUCT_PACKAGES += \
-    SuryaSmoothDisplaySettings
+    J20CSmoothDisplaySettings
 
 # Smooth Display Refresh Rate Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "SuryaRefreshRateListSettings",
-    sdk_version: "current",
-    vendor: true,
-}
