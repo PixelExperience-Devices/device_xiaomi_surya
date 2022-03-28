@@ -52,7 +52,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Dexopt
 PRODUCT_SYSTEM_PROPERTIES += \
-     pm.dexopt.first-boot=quicken
+     pm.dexopt.first-boot=quicken \
      pm.dexopt.bg-dexopt=everything
 
 # Device Settings
@@ -159,7 +159,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.sensors.enable.mag_filter=true
+    persist.vendor.sensors.enable.mag_filter=true \
     debug.sensors.diag_buffer_log=false
 
 # Thermal
