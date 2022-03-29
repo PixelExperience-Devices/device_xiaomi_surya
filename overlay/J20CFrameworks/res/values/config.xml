@@ -39,8 +39,7 @@
     <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">91.0px</dimen>
-    <dimen name="status_bar_height_landscape">28.0dp</dimen>
+    <dimen name="status_bar_height">91.0px</dimen>
 
     <!-- Radius of the software rounded corners at the top of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
