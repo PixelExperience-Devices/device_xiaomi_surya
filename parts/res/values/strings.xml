@@ -2,8 +2,4 @@
 
 <resources>
 
-    <!-- Dirac -->
-    <string name="dirac_tile_on">On</string>
-    <string name="dirac_tile_off">Off</string>
-
 </resources>

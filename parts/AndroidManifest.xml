@@ -49,7 +49,9 @@
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </service>
+            <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+            android:value="true" />
+           </service>
 
         <activity
             android:name=".refreshrate.RefreshActivity"
@@ -97,7 +99,7 @@
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </service>
+           </service>
 
         <service
             android:name=".display.CabcTileService"
