@@ -241,6 +241,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
     ro.telephony.iwlan_operation_mode=legacy
 
+# Keyguard
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.wm.enable_remote_keyguard_animation=0
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
