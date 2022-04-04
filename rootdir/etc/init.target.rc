@@ -77,7 +77,6 @@ on post-fs-data
 on boot
     chown system system /sys/kernel/hbtp/display_pwr
     start vendor.rmt_storage
-    start rfs_access
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-3
