@@ -46,7 +46,7 @@ public final class RefreshUtils {
     private static final float REFRESH_STATE_HIGH = 90f;
     private static final float REFRESH_STATE_EXTREME = 120f;
 
-     private static final String REFRESH_MEDIUM = "refresh.medium=";
+    private static final String REFRESH_MEDIUM = "refresh.medium";
     private static final String REFRESH_HIGH = "refresh.high=";
     private static final String REFRESH_EXTREME = "refresh.extreme=";
 
@@ -134,20 +134,20 @@ public final class RefreshUtils {
                 minrate = maxrate;
                 }
                 isAppInList = true;
-            } else if (modes[1].contains(packageName + ",")) {
+                } else if (modes[1].contains(packageName + ",")) {
                 maxrate = REFRESH_STATE_HIGH;
                 if ( minrate > maxrate){
                 minrate = maxrate;
                 }
-		isAppInList = true;
-            } else if (modes[2].contains(packageName + ",")) {
+                isAppInList = true;
+                } else if (modes[2].contains(packageName + ",")) {
                 maxrate = REFRESH_STATE_EXTREME;
                 if ( minrate > maxrate){
                 minrate = maxrate;
                 }
-		isAppInList = true;
-           }
-          }
+                isAppInList = true;
+            }
+        }
 	Settings.System.putFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, minrate);
         Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, maxrate);
     }
