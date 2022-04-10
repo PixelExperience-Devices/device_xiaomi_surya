@@ -66,8 +66,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Display
 PRODUCT_VENDOR_PROPERTIES += \
-   debug.sf.disable_backpressure=1 \
    debug.sf.latch_unsignaled=1 \
+   persist.sys.sf.native_mode=0 \
+   persist.sys.sf.color_mode=0 \
    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
    ro.vendor.display.ad=1 \
    ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
@@ -75,10 +76,12 @@ PRODUCT_VENDOR_PROPERTIES += \
    ro.vendor.display.sensortype=2 \
    vendor.display.disable_idle_time_hdr=1 \
    vendor.display.disable_idle_time_video=1 \
-   vendor.display.disable_rotator_downscale=1
+   vendor.display.disable_rotator_downscale=1 \
+   vendor.display.qdcm.mode_combine=2
 
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.has_wide_color_display=false
+PRODUCT_DEFAULT_VENDOR_PROPERTIES += \
+   ro.surface_flinger.has_wide_color_display=false \
+   ro.surface_flinger.has_HDR_display=false
 
 # Disable vsync for cpu rendered apps
 PRODUCT_SYSTEM_PROPERTIES += \
