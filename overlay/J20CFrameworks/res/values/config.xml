@@ -592,4 +592,7 @@
          Exempted from privacy indicators. -->
     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
 
+    <!-- Whether device has a big physical display cutout -->
+    <bool name="config_physicalDisplayCutout">true</bool>
+
 </resources>
