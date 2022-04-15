@@ -132,7 +132,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Netflix
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.netflix.bsp_rev=Q6150-17263-1
+    ro.netflix.bsp_rev=Q6150-17263-1
 
 # NFC
 PRODUCT_SYSTEM_PROPERTIES += \
