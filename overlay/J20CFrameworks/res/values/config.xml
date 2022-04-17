@@ -504,6 +504,8 @@
         <item>"/system/bin/surfaceflinger"</item>
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
+        <item>"/system/framework/arm64/boot.oat"</item>
+        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
         <item>"/system/framework/ext.jar"</item>
         <item>"/system/framework/QPerformance.jar"</item>
         <item>"/system/framework/UxPerformance.jar"</item>
