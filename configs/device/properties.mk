@@ -64,7 +64,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dirac.acs.ignore_error=1
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    persist.lcd.hbm_mode=0 \
     persist.lcd.cabc_mode=1
 
 # Display
