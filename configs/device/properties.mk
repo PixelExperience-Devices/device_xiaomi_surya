@@ -1,5 +1,7 @@
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.audio.soundfx.type=mi \
+    ro.vendor.audio.soundfx.usb=true \
     persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
     persist.vendor.audio.voicecall.speaker.stereo=true
 
