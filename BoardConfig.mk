@@ -158,6 +158,7 @@ TARGET_SCREEN_DENSITY := 440
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/xiaomi/J20C-sepolicy/J20C-sepolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
