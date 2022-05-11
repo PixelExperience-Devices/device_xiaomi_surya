@@ -104,6 +104,10 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
     
+## Compile SystemUI on device with `speed`.
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed
+    
 # Disable vsync for cpu rendered apps
 PRODUCT_SYSTEM_PROPERTIES += \
    debug.cpurend.vsync=false
