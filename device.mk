@@ -444,7 +444,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.multihal \
+    android.hardware.sensors@2.1-service.xiaomi-multihal \
     android.frameworks.sensorservice@1.0 \
     libsensorndkbridge
 
