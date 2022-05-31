@@ -43,6 +43,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.bluetooth.wipower=false \
     vendor.qcom.bluetooth.soc=cherokee
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.vendor.btstack.enable.lpa=true
+
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
