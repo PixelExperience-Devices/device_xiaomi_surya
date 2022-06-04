@@ -62,7 +62,6 @@ PRODUCT_VENDOR_PROPERTIES += \
    debug.sf.latch_unsignaled=1 \
    persist.sys.sf.native_mode=0 \
    persist.sys.sf.color_mode=0 \
-   ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30 \
    ro.vendor.display.ad=1 \
    ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
    ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \

@@ -599,9 +599,6 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e4134405110
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|14819df15693c737fb2a51bf89fe826200286006
 
-# GPU drivers - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
--vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk|c3601f567e672f5493fd8015d858d78399b891f2
-
 # Graphics firmware
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.b01
