@@ -81,11 +81,28 @@ on boot
     # Create pa-cal driver directory lct-20181009
     mkdir /mnt/vendor/persist/audio 0770 audio audio
 
+    # access permissions for vibrator calibration
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/cali
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/cali_save
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/f0_save
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/osc_save
+    chmod 0666 sys/devices/platform/soc/884000.i2c/i2c-3/3-005a/osc_cali
+
+on property:sys.boot_completed=1
+    start vibrator_calibration
+    
 on charger
     chown system system /sys/class/leds/red/brightness
     chmod 0666 /sys/class/leds/red/brightness
     start vendor.power_off_alarm
 
+service vibrator_calibration /vendor/bin/vibrator_calibration
+     class late_start
+     user system
+     group system
+     disabled
+     oneshot
+     
 service mi_thermald /system/vendor/bin/mi_thermald
     class core
     user root

@@ -14,7 +14,8 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/surya/sepolicy/qcom/vendor \
     device/xiaomi/surya/sepolicy/sensors/vendor \
     device/xiaomi/surya/sepolicy/thermal/vendor \
-    device/xiaomi/surya/sepolicy/usb/vendor
+    device/xiaomi/surya/sepolicy/usb/vendor \
+    device/xiaomi/surya/sepolicy/vibrator/vendor
 
 # Private Sepolicy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
