@@ -222,6 +222,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wlan
 
 $(call inherit-product, device/qcom/common/common.mk)
+DEVICE := surya
 
 # Radio
 PRODUCT_PACKAGES += \
