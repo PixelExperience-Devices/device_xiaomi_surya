@@ -46,15 +46,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.model=SM7150 \
     ro.soc.manufacturer=QTI
 
-# Dalvik
-PRODUCT_SYSTEM_PROPERTIES += \
-     dalvik.vm.dex2oat64.enabled=true
-
-# Dexopt
-PRODUCT_SYSTEM_PROPERTIES += \
-     pm.dexopt.first-boot=quicken \
-     pm.dexopt.bg-dexopt=everything
-
 # Device Settings
 PRODUCT_VENDOR_PROPERTIES += \
     ro.audio.soundfx.dirac=true \
