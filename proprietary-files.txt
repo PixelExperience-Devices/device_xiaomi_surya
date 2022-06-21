@@ -1,4 +1,4 @@
-# Device proprietary files - from surya MIUI V12.5.5.0.RJGMIXM package, unless pinned
+# Device proprietary files - from surya MIUI V12.5.8.0.RJGMIXM package, unless pinned
 
 # ADSP - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/adsprpcd|12e09d8e87b260a8721c7938890186a0877a9e85
