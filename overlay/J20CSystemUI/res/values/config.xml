@@ -40,7 +40,7 @@
     <dimen name="physical_fingerprint_sensor_center_screen_location_x">1080px</dimen>
 
     <!-- Height of the status bar header bar when on Keyguard (match status_bar_height) -->
-    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_default</dimen>
 
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
      vibrator is capable of subtle vibrations -->
