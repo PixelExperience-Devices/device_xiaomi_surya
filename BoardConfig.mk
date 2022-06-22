@@ -39,9 +39,6 @@ TARGET_NO_BOOTLOADER := true
 TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
-# DT2W
-TARGET_TAP_TO_WAKE_NODE  := "/proc/tp_gesture"
-
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/device_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
@@ -125,6 +122,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+TARGET_TAP_TO_WAKE_NODE  := "/proc/tp_gesture"
 TARGET_USES_INTERACTION_BOOST := true
 
 # QC common
