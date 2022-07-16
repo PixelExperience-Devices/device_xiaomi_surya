@@ -217,7 +217,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wlan
 
 $(call inherit-product, device/qcom/common/common.mk)
-DEVICE := surya
+TARGET_USE_SM8150_HALS := true
 
 # Radio
 PRODUCT_PACKAGES += \
