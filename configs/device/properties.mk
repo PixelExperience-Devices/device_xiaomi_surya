@@ -104,12 +104,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.cp.taper_term_mv=6500 \
     persist.vendor.cp.vbus_offset_mv=1040
 
-# IMS
-PRODUCT_VENDOR_PROPERTIES += \
-   persist.dbg.volte_avail_ovr=1 \
-   persist.dbg.vt_avail_ovr=1 \
-   persist.dbg.wfc_avail_ovr=1
-
 # Incremental FS
 PRODUCT_VENDOR_PROPERTIES += \
    ro.incremental.enable=1
