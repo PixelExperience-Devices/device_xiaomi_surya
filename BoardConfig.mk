@@ -123,7 +123,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 TARGET_TAP_TO_WAKE_NODE  := "/proc/tp_gesture"
-TARGET_USES_INTERACTION_BOOST := true
 
 # QC common
 OVERRIDE_QCOM_HARDWARE_VARIANT := sm8150-common
