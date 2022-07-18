@@ -71,10 +71,6 @@ PRODUCT_VENDOR_PROPERTIES += \
    vendor.display.disable_rotator_downscale=1 \
    vendor.display.qdcm.mode_combine=2
 
-PRODUCT_DEFAULT_VENDOR_PROPERTIES += \
-   ro.surface_flinger.has_wide_color_display=true \
-   ro.surface_flinger.has_HDR_display=true
-
 # Disable vsync for cpu rendered apps
 PRODUCT_SYSTEM_PROPERTIES += \
    debug.cpurend.vsync=false
