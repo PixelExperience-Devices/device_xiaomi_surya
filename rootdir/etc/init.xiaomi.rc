@@ -42,11 +42,18 @@ on fs
     chmod 0755 /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
     chown system system /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
 
+on post-fs
+    chmod 0660 /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/red/brightness
+
 on post-fs-data
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
     mkdir /data/vendor/misc/display 0771 system system
     chmod 666 /sys/class/drm/card0-DSI-1/disp_count
+
+    #Create folder of camera
+    mkdir /data/vendor/camera 0770 system camera
 
 on boot
     chown system system /sys/class/drm/card0-DSI-1/disp_param
@@ -79,6 +86,41 @@ on boot
 
 #Load mi memory driver
     insmod /vendor/lib/modules/mi_memory.ko
+
+    #add flashlight
+    chmod 0660 /sys/class/leds/flashlight/brightness
+    chown system system /sys/class/leds/flashlight/brightness
+
+    #define back flash and front flash
+    chmod 0660 /sys/class/leds/led:flash_0/brightness
+    chmod 0660 /sys/class/leds/led:flash_1/brightness
+    chmod 0660 /sys/class/leds/led:flash_2/brightness
+    chmod 0660 /sys/class/leds/led:torch_0/brightness
+    chmod 0660 /sys/class/leds/led:torch_1/brightness
+    chmod 0660 /sys/class/leds/led:torch_2/brightness
+    chmod 0660 /sys/class/leds/led:switch_0/brightness
+    chmod 0660 /sys/class/leds/flashlight/brightness
+  	chmod 0777 /sys/class/ant_div_class/ant_div_state
+    chown system system /sys/class/leds/led:flash_0/brightness
+    chown system system /sys/class/leds/led:flash_1/brightness
+    chown system system /sys/class/leds/led:flash_2/brightness
+    chown system system /sys/class/leds/led:torch_0/brightness
+    chown system system /sys/class/leds/led:torch_1/brightness
+    chown system system /sys/class/leds/led:torch_2/brightness
+    chown system system /sys/class/leds/led:switch_0/brightness
+    chown system system /sys/class/leds/led:switch_1/brightness
+    chown system system /sys/class/leds/flashlight/brightness
+	chown system system /sys/class/ant_class/ant_state
+	chown system system /sys/class/ant_div_class/ant_div_state
+
+    #enable camera read sensors data
+    setprop persist.camera.gyro.disable 0
+
+    #Create camera directory
+    mkdir /mnt/vendor/persist/camera 0755 system cameraserver
+
+    # Create pa-cal driver directory lct-20181009
+    mkdir /mnt/vendor/persist/audio 0770 audio audio
 
 on charger
     chown system system /sys/class/leds/red/brightness
