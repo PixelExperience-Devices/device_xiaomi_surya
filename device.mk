@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Firmware Surya
-$(call inherit-product, vendor/xiaomi-firmware/surya/Android.mk)
-
 # Device configs makefiles
 $(call inherit-product, $(LOCAL_PATH)/configs/device/hidl_vendor.mk)
 $(call inherit-product, $(LOCAL_PATH)/configs/device/refreshrate.mk)
@@ -145,7 +142,6 @@ PRODUCT_COPY_FILES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    vendor/xiaomi-firmware \
     hardware/xiaomi
 
 # NFC
