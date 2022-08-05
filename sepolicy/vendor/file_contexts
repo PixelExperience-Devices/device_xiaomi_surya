@@ -7,3 +7,6 @@
 
 # Charger Xiaomi
 /vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service       u:object_r:hal_micharge_default_exec:s0
+
+# Camera
+/(vendor|system/vendor)/lib(64)?/vendor\.qti\.hardware\.camera\.device@3\.5\.so       u:object_r:same_process_hal_file:s0
