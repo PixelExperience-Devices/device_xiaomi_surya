@@ -1,4 +1,4 @@
-# Device proprietary files - from surya MIUI V12.5.8.0.RJGMIXM package, unless pinned
+# Device proprietary files - from surya V13.0.1.0.SJGMIXM package, unless pinned
 
 # ADSP - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/adsprpcd|12e09d8e87b260a8721c7938890186a0877a9e85
@@ -32,6 +32,8 @@ vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
+vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
+vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libSuperSensor_skel.so
@@ -105,6 +107,7 @@ vendor/lib64/libsndmonitor.so
 vendor/lib64/libspkrprot.so
 vendor/lib64/libssrec.so
 vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
 vendor/lib64/soundfx/libqcomvoiceprocessing.so
@@ -230,6 +233,8 @@ vendor/lib64/libremosaiclib.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libsdk_sr.so
 vendor/lib64/libst_sr_models.so
+vendor/lib64/libsnpe_dsp_domains_v2.so
+vendor/lib64/libsnpe_dsp_domains_v2_system.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSuperSensorCPU.so
 vendor/lib64/libSuperSensor.so
@@ -336,7 +341,6 @@ vendor/etc/camera/golden_rear_dc_cal_wd.bin
 vendor/etc/camera/hdr_ui9_params.config
 vendor/etc/camera/LDC_FPC_TUNING_DATA.bin
 vendor/etc/camera/LDC_PACKDATA_VENDORID_0x01.bin
-vendor/etc/camera/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/etc/camera/male_bg.png
 vendor/etc/camera/male_icon.png
 vendor/etc/camera/megviifacepp_0_5_2_model
@@ -425,6 +429,13 @@ vendor/bin/init.qti.chg_policy.sh|9a96b05abdfe149eb8a7e20a791284e84b5fffe0
 vendor/etc/charger_fstab.qti|8464c139d93f05e86ff9c9d31b3e8617b8d9476e
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
 vendor/bin/hvdcp_opti|2f11f89c6c7741f6837d873939b392217e2cc3c1
+
+# Charger xiaomi
+vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service
+vendor/etc/init/vendor.xiaomi.hardware.micharge@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge@1.0.xml
+vendor/lib64/hw/vendor.xiaomi.hardware.micharge@1.0-impl.so
+vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so
 
 # CNE - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 -vendor/app/CneApp/CneApp.apk|909e1cce38c475a2b274df5f0571ccd7655d86a1
@@ -780,13 +791,16 @@ vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
+# Perf
+vendor/etc/perf/commonsysnodesconfigs.xml
+
 # Peripheral Manager - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/pm-proxy|0704192692efb4b79e8cb1a2252625ad24468805
 vendor/bin/pm-service|1a48e2a015181b351374b99053fb5dee8e2750ee
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
-# Public Libraries - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/etc/public.libraries.txt|3e96f117599019be1aa99b965961005a66170250
+# Public Libraries
+vendor/etc/public.libraries.txt
 
 # QCV (SOC Helper) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/init.qti.qcv.sh|a8f664cb25d5d381885833e6a8c8b2f462958acf
@@ -1038,6 +1052,7 @@ vendor/etc/sensors/config/sns_cm.json
 vendor/etc/sensors/config/sns_dae.json
 vendor/etc/sensors/config/sns_device_orient.json
 vendor/etc/sensors/config/sns_diag_filter.json
+vendor/etc/sensors/config/sns_direct_channel.json
 vendor/etc/sensors/config/sns_distance_bound.json
 vendor/etc/sensors/config/sns_dpc.json
 vendor/etc/sensors/config/sns_facing.json
@@ -1102,12 +1117,11 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|938262f1c75299523dc8e5c4e6a7937
 
 # Vibrator firmware - AW8624
 vendor/firmware/aw8624_haptic.bin
-vendor/firmware/aw8624_rtp.bin
+vendor/firmware/aw8624_rtp_1.bin
 vendor/firmware/osc_rtp_24K_5s.bin
 
 # Vibrator firmware - DRV2624
 vendor/firmware/drv2624.bin
-vendor/firmware/drv2624.rtp
 
 # WiFi Display - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/wfdvndservice|194bb3aef5237f05d0c8fab2c88846147a6cc55a

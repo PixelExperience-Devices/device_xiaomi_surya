@@ -2,6 +2,7 @@
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.soundfx.type=mi \
     ro.vendor.audio.soundfx.usb=true \
+    ro.vendor.audio.misound.bluetooth.enable=true \
     persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
     persist.vendor.audio.voicecall.speaker.stereo=true
 
@@ -119,8 +120,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Netflix
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.netflix.bsp_rev=Q6150-17263-1
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.netflix.bsp_rev=Q6150-17263-1 \
+    ro.netflix.channel=497730f0-ad4b-11e7-95a4-c7ad113ce187 \
+    ro.netflix.signup=1
 
 # NFC
 PRODUCT_SYSTEM_PROPERTIES += \

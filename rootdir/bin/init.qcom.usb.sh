@@ -1,5 +1,5 @@
 #!/vendor/bin/sh
-# Copyright (c) 2012-2018, 2020 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2018, 2020-2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -105,7 +105,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "diag,serial_cdev,rmnet,dpl,qdss,
 	              "sdm845" | "sdm710")
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
-	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi" | "curtana" | "gram" | "excalibur" | "joyeuse")
+	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi" | "curtana" | "gram" | "excalibur" | "joyeuse" | "surya")
                       case "$debuggable" in
                       "1")
 				setprop persist.vendor.usb.config adb
@@ -114,6 +114,9 @@ if [ "$(getprop persist.vendor.usb.config)" == "diag,serial_cdev,rmnet,dpl,qdss,
 				setprop persist.vendor.usb.config none
                              ;;
                       esac
+		      ;;
+	              "monaco")
+		          setprop persist.vendor.usb.config diag,qdss,rmnet,adb
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
@@ -152,7 +155,11 @@ esac
 if [ -d /config/usb_gadget ]; then
 	# Chip-serial is used for unique MSM identification in Product string
 	msm_serial=`cat /sys/devices/soc0/serial_number`;
-	msm_serial_hex=`printf %08X $msm_serial`
+	# If MSM serial number is not available, then keep it blank instead of 0x00000000
+	if [ "$msm_serial" != "" ]; then
+		msm_serial_hex=`printf %08X $msm_serial`
+	fi
+
 	machine_type=`cat /sys/devices/soc0/machine`
 	setprop vendor.usb.product_string "$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
 
