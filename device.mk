@@ -15,9 +15,6 @@ $(call inherit-product, $(LOCAL_PATH)/configs/device/properties.mk)
 # Inherit from the proprietary configuration
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
-# Inherit Google Camera
-$(call inherit-product, vendor/xiaomi/miatoll-gcam/miatoll-gcam-vendor.mk)
-
 # ANT+
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
