@@ -286,7 +286,7 @@ vendor/lib64/camera/components/com.qti.node.photosolid.so
 vendor/lib64/camera/components/com.qti.node.remosaic.so
 vendor/lib64/camera/components/com.qti.node.stich.so
 vendor/lib64/camera/components/com.qti.node.swregistration.so
-vendor/lib64/camera/components/com.qti.node.watermark.so
+vendor/lib64/camera/components/com.qti.node.watermark.so|86fb0f731517bac668526d6f500f1e3ac812f5a6|041ce29c2e6801784f5ba7ef01c4306d3de6d487
 vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so
 vendor/lib64/camera/components/com.qtistatic.stats.aec.so
 vendor/lib64/camera/components/com.qtistatic.stats.af.so

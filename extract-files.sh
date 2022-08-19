@@ -55,6 +55,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/lib64/camera/components/com.qti.node.watermark.so)
+            "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
+            ;;
         vendor/bin/mi_thermald)
             sed -i 's/%d\/on/%d\/../g' "${2}"
             ;;
