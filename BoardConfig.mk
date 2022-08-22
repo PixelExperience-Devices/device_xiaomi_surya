@@ -146,6 +146,7 @@ include device/xiaomi/J20C-sepolicy/J20C-sepolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 TARGET_USE_COMMON_SEPOLICY_DEFINITIONS := true
 
 # Verified Boot
