@@ -7,10 +7,6 @@
 # Inherit from the proprietary configuration
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
-# ANT+
-PRODUCT_PACKAGES += \
-    com.dsi.ant@1.0.vendor
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -38,13 +34,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     libbluetooth_audio_session
 
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.1-impl \
-    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
-
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.bluetooth.modem_nv_support=true \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
@@ -58,7 +47,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.qcom.bluetooth.soc=cherokee
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.bt.a2dp.aac_whitelist=false \
     persist.vendor.btstack.enable.lpa=true \
     persist.vendor.btstack.enable.twsplus=true
 
