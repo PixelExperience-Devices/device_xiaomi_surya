@@ -30,10 +30,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.vc_call_vol_steps=10
 
 # Bluetooth
-PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    libbluetooth_audio_session
-
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.bluetooth.modem_nv_support=true \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
