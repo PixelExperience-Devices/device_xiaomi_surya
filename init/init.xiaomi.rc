@@ -1,15 +1,4 @@
 on init
-    chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp
-
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/fingerdown_wait
-    chmod 0220 /sys/bus/platform/devices/soc/soc:fpc1020/fingerdown_wait
-
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/hw_reset
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
-    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/modalias
-
     chmod 0664 /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/sconfig
     chmod 0666 /sys/class/thermal/thermal_message/temp_state
