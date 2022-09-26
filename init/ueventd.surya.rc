@@ -27,6 +27,7 @@
 
 # fingerprint
 /sys/devices/platform/soc/soc:fpc1020* fingerdown_wait 0220 system system
+/dev/goodix_fp            0660   system     system
 
 #qvr
 /sys/kernel/qvr_external_sensor fd  0660  system  system
