@@ -441,15 +441,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.data_con_rprt=1 \
-    persist.vendor.radio.enableadvancedscan=true \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.manual_nw_rej_ct=1 \
     persist.vendor.radio.mt_sms_ack=30 \
     persist.vendor.radio.process_sups_ind=1 \
     persist.vendor.radio.redir_party_num=1 \
-    persist.vendor.radio.report_codec=1 \
-    ro.telephony.default_network=22,20
-
+    persist.vendor.radio.report_codec=1
+    
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
