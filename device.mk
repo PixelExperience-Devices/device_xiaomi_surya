@@ -307,10 +307,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
-# IORap
-PRODUCT_PRODUCT_PROPERTIES += \
-   persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-
 # IWLAN
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
