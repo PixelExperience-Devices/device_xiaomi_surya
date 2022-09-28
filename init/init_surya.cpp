@@ -49,6 +49,7 @@ void load_poco_karna() {
     property_override("ro.product.model", "M2007J20CI");
     property_override("ro.product.name", "karna_in");
     property_override("bluetooth.device.default_name", "POCO X3");
+    property_override("vendor.usb.product_string", "POCO X3");
 }
 
 void load_poco_thai() {
@@ -59,6 +60,7 @@ void load_poco_thai() {
     property_override("ro.product.model", "M2007J20CT");
     property_override("ro.product.name", "surya_global");
     property_override("bluetooth.device.default_name", "POCO X3 NFC");
+    property_override("vendor.usb.product_string", "POCO X3 NFC");
 }
 
 void load_poco_surya() {
@@ -69,6 +71,7 @@ void load_poco_surya() {
     property_override("ro.product.model", "M2007J20CG");
     property_override("ro.product.name", "surya_global");
     property_override("bluetooth.device.default_name", "POCO X3 NFC");
+    property_override("vendor.usb.product_string", "POCO X3 NFC");
 }
 
 void vendor_load_properties() {
