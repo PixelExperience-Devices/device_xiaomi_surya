@@ -46,21 +46,10 @@ void load_poco_karna() {
     property_override("ro.product.device", "karna");
     property_override("ro.product.manufacturer", "Xiaomi");
     property_override("ro.product.marketname", "POCO X3");
-    property_override("ro.product.model", "M2007J20CI");
+    property_override("ro.product.model", "POCO X3");
     property_override("ro.product.name", "karna_in");
     property_override("bluetooth.device.default_name", "POCO X3");
     property_override("vendor.usb.product_string", "POCO X3");
-}
-
-void load_poco_thai() {
-    property_override("ro.product.brand", "POCO");
-    property_override("ro.product.device", "surya");
-    property_override("ro.product.manufacturer", "Xiaomi");
-    property_override("ro.product.marketname", "POCO X3 NFC");
-    property_override("ro.product.model", "M2007J20CT");
-    property_override("ro.product.name", "surya_global");
-    property_override("bluetooth.device.default_name", "POCO X3 NFC");
-    property_override("vendor.usb.product_string", "POCO X3 NFC");
 }
 
 void load_poco_surya() {
@@ -68,18 +57,16 @@ void load_poco_surya() {
     property_override("ro.product.device", "surya");
     property_override("ro.product.manufacturer", "Xiaomi");
     property_override("ro.product.marketname", "POCO X3 NFC");
-    property_override("ro.product.model", "M2007J20CG");
+    property_override("ro.product.model", "POCO X3 NFC");
     property_override("ro.product.name", "surya_global");
     property_override("bluetooth.device.default_name", "POCO X3 NFC");
     property_override("vendor.usb.product_string", "POCO X3 NFC");
 }
 
 void vendor_load_properties() {
-    std::string region = GetProperty("ro.boot.hwc", "");
-    if (region.find("INDIA") != std::string::npos) {
+    std::string hwname = GetProperty("ro.boot.hwname", "");
+    if (hwname == "karna") {
         load_poco_karna();
-    } else if (region.find("THAI") != std::string::npos) {
-        load_poco_thai();
     } else {
         load_poco_surya();
     }
