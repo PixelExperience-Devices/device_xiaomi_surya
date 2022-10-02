@@ -19,7 +19,7 @@
     <!-- The padding around the statusbar -->
     <dimen name="status_bar_padding_top">8dp</dimen>
     <dimen name="status_bar_padding_start">4dp</dimen>
-    <dimen name="status_bar_padding_end">4dp</dimen>
+    <dimen name="status_bar_padding_end">3dp</dimen>
 
 
     <!-- Height of the status bar header bar when on Keyguard -->
