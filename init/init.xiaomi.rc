@@ -55,14 +55,8 @@ on post-fs-data
     mkdir /data/vendor/camera 0770 system camera
 
 on boot
-    chown system system /sys/class/drm/card0-DSI-1/disp_param
-    chmod 0664 /sys/class/drm/card0-DSI-1/disp_param
-    chown system system /sys/class/drm/card0-DSI-1/mipi_reg
-    chmod 0664 /sys/class/drm/card0-DSI-1/mipi_reg
-    chown system system /sys/class/drm/card0-DSI-1/panel_info
-    chmod 0444 /sys/class/drm/card0-DSI-1/panel_info
     chown system system /sys/class/backlight/panel0-backlight/brightness_clone
-    chmod 0664  /sys/class/backlight/panel0-backlight/brightness_clone
+    chmod 0664 /sys/class/backlight/panel0-backlight/brightness_clone
     start mi_thermald
 
 #add for MI-cit white-led
