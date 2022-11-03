@@ -110,10 +110,6 @@ vendor/etc/mixer_paths_idp.xml
 vendor/etc/mixer_paths_qrd.xml
 vendor/etc/mixer_paths_tavil.xml
 vendor/etc/mixer_paths_wcd9375qrd.xml
-vendor/etc/sound_trigger_mixer_paths.xml
-vendor/etc/sound_trigger_mixer_paths_qrd.xml
-vendor/etc/sound_trigger_mixer_paths_wcd9340.xml
-vendor/etc/sound_trigger_platform_info.xml
 
 # Audio ACDB - from MIUI
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb|c2d1681437a8f797c3e754deea07009a0b76da60
