@@ -29,6 +29,7 @@ public class ThermalSettingsActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         getFragmentManager().beginTransaction().replace(R.id.content_frame,
                 new ThermalSettingsFragment(), TAG_THERMAL).commit();
     }
