@@ -41,5 +41,7 @@
      By default, this is set to @null to use the horizontal center of the screen. -->
     <dimen name="physical_fingerprint_sensor_center_screen_location_x">1080px</dimen>
 
+    <!-- The width of user avatar when on Keyguard -->
+    <dimen name="multi_user_avatar_keyguard_size">12dp</dimen>
     
 </resources>
