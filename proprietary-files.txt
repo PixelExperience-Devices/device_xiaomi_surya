@@ -434,13 +434,6 @@ vendor/etc/charger_fstab.qti|8464c139d93f05e86ff9c9d31b3e8617b8d9476e
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc|29b23be4f604282abf715f86aec9697175a9aaad
 vendor/bin/hvdcp_opti|2f11f89c6c7741f6837d873939b392217e2cc3c1
 
-# Charger xiaomi
-vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service
-vendor/etc/init/vendor.xiaomi.hardware.micharge@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge@1.0.xml
-vendor/lib64/hw/vendor.xiaomi.hardware.micharge@1.0-impl.so
-vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so
-
 # CNE - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 -vendor/app/CneApp/CneApp.apk|909e1cce38c475a2b274df5f0571ccd7655d86a1
 vendor/bin/cnd|f6b821fe6db66e64973a55fc98b20cfc4f779c12
