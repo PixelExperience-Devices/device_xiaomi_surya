@@ -20,6 +20,7 @@
 #include <unistd.h>
 #include <vector>
 
+#include <android-base/logging.h>
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
@@ -65,10 +66,12 @@ void load_poco_surya() {
 
 void vendor_load_properties() {
     std::string hwname = GetProperty("ro.boot.hwname", "");
-    if (hwname == "karna") {
-        load_poco_karna();
-    } else {
-        load_poco_surya();
+    if (access("/system/bin/recovery", F_OK) != 0) {
+       if (hwname == "karna") {
+          load_poco_karna();
+       } else {
+          load_poco_surya();
+       }
     }
 
     // Set hardware revision
