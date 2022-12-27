@@ -381,6 +381,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    J20CCarrierConfig \
     J20CFrameworks \
     J20CNoCutoutOverlay \
     J20CSettings \
