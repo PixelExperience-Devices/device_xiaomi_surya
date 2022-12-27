@@ -279,6 +279,7 @@ PRODUCT_PACKAGES += \
     AOSPASuryaSystemUIOverlay \
     KarnaFrameworksOverlay \
     NotchBarKillerOverlay \
+    SuryaCarrierConfigOverlay \
     SuryaFrameworksOverlay \
     SuryaSettingsOverlay \
     SuryaSystemUIOverlay 
