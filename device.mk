@@ -432,6 +432,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     libwpa_client
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
+
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.atfwd.start=true \
