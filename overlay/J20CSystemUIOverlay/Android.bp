@@ -14,6 +14,5 @@
 
 runtime_resource_overlay {
     name: "J20CSystemUIOverlay",
-    sdk_version: "current",
     vendor: true,
 }

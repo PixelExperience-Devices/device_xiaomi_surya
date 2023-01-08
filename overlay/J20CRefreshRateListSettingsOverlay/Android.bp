@@ -14,6 +14,5 @@
 
 runtime_resource_overlay {
     name: "J20CRefreshRateListSettingsOVerlay",
-    sdk_version: "current",
     vendor: true,
 }
