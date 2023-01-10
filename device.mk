@@ -72,11 +72,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_VENDOR_PROPERTIES += \
-    camera.disable_zsl_mode=1 \
-    persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
-
-PRODUCT_SYSTEM_PROPERTIES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+    camera.disable_zsl_mode=1
 
 # Charger
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -381,6 +377,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    J20CApertureOverlay \
     J20CCarrierConfig \
     J20CFrameworks \
     J20CNoCutoutOverlay \
