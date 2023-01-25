@@ -217,8 +217,7 @@ endif
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey \
-    android.hardware.drm@1.4.vendor
+    android.hardware.drm@1.4-service.clearkey
 
 PRODUCT_VENDOR_PROPERTIES += \
     drm.service.enabled=true
@@ -252,10 +251,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # FUSE passthrough
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
 
 # GPS
 LOC_HIDL_VERSION := 4.0
@@ -314,10 +309,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
-
 # Keystore
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.keystore_desede=true
@@ -344,10 +335,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.netflix.bsp_rev=Q6150-17263-1 \
     ro.netflix.channel=497730f0-ad4b-11e7-95a4-c7ad113ce187 \
     ro.netflix.signup=1
-
-# Neural Networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
