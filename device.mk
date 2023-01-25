@@ -224,10 +224,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
-   persist.vendor.dpm.feature=1 \
-   persist.vendor.dpmhalservice.enable=1 \
-   persist.vendor.dpm.idletimer.mode=default \
-   persist.vendor.dpm.nsrm.bkg.evt=3955
+   persist.vendor.dpmhalservice.enable=1
 
 # Filesystems table
 PRODUCT_COPY_FILES += \
