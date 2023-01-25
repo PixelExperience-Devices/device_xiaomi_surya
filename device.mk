@@ -429,9 +429,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcomsysd.enabled=1
 
 # Radio
-PRODUCT_PACKAGES += \
-    libwpa_client
-
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
 
