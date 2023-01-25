@@ -319,6 +319,20 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
 
+PRODUCT_ODM_PROPERTIES += \
+    vendor.mm.enable.qcom_parser=63963135
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    media.aac_51_output_enabled=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-scan=true \
+    mmp.enable.3g2=true \
+    persist.mm.enable.prefetch=true
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
