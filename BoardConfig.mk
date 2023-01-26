@@ -132,7 +132,6 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 include device/xiaomi/surya/sepolicy/surya-sepolicy.mk
-SELINUX_IGNORE_NEVERALLOWS := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
