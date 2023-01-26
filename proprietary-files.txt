@@ -154,7 +154,6 @@ vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|4d7232ed02f6558e8c
 vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|411231b527027ea62ef3f754c1a7894fa7b55834
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|06190d0a018caea67b9b3d73f06ef1e26c39517d
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|fb39a268bff9ad81e5db252d6a806f853ee136d5
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|1b238f6b0494313fb217c7af55a9d4a59f982d59
 vendor/lib/libbluetooth_audio_session_qti.so|dff7e5863c142efd4612237ce2e88afb88de8c7d
 vendor/lib/libbluetooth_audio_session_qti_2_1.so|f6ef416459e39d356b53e966a8b5cc3455d135c2
 vendor/lib/libbt-hidlclient.so|6cb8d57c9fa5b2eec2cba368c4309b8b3f6452dd
@@ -595,15 +594,6 @@ vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 
 # Fingerprint - FPC
 vendor/lib64/hw/fingerprint.fpc.default.so|645bf256da2db3ce60dddab9b3282ab7241bbcb0
-
-# FM - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-system_ext/lib64/fm_helium.so|0d810fb4f094daf6f399a3d13f379a13114b21a6
-system_ext/lib64/libfm-hci.so|66ccf3fc817cf744871ea4178702359bb8babbd5
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|0bfc9d9097698b7cc8cb74721cb971a80f862720
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|1b238f6b0494313fb217c7af55a9d4a59f982d59
-vendor/lib/vendor.qti.hardware.fm@1.0.so|e16ea9c7641064eb170b98f636fbbf81ae6a1618
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|5c938c9eb6060bfeac1752b4e6d07101bb2430df
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|49e99338190dbbe0a5db2be70fa68f24e3fd18fa
 
 # Gatekeeper - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
