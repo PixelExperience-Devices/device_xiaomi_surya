@@ -1,4 +1,4 @@
-# All MIUI blobs below are extracted from surya V13.0.1.0.SJGMIXM
+# All MIUI blobs below are extracted from surya V13.0.5.0.SJGIDXM
 # LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0 blobs from msmsteppe
 
 # ADSP - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
