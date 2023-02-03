@@ -114,6 +114,18 @@ vendor/lib64/soundfx/libqcomvisualizer.so
 vendor/lib64/soundfx/libqcomvoiceprocessing.so
 vendor/lib64/soundfx/libshoebox.so
 
+# Audio Configs -from MIUI
+vendor/etc/audio_platform_info_qrd.xml
+vendor/etc/audio_platform_info.xml
+vendor/etc/mixer_paths_idp.xml
+vendor/etc/mixer_paths_qrd.xml
+vendor/etc/mixer_paths_tavil.xml
+vendor/etc/mixer_paths_wcd9375qrd.xml
+vendor/etc/sound_trigger_mixer_paths_qrd.xml
+vendor/etc/sound_trigger_mixer_paths_wcd9340.xml
+vendor/etc/sound_trigger_mixer_paths.xml
+vendor/etc/sound_trigger_platform_info.xml
+
 # Audio ACDB - from MIUI
 vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
