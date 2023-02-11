@@ -1,0 +1,2 @@
+allow vendor_per_proxy vendor_sysfs_ssr:file r_file_perms;
+allow vendor_per_proxy vendor_sysfs_data:file r_file_perms;

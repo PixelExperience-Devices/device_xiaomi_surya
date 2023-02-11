@@ -1,0 +1,3 @@
+set_prop(vendor_qti_init_shell,vendor_media_sm6150_version_prop)
+set_prop(vendor_qti_init_shell,vendor_media_sdmmagpie_version_prop)
+set_prop(vendor_qti_init_shell,vendor_chre_enabled_prop)

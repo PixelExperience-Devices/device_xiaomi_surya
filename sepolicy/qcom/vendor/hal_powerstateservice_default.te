@@ -1,0 +1,25 @@
+#Define Domain
+type vendor_hal_powerstateservice_qti, domain;
+#mark as hal server domain
+hal_server_domain(vendor_hal_powerstateservice_qti, vendor_hal_powerstateservice)
+
+type vendor_hal_powerstateservice_qti_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_powerstateservice_qti)
+
+#allow hwbinder call bw client and server
+binder_call(vendor_hal_powerstateservice_client, vendor_hal_powerstateservice_server)
+binder_call(vendor_hal_powerstateservice_server, vendor_hal_powerstateservice_client)
+
+#allow service to be added to hwservice list
+hal_attribute_hwservice(vendor_hal_powerstateservice, vendor_hal_powerstateservice_hwservice)
+
+#allow service to communicate with power_state device
+allow vendor_hal_powerstateservice_qti vendor_power_state_device:chr_file rw_file_perms;
+
+allow vendor_hal_powerstateservice_qti self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+hal_client_domain(vendor_hal_powerstateservice_qti, vendor_hal_powerstateutility)
+allow vendor_hal_powerstateservice_qti sysfs_power:file rw_file_perms;
+
+#allow service access to qc_aon_prop
+#get_prop(vendor_hal_powerstateservice_qti, qc_aon_prop)

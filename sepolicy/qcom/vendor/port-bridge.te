@@ -1,0 +1,1 @@
+allow vendor_port-bridge vendor_sysfs_ssr:file r_file_perms;

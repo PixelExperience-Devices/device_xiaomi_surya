@@ -1,0 +1,2 @@
+#keymaster quickboot prop
+vendor_restricted_prop(vendor_tee_km_quickboot);

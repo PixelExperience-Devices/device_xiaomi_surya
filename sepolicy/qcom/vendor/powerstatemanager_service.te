@@ -1,0 +1,14 @@
+type powerstatemanager_service, domain;
+
+# Domain to run powerstatemanager_service Service (com.qualcomm.qti.powerstatemanagerservice)
+app_domain(powerstatemanager_service)
+
+# Allow powerstatemanager Service to access certain system services.
+allow powerstatemanager_service { activity_service bluetooth_manager_service surfaceflinger_service wifi_service audio_service location_service radio_service tethering_service thermal_service}:service_manager find;
+allow powerstatemanager_service system_app_data_file:dir create_dir_perms;
+allow powerstatemanager_service system_app_data_file:{ file lnk_file } create_file_perms;
+allow powerstatemanager_service fs_bpf:dir search;
+allow powerstatemanager_service activity_task_service:service_manager find;
+#get_prop(powerstatemanager_service, vendor_qc_aon_prop);
+
+hal_client_domain(powerstatemanager_service, vendor_hal_powerstateservice)
