@@ -47,6 +47,7 @@ void load_poco_karna() {
     property_override("ro.product.device", "karna");
     property_override("ro.product.manufacturer", "Xiaomi");
     property_override("ro.product.marketname", "POCO X3");
+    property_override("ro.product.mod_device", "surya_in_global");
     property_override("ro.product.model", "POCO X3");
     property_override("ro.product.name", "karna_in");
     property_override("bluetooth.device.default_name", "POCO X3");
@@ -58,6 +59,7 @@ void load_poco_surya() {
     property_override("ro.product.device", "surya");
     property_override("ro.product.manufacturer", "Xiaomi");
     property_override("ro.product.marketname", "POCO X3 NFC");
+    property_override("ro.product.mod_device", "surya_global");
     property_override("ro.product.model", "POCO X3 NFC");
     property_override("ro.product.name", "surya_global");
     property_override("bluetooth.device.default_name", "POCO X3 NFC");
