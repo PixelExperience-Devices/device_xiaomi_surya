@@ -25,10 +25,10 @@ fi
 source "${HELPER}"
 
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
 
 # Warning headers and guards
-write_headers
+write_headers "${DEVICE}"
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
