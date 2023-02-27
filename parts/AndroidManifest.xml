@@ -12,8 +12,6 @@
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
 
-    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-
     <application
         android:label="@string/device_settings_app_name"
         android:persistent="true">
@@ -111,29 +109,6 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-
-        <service android:name=".doze.DozeService"
-                 android:permission="XiaomiDozeService">
-        </service>
-
-        <activity
-            android:name=".doze.DozeSettingsActivity"
-            android:label="@string/ambient_display_title"
-            android:exported="true"
-            android:theme="@style/Theme.SubSettingsBase">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.lockscreen" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:value="@string/ambient_display_summary" />
-             <meta-data
-                android:name="com.android.settings.order"
-                android:value="1001" />
-        </activity>
 
         <activity
             android:name=".TileEntryActivity"
