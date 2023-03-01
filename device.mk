@@ -143,7 +143,7 @@ USE_REFRESH_RATE_LIST := true
 ifeq ($(USE_REFRESH_RATE_LIST), true)
 ## Overlays
 PRODUCT_PACKAGES += \
-    J20CRefreshRateListSettings
+    J20CRefreshRateListSettingsOVerlay
 
 ### Refresh Rate Dynamic Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -177,7 +177,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 else
 ### Overlays
 PRODUCT_PACKAGES += \
-    J20CSmoothDisplaySettings
+    J20CSmoothDisplaySettingsOverlay
 
 ### Smooth Display Refresh Rate Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -368,15 +368,15 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # Overlays
 PRODUCT_PACKAGES += \
     J20CApertureOverlay \
-    J20CCarrierConfig \
-    J20CFrameworks \
+    J20CCarrierConfigOverlay \
+    J20CFrameworksOverlay \
     J20CNoCutoutOverlay \
-    J20CSettings \
-    J20CSystemUI \
-    KarnaFrameworks \
+    J20CSettingsOverlay \
+    J20CSystemUIOverlay \
+    KarnaFrameworksOverlay \
     KarnaWifiOverlay \
-    NotchBarKiller \
-    SuryaFrameworks \
+    NotchBarKillerOverlay \
+    SuryaFrameworksOverlay \
     SuryaWifiOverlay
 
 # Partitions

@@ -5,6 +5,6 @@
 
 runtime_resource_overlay {
     aaptflags: ["--keep-raw-values"],
-    name: "J20CCarrierConfig",
+    name: "J20CCarrierConfigOverlay",
     product_specific: true,
 }

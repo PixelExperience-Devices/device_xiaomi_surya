@@ -13,7 +13,7 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "J20CSmoothDisplaySettings",
+    name: "J20CSmoothDisplaySettingsOverlay",
     sdk_version: "current",
     vendor: true,
 }

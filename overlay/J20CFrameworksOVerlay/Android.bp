@@ -13,7 +13,7 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "SuryaFrameworks",
+    name: "J20CFrameworksOverlay",
     sdk_version: "current",
     vendor: true,
 }

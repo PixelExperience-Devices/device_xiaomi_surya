@@ -13,7 +13,7 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "J20CSettings",
+    name: "J20CSystemUIOverlay",
     sdk_version: "current",
     vendor: true,
 }
