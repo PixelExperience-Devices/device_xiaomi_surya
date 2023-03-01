@@ -373,6 +373,7 @@ PRODUCT_PACKAGES += \
     J20CNoCutoutOverlay \
     J20CSettingsOverlay \
     J20CSystemUIOverlay \
+    J20CWifiOverlay \
     KarnaFrameworksOverlay \
     KarnaWifiOverlay \
     NotchBarKillerOverlay \
