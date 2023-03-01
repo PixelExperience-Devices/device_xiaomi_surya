@@ -108,13 +108,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.xiaomiparts.rc \
     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-parts.xml
 
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.audio.soundfx.dirac=true \
-    persist.audio.dirac.speaker=true \
-    persist.dirac.acs.controller=qem \
-    persist.dirac.acs.storeSettings=1 \
-    persist.dirac.acs.ignore_error=1
-
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.lcd.cabc_mode=1
 

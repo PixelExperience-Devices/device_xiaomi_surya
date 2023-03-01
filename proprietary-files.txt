@@ -138,11 +138,6 @@ vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
 
-# Audio Dirac - from Xiaomi
-lib/libDiracAPI_SHARED.so:vendor/lib/libDiracAPI_SHARED.so
-lib/soundfx/libdirac.so:vendor/lib/soundfx/libdirac.so
-vendor/etc/diracmobile.config
-
 # Audio firmware - from MIUI
 vendor/firmware/tas256x_reg.bin
 
