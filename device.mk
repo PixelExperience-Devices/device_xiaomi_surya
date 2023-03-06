@@ -358,7 +358,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
 
 # Radio
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.radio.add_power_save=1 \
+    persist.vendor.radio.add_power_save=0 \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.force_on_dc=true \
