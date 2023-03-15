@@ -1,1 +1,0 @@
-allow vendor_rmt_storage vendor_sysfs_ssr:file r_file_perms;

@@ -1,3 +1,0 @@
-allow vendor_wcnss_service mnt_vendor_file:dir r_dir_perms;
-allow vendor_wcnss_service vendor_sysfs_ssr:file r_file_perms;
-allow vendor_wcnss_service vendor_sysfs_data:file r_file_perms;

@@ -1,2 +1,0 @@
-#Add new domain for powerstatemanager services
-user=_app seinfo=platform name=com.qualcomm.qti.powerstatemanagerservice domain=powerstatemanager_service type=app_data_file levelFrom=all

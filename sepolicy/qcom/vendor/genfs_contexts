@@ -45,22 +45,6 @@ genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone                                                                                                u:object_r:vendor_sysfs_usb_supply:s0
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify                                                                                                             u:object_r:vendor_sysfs_battery_supply:s0
 
-#pmic sysfs_nodes
-genfscon sysfs /bus/iio/devices u:object_r:vendor_sysfs_battery_supply:s0
-
-# subsys  SSR entries
-genfscon sysfs /devices/platform/soc/62400000.qcom,lpass/subsys1/name         u:object_r:vendor_sysfs_ssr:s0
-genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys3/name            u:object_r:vendor_sysfs_ssr:s0
-genfscon sysfs /devices/platform/soc/aae0000.qcom,venus/subsys0/name          u:object_r:vendor_sysfs_ssr:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys4/name           u:object_r:vendor_sysfs_ssr:s0
-
-# usbpd device
-genfscon sysfs /sys/kernel/tracing/instances/usb/events/filemap/.*    u:object_r:vendor_subsys_hvdcp:s0
-
-genfscon sysfs /power/disk  u:object_r:sysfs_power_disk:s0
-genfscon sysfs /power/image_size    u:object_r:sysfs_power_imagesize:s0
-genfscon proc /sys/vm/swappiness    u:object_r:proc_swappiness:s0
-
 # Extcon sysfs
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon u:object_r:sysfs_extcon:s0

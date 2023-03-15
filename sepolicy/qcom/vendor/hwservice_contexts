@@ -1,2 +1,0 @@
-vendor.qti.hardware.powerstateservice::IPowerStateService u:object_r:vendor_hal_powerstateservice_hwservice:s0
-vendor.qti.hardware.powerstateservice::IPowerStateUtility u:object_r:vendor_hal_powerstateutility_hwservice:s0

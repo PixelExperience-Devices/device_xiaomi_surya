@@ -1,2 +1,0 @@
-allow vendor_hal_gnss_qti vendor_sysfs_data:file r_file_perms;
-allow vendor_hal_gnss_qti vendor_sysfs_ssr:file r_file_perms;

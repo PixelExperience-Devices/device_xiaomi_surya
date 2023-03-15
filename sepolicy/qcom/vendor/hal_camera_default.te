@@ -1,3 +1,0 @@
-get_prop(hal_camera_default, aac_drc_prop)
-get_prop(hal_camera_default, ab_update_gki_prop)
-get_prop(hal_camera_default, adbd_config_prop)
