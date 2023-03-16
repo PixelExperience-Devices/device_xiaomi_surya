@@ -2,20 +2,6 @@
 # LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0 blobs from msmsteppe
 # LA.UM.9.1.r1-12900-SMxxx0.0 blobs from msmsteppe
 
-# ADSP - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|77f5aaf6d773ee545e39bc5fdc99c65434c05379
-
-# ADSP - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/adsprpcd|12e09d8e87b260a8721c7938890186a0877a9e85
-vendor/lib/libadsp_default_listener.so|49d7644708419ea077ffd9d00901ebf6cdd4377c
-vendor/lib/libadsprpc.so|d178f711635f892c30bf7ca95c32a02eb42e1395
-vendor/lib/libmdsprpc.so|8d30415d966c534a304abf07602081c6a026e483
-vendor/lib/libsdsprpc.so|e97c96c864b37a84ea00dff264246b8160003988
-vendor/lib64/libadsp_default_listener.so|3ebcf635d6cdc447b8ecd40ea76bda39bf82c308
-vendor/lib64/libadsprpc.so|b74d025169fdcfdfdfd2c2d94062dc3e04261f93
-vendor/lib64/libmdsprpc.so|fe228b9363271c3540e0b86025a4fa9926a7400b
-vendor/lib64/libsdsprpc.so|e8d8faccb96253e8cd26775efc04ce964243a741
-
 # ADSP modules - from MIUI
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so|7182a5728055dfdee15cd9518c1fdd576d813133
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so|67e36bfe46b82bc3e0603bf58d638293fcadd4aa
@@ -421,16 +407,6 @@ vendor/lib64/camera/fdconfigpreviewlite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b
 vendor/lib64/camera/fdconfigvideo.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
 vendor/lib64/camera/fdconfigvideolite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b7144
 
-# CDSP - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/cdsprpcd|530bcfcf9a31dedcc6c8ff5ea33fbaf8c03ab877
-vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
-vendor/lib/libcdsp_default_listener.so|6a3f97faf26da3d01f7895d37c09c8bc62030e0a
-vendor/lib/libcdsprpc.so|b420c27a301356d517f84d2df7442977cd7c8083
-vendor/lib/libsysmon_cdsp_skel.so|b0dd56ca83493e68dc7610d44045849bb3bd8c38
-vendor/lib64/libcdsp_default_listener.so|81e5f4737bfb7e2f0a906183b2a8357a5053ee5c
-vendor/lib64/libcdsprpc.so|dbb387be2104dfd73ccc37dc040d2f63ed919de0
-vendor/lib64/libsysmon_cdsp_skel.so|8a951e039071107317e0e7541ff4df7ad35d87ad
-
 # Certificate Authority - from LA.UM.9.1.r1-12900-SMxxx0.0
 -vendor/app/CACertService/CACertService.apk|b1072f129d588b5c5aefa8824b6d531586a26755
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
@@ -577,12 +553,6 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 vendor/lib64/libwvhidl.so|cbc02c1560ed8a9cbe697b5351a94def71692e75
 vendor/lib64/mediadrm/libwvdrmengine.so|1e029b294540037c72690ec5755426f14b98f511
-
-# DSP - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
-vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
 
 # Fingerprint - from MIUI
 vendor/etc/permissions/com.fingerprints.extension.xml|de711d8827e1d321b22b60fd75a204e8928f9c6d
@@ -1013,19 +983,9 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 
 # Sensors - from MIUI
 vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
-vendor/bin/sensors.qti|64209a8780d42c8c70aee16bcc5b467574fd65f0
-vendor/etc/init/init.vendor.sensors.rc|8d286f50fd261dc8843c6a208386b535cc07641e
-vendor/etc/init/vendor.sensors.qti.rc|f34fc966af816b50f10ae7520b33863961a14478
 vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
-vendor/lib64/libsensorslog.so|5dfd4c42e9dddbea55f56902a9ac4b1098249cb2
-vendor/lib64/libsns_device_mode_stub.so|3ca95e19b3fb12cb10cebc8f8bd091d321e457b1
-vendor/lib64/libsns_fastRPC_util.so|a8ce9430e7f4f57cc884904853d22185cd86840a
-vendor/lib64/libsns_low_lat_stream_stub.so|cbe454dee434ce203401ab903f247d42cf7e249a
 vendor/lib64/libsns_registry_skel.so|eef255155f222ec78b7c3f49e90f7fc5e8df5b10
 vendor/lib64/libsnsapi.so|600b0cb44165b2da5e33fbbc32214e21d689332f
-vendor/lib64/libsnsdiaglog.so|74d6c81a5e0a472933b19b6ee26f3c3ffc9f196f
-vendor/lib64/libssc.so|876230c6a35f78e7895e695330af195efd760f90
-vendor/lib64/libssc_default_listener.so|d1ca27c768a8746fc92ff5d0ed61699015853d7c
 vendor/lib64/sensors.ssc.so|c008d95b6174d1ef5c6255721c9ae6a8755f4be0
 
 # Sensors config - from MIUI
