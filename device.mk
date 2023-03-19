@@ -78,9 +78,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.soc.model=SM7150 \
-    ro.soc.manufacturer=QTI
-
+    ro.soc.model=SM7150
+    
 # ContextHub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
