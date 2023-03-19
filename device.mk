@@ -401,6 +401,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     dsprpcd \
     gps \
     init \
+    keymaster \
     media \
     overlay \
     perf \

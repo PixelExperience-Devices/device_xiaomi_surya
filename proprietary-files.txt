@@ -570,11 +570,6 @@ vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|c437af62587
 # Fingerprint - FPC - from MIUI
 vendor/lib64/hw/fingerprint.fpc.default.so|629d306bde0b2b8732a0227e8d425d664f2614df
 
-# Gatekeeper - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|14819df15693c737fb2a51bf89fe826200286006
-
 # Graphics firmware - from MIUI
 vendor/firmware/a615_zap.b00|1f966d9754aa6b971d39f5b3d9637480e67aa3fe
 vendor/firmware/a615_zap.b01|f37fbf6cbaf577c6d09e55d13d4f95f50d457cfd
@@ -651,16 +646,6 @@ vendor/firmware/ipa_fws.mdt|3cf0e17787b1b56a6252a3eda7675cf5e75ad0f2
 
 # IR - from MIUI
 vendor/lib64/hw/consumerir.default.so|bb96104803e2468d7982e6955dad14e6bd739939
-
-# Keymaster - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|f2dfed2111ada63ddc5283e12b6cb051bd9f9736
-vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|9816f37e7487295e29a19d05c4a3e6b7b0ec35ea
-vendor/lib64/libkeymasterdeviceutils.so|ae35058e3a887c0434d8d90470c2b33a2b8ddc1a
-vendor/lib64/libkeymasterprovision.so|20f964d6c902e003e826272f6227d23523056d1e
-vendor/lib64/libkeymasterutils.so|2392abef423c0610d9625670f1ff3063532e9bc1
-vendor/lib64/libqcbor.so|7da5294a577f5a71ede5b3804a026bf69bd025ee
-vendor/lib64/libqtikeymaster4.so|f02887e22f3cec87c2df4f78142923f0ded909e3
-vendor/lib64/libspcom.so|7cc4390e7caf520586c22cdb7219842fa5d6ed2c
 
 # Listen - from MIUI
 vendor/lib/libadpcmdec.so|297d8fecff85b6dc67ff19e788bcf3f1286014a0

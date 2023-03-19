@@ -96,16 +96,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>legacy/0</instance>
         </interface>
     </hal>
-    <!-- keymaster -->
-    <hal format="hidl">
-       <name>android.hardware.keymaster</name>
-       <transport>hwbinder</transport>
-       <version>4.1</version>
-       <interface>
-           <name>IKeymasterDevice</name>
-           <instance>default</instance>
-       </interface>
-    </hal>
     <!--  Soter service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.soter</name>
@@ -116,16 +106,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- gatekeeper -->
-    <hal format="hidl">
-       <name>android.hardware.gatekeeper</name>
-       <transport>hwbinder</transport>
-       <version>1.0</version>
-       <interface>
-           <name>IGatekeeper</name>
-           <instance>default</instance>
-       </interface>
-   </hal>
    <!-- RIL AUDIO HAL -->
    <hal format="hidl">
        <name>vendor.qti.hardware.radio.am</name>
