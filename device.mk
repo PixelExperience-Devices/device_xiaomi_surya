@@ -76,10 +76,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=1
 
-# Charger
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.charger.enable_suspend=true
-
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.model=SM7150 \
@@ -400,6 +396,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     audio \
     av \
     bt \
+    charging \
     display \
     gps \
     init \
