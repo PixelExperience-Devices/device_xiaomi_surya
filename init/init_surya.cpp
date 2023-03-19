@@ -43,6 +43,7 @@ void property_override(char const prop[], char const value[], bool add = true) {
 }
 
 void load_poco_karna() {
+    property_override("ro.build.description", "karna_in-user 12 RKQ1.211019.001 V13.0.2.0.SJGINXM release-keys");
     property_override("ro.product.brand", "POCO");
     property_override("ro.product.device", "karna");
     property_override("ro.product.manufacturer", "Xiaomi");
@@ -52,9 +53,12 @@ void load_poco_karna() {
     property_override("ro.product.name", "karna_in");
     property_override("bluetooth.device.default_name", "POCO X3");
     property_override("vendor.usb.product_string", "POCO X3");
+    property_override("fingerprint", "POCO/karna_in/karna:12/RKQ1.211019.001/V13.0.2.0.SJGINXM:user/release-keys");
+
 }
 
 void load_poco_surya() {
+    property_override("ro.build.description", "surya_global-user 12 RKQ1.211019.001 V14.0.1.0.SJGMIXM release-keys");
     property_override("ro.product.brand", "POCO");
     property_override("ro.product.device", "surya");
     property_override("ro.product.manufacturer", "Xiaomi");
@@ -64,6 +68,7 @@ void load_poco_surya() {
     property_override("ro.product.name", "surya_global");
     property_override("bluetooth.device.default_name", "POCO X3 NFC");
     property_override("vendor.usb.product_string", "POCO X3 NFC");
+    property_override("fingerprint", "POCO/surya_global/surya:12/RKQ1.211019.001/V14.0.1.0.SJGMIXM:user/release-keys");
 }
 
 void vendor_load_properties() {
