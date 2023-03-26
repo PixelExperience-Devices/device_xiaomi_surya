@@ -63,6 +63,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libdng_sdk.vendor \
     libpiex_shim \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
