@@ -242,6 +242,22 @@
             Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                        0x40800100, 0xFFF, 0x40CA0000, 0, 0x40C00000, 2" />
 
+    <!--resume boost-->
+       <!-- SCHEDBOOST resource opcode, value-->
+       <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+       <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+       <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+       <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+
+       <Config
+            Id="0x00001082" Type="1" Enable="true" Timeout="400" Target="msmsteppe"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+                       0x40800100, 0xFFF" />
+       <Config
+            Id="0x00001082" Type="1" Enable="true" Timeout="400" Target="sdmmagpie"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+                      0x40800100, 0xFFF" />
+
     <!--Rotation latency boost-->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
