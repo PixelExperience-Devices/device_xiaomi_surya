@@ -16,8 +16,7 @@
     <PerfBoost>
 
     <!--app lauch boost-->
-        <!-- SCHED DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED UPMIGRATE resource opcode, value-->
+        <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -27,11 +26,11 @@
         <!-- Type="1", main launch boost of 2sec -->
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="msmsteppe"
-            Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                        0x40800100, 0xFFF, 0x4280C000, 596" />
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="sdmmagpie"
-           Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+           Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                       0x40800100, 0xFFF, 0x4280C000, 800" />
 
     <!--app lauch boost (disabling packing)-->
