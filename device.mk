@@ -34,7 +34,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
+    android.hardware.camera.provider@2.4-service_64 \
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -71,6 +72,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor
+
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
@@ -106,6 +110,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4.vendor \
     android.hardware.drm@1.3-service.clearkey
 
 PRODUCT_VENDOR_PROPERTIES += \
@@ -137,6 +142,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0.vendor
 
 # IDC
 PRODUCT_COPY_FILES += \
@@ -212,8 +221,13 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.netflix.bsp_rev=Q6150-17263-1
 
+# NeuralNetworks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
+
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2.vendor \
     NfcNci \
     SecureElement \
     Tag \
