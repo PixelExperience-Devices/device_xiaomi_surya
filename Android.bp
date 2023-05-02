@@ -1,2 +1,16 @@
 soong_namespace {
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_dpmQmi_interface",
+    interfaces: [
+        "com.qualcomm.qti.dpm.api@1.0::IdpmQmi",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_DspSerivce_interface",
+    interfaces: [
+        "vendor.qti.hardware.dsp@1.0::IDspService",
+    ],
+}
