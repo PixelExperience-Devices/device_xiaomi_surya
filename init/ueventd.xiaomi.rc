@@ -1,0 +1,5 @@
+# fingerprint
+/sys/devices/platform/soc/soc:fpc1020* fingerdown_wait 0220 system system
+
+# wlan
+/dev/spidev0.1            0660   system	    system
