@@ -318,6 +318,10 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Thermal
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.sys.thermal.data.path=/data/vendor/thermal/
+    
 # Userspace fastboot
 PRODUCT_PACKAGES += \
     fastbootd
