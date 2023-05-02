@@ -127,7 +127,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 LOC_HIDL_VERSION := 4.0
 
 # GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Health
 PRODUCT_PACKAGES += \
