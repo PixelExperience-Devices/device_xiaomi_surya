@@ -1,0 +1,2 @@
+ro.camera.req.fmq.size                  u:object_r:vendor_ro_camera_prop:s0
+ro.camera.res.fmq.size                  u:object_r:vendor_ro_camera_prop:s0
