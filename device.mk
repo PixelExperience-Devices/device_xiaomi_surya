@@ -283,7 +283,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     AOSPASuryaFrameworks \
-    AOSPASuryaSettings \
     AOSPASuryaSystemUI \
     KarnaFrameworks \
     NoCutoutOverlay \
