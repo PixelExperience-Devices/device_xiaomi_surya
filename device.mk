@@ -281,13 +281,13 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPASuryaFrameworks \
-    AOSPASuryaSystemUI \
-    KarnaFrameworks \
-    NotchBarKiller \
-    SuryaFrameworks \
-    SuryaSettings \
-    SuryaSystemUI
+    AOSPASuryaFrameworksOverlay \
+    AOSPASuryaSystemUIOverlay \
+    KarnaFrameworksOverlay \
+    NotchBarKillerOverlay \
+    SuryaFrameworksOverlay \
+    SuryaSettingsOverlay \
+    SuryaSystemUIOverlay 
 
 # ParanoidDoze
 PRODUCT_PACKAGES += \
