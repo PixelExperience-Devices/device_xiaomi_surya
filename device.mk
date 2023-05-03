@@ -284,7 +284,6 @@ PRODUCT_PACKAGES += \
     AOSPASuryaFrameworks \
     AOSPASuryaSystemUI \
     KarnaFrameworks \
-    NoCutoutOverlay \
     NotchBarKiller \
     SuryaFrameworks \
     SuryaSettings \
