@@ -113,14 +113,14 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.idle_time_inactive=0 \
     vendor.display.qdcm.mode_combine=2
 
-PRODUCT_VENDOR_PROPERTIES += \
-    debug.sf.early_app_phase_offset_ns=500000 \
-    debug.sf.early_gl_app_phase_offset_ns=15000000 \
-    debug.sf.early_gl_phase_offset_ns=3000000 \
-    debug.sf.early_phase_offset_ns=500000 \
-    debug.sf.high_fps_early_gl_phase_offset_ns=6500000 \
-    debug.sf.high_fps_early_phase_offset_ns=6100000 \
-    debug.sf.high_fps_late_app_phase_offset_ns=1000000
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.late.sf.duration=10500000 \
+    debug.sf.late.app.duration=20500000 \
+    debug.sf.early.sf.duration=16000000 \
+    debug.sf.early.app.duration=16500000 \
+    debug.sf.earlyGl.sf.duration=13500000 \
+    debug.sf.earlyGl.app.duration=21000000
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
