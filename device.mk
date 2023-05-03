@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Vendor blobs
+$(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -375,9 +378,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Userspace fastboot
 PRODUCT_PACKAGES += \
     fastbootd
-
-# Vendor blobs
-$(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
 # VNDK
 PRODUCT_COPY_FILES += \
