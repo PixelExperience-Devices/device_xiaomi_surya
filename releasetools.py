@@ -16,14 +16,6 @@
 import common
 import re
 
-def FullOTA_Assertions(info):
-  input_zip = info.input_zip
-  return
-
-def IncrementalOTA_Assertions(info):
-  input_zip = info.target_zip
-  return
-
 def FullOTA_InstallEnd(info):
   input_zip = info.input_zip
   OTA_InstallEnd(info, input_zip)
