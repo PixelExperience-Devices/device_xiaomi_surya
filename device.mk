@@ -325,11 +325,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wfd \
     wlan
-    
-    
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_xiaomi
 
 # Radio
 PRODUCT_VENDOR_PROPERTIES += \
