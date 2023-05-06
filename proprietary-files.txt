@@ -96,6 +96,7 @@ vendor/lib64/libqtigef.so|0c438718d1846f56898ba2b1787cc9748744d029
 vendor/lib64/libsndmonitor.so|760715f552fd885f7dd4f18bc39928183a23d812
 vendor/lib64/libspkrprot.so|777d16a07475fda0dbfef930abbc268de2ab8d85
 vendor/lib64/libssrec.so|b826d6c6567913403c81a300b0b62dc1b8246f3c
+vendor/lib64/libwebrtc_audio_preprocessing.so|9ecb318c3b4777725d098e3b01cbda7ff500a064
 vendor/lib64/soundfx/libasphere.so|b9296f601776e631be0f347f8f10d26689103d12
 vendor/lib64/soundfx/libmisoundfx.so|6c21183573e7d4253825c4be1a6b56395727e67f
 vendor/lib64/soundfx/libqcompostprocbundle.so|695f929b1b341ef5961847c4ec022bda9abfeac2
@@ -213,6 +214,7 @@ vendor/lib64/libcamxswprocessalgo.so|e26526cc3de976bc6a73e96236614fdbf861dde3
 vendor/lib64/libcamxtintlessalgo.so|d761d0747d47a63990c866a31116dd297d01f86f
 vendor/lib64/libcom.qti.chinodeutils.so|7760cd888fd686bfa296e1cb8a204eb6644ff0f4
 vendor/lib64/libdng_sdk2vendor.so|df7487d013c78b7c6a77ccd9be10fa8e115ed7c8
+vendor/lib64/libflaw.so|91483575e471d5e2ccfd635dae0c154bdc997631
 vendor/lib64/libft2vendor.so|fd87e8dbbb193d263d60bd352813b686633cba65
 vendor/lib64/libhvx_interface.so|e9db1741a4c685bf9259acc353f87d177178f959
 vendor/lib64/libmegface.so|8f67d986f23a110e48a2c6c57024ac3dee4993aa
@@ -313,6 +315,18 @@ vendor/lib64/camera/components/libdepthmapwrapper.so|6df3ef4508a8a165b5d4138fe02
 vendor/lib64/camera/components/libmmcamera_cac3.so|5591fef4383db7409c744c52cd151c11e3b18787
 
 # Camera configs - from MIUI
+vendor/etc/camera/102_SummerDay.png|e27c1ad14c763cbc0159aa5a0357b934cbc16ced
+vendor/etc/camera/103_Fantasy.png|0eb52c60f767c4a9b26b22f4ee35ec646545a123
+vendor/etc/camera/104_Meet.png|6311603a50532eece3f92cce50898a29c1d4995c
+vendor/etc/camera/105_WindSing.png|8d07722a63e5619fbd3b293078ae67dfe271a72c
+vendor/etc/camera/106_Lost.png|61a35b9eb3c6286357ba213cfce0b3e1fc112fd6
+vendor/etc/camera/107_Central.png|64c1e291c873ff7715ee9017c3a0d6cae48a9b6a
+vendor/etc/camera/108_NorthernEurope.png|b6a0847fcf1d87d5db0cae2c9a589b9780e1cbbe
+vendor/etc/camera/109_Rome.png|d5eb2a236ff03ef1a18a06323ed7ea1e10d3216f
+vendor/etc/camera/110_BlackGold.png|bf0b84c9cc417a78f38fa01606160a80d0fda3d2
+vendor/etc/camera/111_GreenOrange.png|7ccb8c48068296275ab440129750cddc47e26f4d
+vendor/etc/camera/112_Cyberpunk.png|a8245aafb5cf4a2bf2aa1ed58ad35dc3140607bb
+vendor/etc/camera/113_BlackIce.png|00bb1b9b499aca960475b79414b5a076324c8b46
 vendor/etc/camera/CFR_para_M_V07.bin|07f1b026e7696d4df0a7e8ee423b7d921b4009a5
 vendor/etc/camera/CFR_para_M_V10.bin|e9d7252dd635ba28508ed7ad4c57b497269e6fd3
 vendor/etc/camera/CFR_para_UW_V01.bin|5a0bd64df91a5aee97da1874feba1b348f04f028
