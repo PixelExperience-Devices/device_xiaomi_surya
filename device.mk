@@ -205,8 +205,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.surya.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.rc \
     $(LOCAL_PATH)/init/init.surya.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.perf.rc \
     $(LOCAL_PATH)/init/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc \
-    $(LOCAL_PATH)/init/init.xiaomi.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.xiaomi.fingerprint.rc \
-    $(LOCAL_PATH)/init/init.xiaomi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.xiaomi.rc \
+    $(LOCAL_PATH)/init/init.xiaomi.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.xiaomi.fingerprint.rc \
+    $(LOCAL_PATH)/init/init.xiaomi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.xiaomi.rc \
     $(LOCAL_PATH)/init/ueventd.xiaomi.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
 
 PRODUCT_COPY_FILES += \
