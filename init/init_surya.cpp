@@ -55,13 +55,21 @@ void load_poco_karna() {
     property_override("ro.product.device", "karna");
     property_override("ro.product.model", "POCO X3");
     property_override("ro.product.name", "karna_in");
+    property_override("ro.product.mod_device", "surya_in_global");
+}
+
+void load_poco_surya() {
+	property_override("ro.product.mod_device", "surya_global");
 }
 
 void vendor_load_properties() {
+    std::string hwname = GetProperty("ro.boot.hwname", "");
     if (access("/system/bin/recovery", F_OK) != 0) {
-        if (hwname == "karna") {
-            load_poco_karna();
-        }
+       if (hwname == "karna") {
+          load_poco_karna();
+       } else {
+          load_poco_surya();
+       }
     }
 
     // Set hardware revision
