@@ -5,6 +5,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/surya/sepolicy/bluetooth/vendor \
     device/xiaomi/surya/sepolicy/camera/vendor \
     device/xiaomi/surya/sepolicy/common/vendor \
+    device/xiaomi/surya/sepolicy/display/vendor \
     device/xiaomi/surya/sepolicy/fingerprint/vendor \
     device/xiaomi/surya/sepolicy/ir/vendor \
     device/xiaomi/surya/sepolicy/leds/vendor \
