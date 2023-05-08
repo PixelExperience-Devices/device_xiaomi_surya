@@ -5,4 +5,4 @@ camera.sensor.frontAux.fuseID      u:object_r:vendor_camera_prop:s0
 camera.sensor.frontMain.fuseID     u:object_r:vendor_camera_prop:s0
 camera.sensor.rearUltra.fuseID     u:object_r:vendor_camera_prop:s0
 camera.sensor.rearTele.fuseID      u:object_r:vendor_camera_prop:s0
-
+vendor.sys.camerainfo              u:object_r:vendor_camera_prop:s0
