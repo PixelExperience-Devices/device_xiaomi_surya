@@ -13,6 +13,6 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "AOSPASuryaFrameworksOverlay",
+    name: "AOSPSuryaSettings",
     product_specific: true,
 }

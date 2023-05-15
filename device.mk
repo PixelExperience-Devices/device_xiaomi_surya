@@ -61,9 +61,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/st_license.lic:$(TARGET_COPY_OUT_VENDOR)/etc/camera/st_license.lic
-
-PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
@@ -223,8 +220,7 @@ PRODUCT_COPY_FILES += \
 
 # IWLAN
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.data.iwlan.enable=true \
-    ro.telephony.iwlan_operation_mode=legacy
+    persist.vendor.data.iwlan.enable=true
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -294,8 +290,9 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPASuryaFrameworksOverlay \
-    AOSPASuryaSystemUIOverlay \
+    AOSPSuryaFrameworksOverlay \
+    AOSPSuryaSettings \
+    AOSPSuryaSystemUIOverlay \
     KarnaFrameworksOverlay \
     NotchBarKillerOverlay \
     SuryaCarrierConfigOverlay \
@@ -311,8 +308,12 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Platform
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
+TARGET_SEPOLICY_DIR := msmsteppe
 
 # QTI
+$(call inherit-product, device/qcom/common/common.mk)
+TARGET_USE_SM8150_HALS := true
+
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     alarm \
