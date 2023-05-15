@@ -49,10 +49,17 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_RAMDISK_OFFSET := 0x01000000
+BOARD_KERNEL_SEPARATED_DTBO := true
 
-TARGET_KERNEL_ADDITIONAL_FLAGS +=  LLVM=1 LLVM_IAS=1
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
+BOARD_BOOTIMG_HEADER_VERSION := 2
+BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+
+TARGET_KERNEL_CONFIG := surya_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 
 BOARD_KERNEL_CMDLINE += \
     kpti=off \
@@ -70,12 +77,6 @@ BOARD_KERNEL_CMDLINE += \
     earlycon=msm_geni_serial,0x880000 \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.init_fatal_reboot_target=recovery
-    
-KERNEL_DEFCONFIG := surya_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_MKBOOTIMG_ARGS += --header_version 2
 
 # Media
 TARGET_DISABLED_UBWC := true
@@ -108,6 +109,9 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# qcom/common
+include device/qcom/common/BoardConfigQcom.mk
+
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
@@ -125,7 +129,6 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 include device/xiaomi/surya/sepolicy/surya-sepolicy.mk
-TARGET_SEPOLICY_DIR := msmsteppe
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
