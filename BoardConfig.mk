@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/surya
+QCOM_COMMON_PATH := device/qcom/common
 
 # Broken Build Rules
 BUILD_BROKEN_DUP_RULES := true
@@ -111,6 +112,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+
+# qcom/common
+include $(QCOM_COMMON_PATH)/BoardConfigQcom.mk
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true

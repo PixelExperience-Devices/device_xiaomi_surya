@@ -14,10 +14,10 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.aospa.systemui.surya">
+    package="co.aosp.settings.surya">
 
     <overlay
         android:isStatic="true"
         android:priority="800"
-        android:targetPackage="com.android.systemui" />
+        android:targetPackage="com.android.settings" />
 </manifest>
