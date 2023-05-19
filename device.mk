@@ -22,6 +22,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_ODM_PROPERTIES += \
     aaudio.mmap_policy=1 \
+    ro.config.media_vol_default=8 \
+    ro.config.vc_call_vol_default=5 \
+    ro.config.vc_call_vol_steps=10 \
     ro.vendor.audio.sdk.fluencetype=fluence \
     vendor.audio.offload.buffer.size.kb=256
 
