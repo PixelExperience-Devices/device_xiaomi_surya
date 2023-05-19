@@ -278,8 +278,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi
 
 # Netflix
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.netflix.bsp_rev=Q6150-17263-1
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.netflix.bsp_rev=Q6150-17263-1
 
 # NeuralNetworks
 PRODUCT_PACKAGES += \
