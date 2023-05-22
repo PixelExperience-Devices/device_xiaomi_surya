@@ -48,7 +48,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.bluetooth.wipower=false
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac \
     persist.vendor.btstack.aac_frm_ctl.enabled=true \
     persist.vendor.btstack.connect.peer_earbud=true \
     persist.vendor.btstack.enable.lpa=true \
