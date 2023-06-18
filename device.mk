@@ -325,13 +325,6 @@ PRODUCT_PACKAGES += \
     SuryaSettingsOverlay \
     SuryaSystemUIOverlay 
 
-# ParanoidDoze
-PRODUCT_PACKAGES += \
-    ParanoidDoze
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sensor.pickup=xiaomi.sensor.pickup
-
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -381,7 +374,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.multihal \
+    android.hardware.sensors@2.1-service.xiaomi-multihal \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
