@@ -411,7 +411,6 @@ vendor/lib64/camera/fdconfigvideolite.bin|57a107b602bfbe3a8b571fdcaa6eb8cb217b71
 
 # Certificate Authority - from LA.UM.9.1.r1-12900-SMxxx0.0
 -vendor/app/CACertService/CACertService.apk|b1072f129d588b5c5aefa8824b6d531586a26755
-vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 vendor/lib64/libcacertclient.so|69ae73b9be13507ff39398ac5813ad709b8b7c32
 vendor/lib64/libjnihelper.so|ae2919dbdbfa489ebeb584674663e908c4cfb9a5
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so|1633c31212d1ea9338b79ebfc2476f83424f36ee
@@ -523,7 +522,6 @@ vendor/lib64/libcpion.so|542fd1114d09ec5c0d6d8e44ed925a0ee226ce94
 vendor/lib64/libdrmfs.so|2e000862d1dba971796ba1223352af519ab86229
 vendor/lib64/libdrmtime.so|d7460a3d0d0a9ccc044688f960ca4b9c3c05cfd5
 vendor/lib64/libminkdescriptor.so|3fb52e7d3c9c213df62881a7068baab82cbbd78e
-vendor/lib64/libminksocket.so|33a9e55842c1927539b8ed5d30bb3ddb12599a5e
 vendor/lib64/liboemcrypto.so|457e298d46454bed76defd96eaedb047b6b50d74
 vendor/lib64/libops.so|a6556e34f327dab506012db83169b5c53e7f1b0a
 vendor/lib64/libpvr.so|4ec5f223df1e2849dbe67687e293653406b6939e
@@ -566,62 +564,6 @@ vendor/firmware/a615_zap.elf|5f74d1f025afa68e19dd937336ce547ac5086ab3
 vendor/firmware/a615_zap.mdt|098634758feb800f6d8c970970a61cb4d80c1a0b
 vendor/firmware/a618_gmu.bin|0c211ef8a3246d649a4ae52a926d128b61e3c264
 vendor/firmware/a630_sqe.fw|6526cbb24d614dd67dc18e3c80d5c4374a0b3f63
-
-# GPS - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/garden_app|6cc6499c8c7769f8278dc43c96465bad8e16e305
-vendor/bin/loc_launcher|be9f321e7c03e038749239ae4accd3db00949e2c
-vendor/bin/lowi-server|d94ebcc5499e0624f941bbf3a7aa259891513cd0
-vendor/bin/mlid|45e6e27038eb35f8fe7a61b9074252e4147fcf33
-vendor/bin/slim_daemon|5b863b101ace7d55cc174fca6d5cd562a7727873
-vendor/bin/xtra-daemon|36df53948c13655ff5ff5b76882f28f9a4d039a8
-vendor/bin/xtwifi-client|69378f73eeb61789822de5aed4c268e3661c81ee
-vendor/bin/xtwifi-inet-agent|2453d2776049b9ef2b29f6abe1256359f321a088
-vendor/etc/apdr.conf|52c9b4265e55c87ddf07c9b60817b3c09420712a
-vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
-vendor/etc/izat.conf|c60fabc264a477e23a36018419271bab2de0a0f6
-vendor/etc/lowi.conf|2045e83483849a124e5fef052b59190f1b784df0
-vendor/etc/sap.conf|b5ea86d9d9ee36dc13194474d343dae36f6fa032
-vendor/etc/seccomp_policy/gnss@2.0-base.policy|abafcf09068ec6fa62f8fc11ce6a7f51fe4cfb81
-vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy|3f8e3466eaeb966e57c5b79b688a618295eb4b17
-vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy|45b44cf547358961841aeba728851e32dc0a5230
-vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy|9c0419bf0a0b4ef129527a9d4c024a624ff34d6e
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
-vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
-vendor/etc/xtwifi.conf|ac2189707c0016c31846ccec73e8857d7f566605
-vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|3d358effa46123a84057a821816c44dc2506a6b5
-vendor/lib64/libcapiv2svarnn.so|6786511acd1925926d09011ae3e22deb3162d142
-vendor/lib64/libcdfw.so|55d33db3a8339cf4e051b5d8ce615712a19612d7
-vendor/lib64/libcdfw_remote_api.so|faaf6c57e4c1c40d5e604d6932704bf63d883e96
-vendor/lib64/libdataitems.so|ac2c6975b584bdf745d09b15aeb3fd3445ab1b71
-vendor/lib64/libgarden.so|e83654234e73c24d468a44c88f6e3fbecab77ebd
-vendor/lib64/libgarden_haltests_e2e.so|183e3449333dfc64ea485441267d990f6c489deb
-vendor/lib64/libgdtap.so|ef93e73de2c5df0f486805e3a2777fd68f12c029
-vendor/lib64/libgnsspps.so|0c5104f4d964b0aaaf283fdb27f32461b76922c9
-vendor/lib64/libizat_client_api.so|5e9998cbcf7d220d5b3080ed1ba352d3656e0ecf
-vendor/lib64/libizat_core.so|cdb3bf89857e2630b49085d33dcae4675d3700d0
-vendor/lib64/liblbs_core.so|80733e0ddea4cc6b70b6f7b298b4f41fe974aef4
-vendor/lib64/libloc_api_v02.so|655a5c38f3e0ed6d217358ee4a16521c350ddd48
-vendor/lib64/libloc_api_wds.so|50bd3ca2e73435270b091a3cb5c156afa384ca4f
-vendor/lib64/libloc_socket.so|347eebf332c92d52516e70a89bce3211de0f98df
-vendor/lib64/liblocationservice.so|5df6dfe1fd322fb1f9f5c6d3edbcc6004a046265
-vendor/lib64/liblocationservice_glue.so|6b6337abc6caadbd78d19712a0b3e0d18173c6f2
-vendor/lib64/liblowi_client.so|79772b0b4a8c08c22480f3513a2fb4a316143328
-vendor/lib64/liblowi_wifihal.so|d0d187f91e03ebec553545847bcad53fb4f2ee56
-vendor/lib64/libqcc_file_agent.so|cd70ce305d5036a027060aa989b0dcbcfab8edb6
-vendor/lib64/libslimclient.so|8a4a3cc1563132e671f8c5b94edcb0ecafa324d3
-vendor/lib64/libsynergy_loc_api.so|821bcaacdc195499a423ba076b5e29a1cb7170c6
-vendor/lib64/libxtadapter.so|76e5e59ea8b54fd1110564467ec7677f8df6d1ca
-vendor/lib64/libxtwifi_server_protocol.so|c26327db373c9df8e19c548f9f7d87789654f874
-vendor/lib64/libxtwifi_server_protocol_uri_v3.so|7fdac704f7c923b09dd3b658e6699c4ef2452cb8
-vendor/lib64/vendor.qti.gnss@1.0.so|5cc0d0c8e7a8083f5892eb303ab1e6d4c9d66639
-vendor/lib64/vendor.qti.gnss@1.1.so|9a516f4b1b55798f0ec1ebead0c653ad65546517
-vendor/lib64/vendor.qti.gnss@1.2.so|1266128a166aed91804aebc1513524eb09424f64
-vendor/lib64/vendor.qti.gnss@2.0.so|8dc78f86e141c05f5b404cb3236910896c10d941
-vendor/lib64/vendor.qti.gnss@2.1.so|81142c88b15688a671bd372f013dfb2e77d1998d
-vendor/lib64/vendor.qti.gnss@3.0.so|1c0b41eddcc4789e1ea842be02d511afad123a8e
-vendor/lib64/vendor.qti.gnss@4.0-service.so|d20a0fd214eb4f7aa2d4b2c2cd14ea2b120a49f5
-vendor/lib64/vendor.qti.gnss@4.0.so|e38ae43982dc62bf48193a6c3eb2ae385adb37aa
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
 
 # IPA firmware - from MIUI
 vendor/firmware/ipa_fws.b00|54728c34b55307de55e1f8319c4724062439c45c
@@ -756,7 +698,6 @@ vendor/lib64/libsoc_helper_jni.so|eb36a57f372b0b7bcb81ecfef1219905ccf3cf39
 # QMI (Qualcomm MSM Interface) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/irsc_util|121deb2d6fd21b122c6a8ca8b30ef167f6b90f61
 vendor/bin/pd-mapper|f8e54297f63af0685555722b0327d6b4d24f86bc
-vendor/etc/sec_config|38ed44170badad7ae9a05f53223e1addf8780083
 vendor/lib/libdiag.so|94d20d63203eb134bcc4deb484b71dae174414e2
 vendor/lib/libdsutils.so|471aa6d37cff3609cf29bf748496e60018ef96e4
 vendor/lib/libidl.so|f91eebf917150514da6c111de6c66805bed3f6c8
