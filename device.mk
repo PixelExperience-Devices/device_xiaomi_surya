@@ -319,6 +319,7 @@ PRODUCT_PACKAGES += \
     NotchBarKillerOverlay \
     SuryaCarrierConfigOverlay \
     SuryaFrameworksOverlay \
+    SuryaNfcOverlay \
     SuryaSettingsOverlay \
     SuryaSystemUIOverlay 
 
