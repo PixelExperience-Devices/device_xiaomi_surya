@@ -48,11 +48,6 @@ on post-fs-data
 on property:ro.boot.hwname=*
     setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
 
-on property:persist.vendor.hvdcp_opti.start=1
-    chown root system /sys/class/power_supply/bms/soh
-    chown root system /sys/class/power_supply/bms/esr_actual
-    chown root system /sys/class/power_supply/bms/esr_nominal
-
 on charger
     chown system system /sys/class/leds/white/brightness
     write /sys/class/leds/white/brightness 255
