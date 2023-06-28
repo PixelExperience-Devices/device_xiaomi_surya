@@ -32,10 +32,6 @@ on init
     chown system system /sys/class/leds/white/delay_on
     chown system system /sys/class/leds/white/delay_off
 
-    chown system system /sys/module/battery_saver/parameters/enabled
-    chmod 0664 /sys/module/battery_saver/parameters/enabled
-
-    # Change permissions for /dev/diag
     chmod 0666 /dev/diag
 
 on post-fs-data
