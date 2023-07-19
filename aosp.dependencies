@@ -7,6 +7,12 @@
    },
    {
        "remote"      : "pixel-devices",
+       "repository"  : "device_xiaomi_surya-miuicamera",
+       "target_path" : "device/xiaomi/surya-miuicamera",
+       "branch"      : "thirteen"
+   },
+   {
+       "remote"      : "pixel-devices",
        "repository"  : "kernel_xiaomi_surya",
        "target_path" : "kernel/xiaomi/surya",
        "branch"      : "thirteen"
@@ -15,6 +21,12 @@
        "remote"      : "pixel-devices-blobs",
        "repository"  : "vendor_xiaomi_surya",
        "target_path" : "vendor/xiaomi/surya",
+       "branch"      : "thirteen"
+   },
+   {
+       "remote"      : "pixel-devices-blobs",
+       "repository"  : "vendor_xiaomi_surya-miuicamera",
+       "target_path" : "vendor/xiaomi/surya-miuicamera",
        "branch"      : "thirteen"
    },
    {   "remote"      : "pixel",
