@@ -47,19 +47,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
     ro.vendor.bluetooth.wipower=false
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac \
-    persist.vendor.btstack.aac_frm_ctl.enabled=true \
-    persist.vendor.btstack.connect.peer_earbud=true \
-    persist.vendor.btstack.enable.lpa=true \
-    persist.vendor.btstack.enable.swb=true \
-    persist.vendor.btstack.enable.swbpm=true \
-    persist.vendor.btstack.enable.twsplus=true \
-    persist.vendor.btstack.enable.twsplussho=true \
-    persist.vendor.service.bdroid.soc.alwayson=true \
-    ro.bluetooth.emb_wp_mode=false \
-    ro.bluetooth.wipower=false
-
 # Camera
 $(call inherit-product-if-exists, device/xiaomi/surya-miuicamera/config.mk)
 
