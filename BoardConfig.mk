@@ -126,6 +126,7 @@ TARGET_SCREEN_DENSITY := 440
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
+include device/xiaomi/sepolicy/SEPolicy.mk
 include device/xiaomi/surya/sepolicy/surya-sepolicy.mk
 TARGET_SEPOLICY_DIR := msmsteppe
 

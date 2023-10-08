@@ -1,1 +1,2 @@
+# Oem fastcharge
 allow system_server vendor_sysfs_battery_supply:file r_file_perms;
