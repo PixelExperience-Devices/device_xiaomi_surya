@@ -1,0 +1,2 @@
+# Oem fastcharge
+/sys/class/power_supply/bms/fastcharge_mode                             u:object_r:vendor_sysfs_battery_supply:s0
