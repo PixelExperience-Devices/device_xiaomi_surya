@@ -984,11 +984,6 @@ vendor/firmware/novatek_ts_huaxing_mp.bin|d221042658194ca50e0c35dcc259c8bde98ffa
 vendor/firmware/novatek_ts_tianma_fw.bin|aeeb2f320e26d91d135426bab24bebc30f9dd2a4
 vendor/firmware/novatek_ts_tianma_mp.bin|78e28cc3c00dfd185f41621d43d6a28f289c9998
 
-# TUI communicator - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|4ba792ee3234dca4cd7ebbd7b3f9003c800f51b4
-
 # Vibrator Calibration - from MIUI
 vendor/bin/vibrator_calibration|bdc04c83648056bf6390fb3342204e527858bdb9
 
