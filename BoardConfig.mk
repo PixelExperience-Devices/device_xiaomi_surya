@@ -27,7 +27,6 @@ TARGET_OTA_ASSERT_DEVICE := surya,karna
 
 # Audio
 BOARD_SUPPORTS_SOUND_TRIGGER := false
-TARGET_PROVIDES_AUDIO_EXTNS := true
 
 # Board Info
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
