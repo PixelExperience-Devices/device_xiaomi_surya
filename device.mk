@@ -178,8 +178,8 @@ BOARD_HAVE_QCOM_FM := true
 PRODUCT_VENDOR_PROPERTIES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# FUSE passthrough
-PRODUCT_SYSTEM_PROPERTIES += \
+# FUSE  
+PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
 
 # HIDL
