@@ -14,5 +14,5 @@
 
 runtime_resource_overlay {
     name: "AOSPASuryaSystemUIOverlay",
-    vendor: true,
+    product_specific: true,
 }
