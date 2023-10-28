@@ -26,14 +26,12 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import org.lineageos.settings.dirac.DiracActivity;
-import org.lineageos.settings.dolby.DolbyActivity;
 import org.lineageos.settings.display.LcdFeaturesPreferenceActivity;
 import org.lineageos.settings.refreshrate.RefreshActivity;
 
 public class TileEntryActivity extends Activity {
     private static final String TAG = "TileEntryActivity";
     private static final String DIRAC_TILE = "org.lineageos.settings.dirac.DiracTileService";
-    private static final String DOLBY_TILE = "org.lineageos.settings.dolby.DolbyTileService";
     private static final String CABC_TILE = "org.lineageos.settings.display.CabcTileService";
     private static final String HBM_TILE = "org.lineageos.settings.display.HbmTileService";
     private static final String REFRESH_TILE = "org.lineageos.settings.refreshrate.RefreshTileService";
@@ -45,9 +43,6 @@ public class TileEntryActivity extends Activity {
         switch (sourceClass.getClassName()) {
             case DIRAC_TILE:
                 openActivitySafely(new Intent(this, DiracActivity.class));
-                break;
-            case DOLBY_TILE:
-                openActivitySafely(new Intent(this, DolbyActivity.class));
                 break;
             case CABC_TILE:
                 openActivitySafely(new Intent(this, LcdFeaturesPreferenceActivity.class));
