@@ -352,16 +352,8 @@ vendor/etc/camera/score_icon.png|8580e0abbf401a09c6581b82e9c00cd78fb8951f
 vendor/etc/camera/vidhance_calibration|9b7e71643edba9d6e6f193051ee4d7d9df0a17a1
 vendor/etc/camera/watermark_font_2300_3199.dat|470c10429888b89966af5eb610b13b843a1a0248
 
-# Camera device - from MIUI
-vendor/lib/vendor.qti.hardware.camera.device@3.5.so|c5d859f6ffbdab3bad417f9cb32dbf75d8cb7d0d
-vendor/lib64/vendor.qti.hardware.camera.device@3.5.so|f5f41758fc143d2d6e98222a436da456d86a1eed
-
 # Camera firmware - from MIUI
 vendor/firmware/CAMERA_ICP.elf|22d8b031172e11b6f34f95be243de8fef092d90c
-
-# Camera provider - from MIUI
-vendor/lib/android.hardware.camera.provider@2.4-legacy.so|2965063ed9dce8748ba38c14f284575099e9cbfd
-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|4e311e433ed442a2ccfbd69310271df88a284c98
 
 # Camera sensors - from MIUI
 vendor/lib64/camera/com.qti.sensor.ofilm_hi259.so|2120902e1909ebd2e39c27c9ddde27bf2986c34a
