@@ -132,6 +132,9 @@ include device/xiaomi/sepolicy/SEPolicy.mk
 include device/xiaomi/surya/sepolicy/surya-sepolicy.mk
 TARGET_SEPOLICY_DIR := msmsteppe
 
+# Treble flag
+BOARD_VNDK_VERSION := current
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
